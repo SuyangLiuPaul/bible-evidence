@@ -81,10 +81,19 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
           style={{ background: `radial-gradient(ellipse 80% 70% at 20% 110%, rgba(0,0,0,0.35), transparent)` }}
         />
 
-        {/* Large icon */}
-        <span className="absolute inset-0 flex items-center justify-center text-6xl select-none opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-300 drop-shadow-lg">
-          {evidence.icon}
-        </span>
+        {/* Evidence image or icon fallback */}
+        {evidence.images.length > 0 ? (
+          <img
+            src={evidence.images[0]}
+            alt={t(evidence.titleKey)}
+            className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+            loading="lazy"
+          />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center text-6xl select-none opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-300 drop-shadow-lg">
+            {evidence.icon}
+          </span>
+        )}
 
         {/* Category tag — top left */}
         <div

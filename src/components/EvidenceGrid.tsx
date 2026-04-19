@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen, Clock, X } from 'lucide-react'
@@ -6,6 +6,20 @@ import { type Evidence, type Category } from '../data/evidences'
 import EvidenceCard from './EvidenceCard'
 
 const categories: Array<Category | 'All'> = ['All', 'Archaeology', 'Manuscripts', 'History', 'Science']
+
+// Standard Bible books grouped by Testament
+const OLD_TESTAMENT = [
+  'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+  'Joshua', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings',
+  '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah',
+  'Psalms', 'Ecclesiastes', 'Isaiah', 'Jeremiah', 'Daniel',
+  'Amos', 'Micah',
+]
+const NEW_TESTAMENT = [
+  'Matthew', 'Mark', 'Luke', 'John', 'Acts',
+  'Romans', 'Galatians', 'James',
+]
+const SPECIAL = ['Multiple Books', 'Hebrew Bible']
 
 interface EvidenceGridProps {
   evidences: Evidence[]
@@ -19,12 +33,27 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
   const [selectedTimeline, setSelectedTimeline] = useState('All')
   const isEn = i18n.language === 'en'
 
-  const books = Array.from(new Set(evidences.map(e => e.bibleBook))).sort()
+  // Extract unique individual books from the bibleBooks arrays
+  const bookCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const e of evidences) {
+      for (const book of e.bibleBooks) {
+        counts.set(book, (counts.get(book) || 0) + 1)
+      }
+    }
+    return counts
+  }, [evidences])
+
+  // Filter books by what actually exists in data, keep defined order
+  const otBooks = OLD_TESTAMENT.filter(b => bookCounts.has(b))
+  const ntBooks = NEW_TESTAMENT.filter(b => bookCounts.has(b))
+  const specialBooks = SPECIAL.filter(b => bookCounts.has(b))
+
   const timelines = Array.from(new Set(evidences.map(e => e.timeline)))
 
   const filtered = evidences.filter(e => {
     const catMatch = activeCategory === 'All' || e.category === activeCategory
-    const bookMatch = selectedBook === 'All' || e.bibleBook === selectedBook
+    const bookMatch = selectedBook === 'All' || e.bibleBooks.includes(selectedBook)
     const timelineMatch = selectedTimeline === 'All' || e.timeline === selectedTimeline
     return catMatch && bookMatch && timelineMatch
   })
@@ -65,7 +94,7 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
           <div className="gold-line mt-8" />
         </div>
 
-        {/* ── Filter panel (non-sticky, full-width card) ─────────── */}
+        {/* ── Filter panel ─────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,8 +133,8 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
 
           {/* Row 2: Book & Timeline dropdowns */}
           <div className="pt-4 border-t border-canvas-border flex flex-wrap gap-4 items-end">
-            {/* Bible Book */}
-            <div className="flex flex-col gap-1.5 min-w-[200px]">
+            {/* Bible Book — grouped by Testament */}
+            <div className="flex flex-col gap-1.5 min-w-[220px]">
               <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
                 <BookOpen className="w-3 h-3" />
                 {isEn ? 'Bible Book' : '圣经书卷'}
@@ -116,7 +145,21 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
                 className="px-3 py-2 rounded-lg border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors cursor-pointer"
               >
                 <option value="All">{isEn ? 'All Books' : '全部书卷'}</option>
-                {books.map(b => <option key={b} value={b}>{b}</option>)}
+                <optgroup label={isEn ? 'Old Testament' : '旧约'}>
+                  {otBooks.map(b => (
+                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                  ))}
+                </optgroup>
+                <optgroup label={isEn ? 'New Testament' : '新约'}>
+                  {ntBooks.map(b => (
+                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                  ))}
+                </optgroup>
+                <optgroup label={isEn ? 'General' : '综合'}>
+                  {specialBooks.map(b => (
+                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                  ))}
+                </optgroup>
               </select>
             </div>
 

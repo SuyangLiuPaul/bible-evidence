@@ -92,10 +92,18 @@ export default function DetailModal({ evidence, onClose }: DetailModalProps) {
             style={{ background: `radial-gradient(ellipse 80% 70% at 20% 110%, rgba(0,0,0,0.30), transparent)` }}
           />
 
-          {/* Icon */}
-          <span className="absolute inset-0 flex items-center justify-center text-8xl select-none opacity-45">
-            {evidence.icon}
-          </span>
+          {/* Evidence image or icon fallback */}
+          {evidence.images.length > 0 ? (
+            <img
+              src={evidence.images[0]}
+              alt={t(evidence.titleKey)}
+              className="absolute inset-0 w-full h-full object-cover opacity-55"
+            />
+          ) : (
+            <span className="absolute inset-0 flex items-center justify-center text-8xl select-none opacity-45">
+              {evidence.icon}
+            </span>
+          )}
 
           {/* Close button */}
           <button
