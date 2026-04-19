@@ -46,6 +46,20 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
   const [selectedTimeline, setSelectedTimeline] = useState('All')
   const isEn = i18n.language === 'en'
   const bookLabel = (b: string) => isEn ? b : (BOOK_ZH[b] || b)
+  const translateTimeline = (tl: string) => {
+    if (isEn) return tl
+    return tl
+      .replace(/(\d+)(?:st|nd|rd|th)/g, '$1')
+      .replace(/Century/g, '世纪')
+      .replace(/Millennium/g, '千年期')
+      .replace(/BCE/g, '公元前')
+      .replace(/CE/g, '公元')
+      .replace(/\s*–\s*/g, '–')
+      .replace(/Late Bronze Age/g, '青铜时代晚期')
+      .replace(/Middle Bronze Age/g, '青铜时代中期')
+      .replace(/Medieval/g, '中世纪')
+      .replace(/~\s*/g, '约')
+  }
 
   // Extract unique individual books from the bibleBooks arrays
   const bookCounts = useMemo(() => {
@@ -189,7 +203,7 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
                 className="px-3 py-2 rounded-lg border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors cursor-pointer"
               >
                 <option value="All">{isEn ? 'All Periods' : '全部年代'}</option>
-                {timelines.map(tl => <option key={tl} value={tl}>{tl}</option>)}
+                {timelines.map(tl => <option key={tl} value={tl}>{translateTimeline(tl)}</option>)}
               </select>
             </div>
 

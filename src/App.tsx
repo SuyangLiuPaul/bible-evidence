@@ -3,10 +3,32 @@ import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
-import EvidenceGrid from './components/EvidenceGrid'
 import { evidences, type Evidence } from './data/evidences'
 
+const EvidenceGrid = lazy(() => import('./components/EvidenceGrid'))
 const DetailModal = lazy(() => import('./components/DetailModal'))
+
+function GridSkeleton() {
+  return (
+    <section id="evidence" className="py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="animate-pulse space-y-8">
+          <div className="h-6 bg-canvas-elevated rounded w-48 mx-auto" />
+          <div className="flex gap-3 justify-center">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="h-9 w-24 bg-canvas-elevated rounded-lg" />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="h-56 bg-canvas-elevated rounded-xl" />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function App() {
   const { i18n } = useTranslation()
@@ -25,10 +47,12 @@ export default function App() {
 
       <main>
         <HeroSection evidenceCount={evidences.length} sourceCount={sourceCount} />
-        <EvidenceGrid
-          evidences={evidences}
-          onSelectEvidence={setSelectedEvidence}
-        />
+        <Suspense fallback={<GridSkeleton />}>
+          <EvidenceGrid
+            evidences={evidences}
+            onSelectEvidence={setSelectedEvidence}
+          />
+        </Suspense>
 
         {/* Methodology section */}
         <section id="methodology" className="py-20 px-6">

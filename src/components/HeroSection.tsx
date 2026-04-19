@@ -122,7 +122,7 @@ export default function HeroSection({ evidenceCount, sourceCount }: HeroSectionP
                 className="group relative flex flex-col items-center gap-3 p-5 rounded-2xl border border-canvas-border bg-canvas-surface hover:border-sapphire/30 hover:bg-sapphire-subtle transition-all duration-300 cursor-default shadow-sm"
               >
                 <div className="w-10 h-10 rounded-xl border border-sapphire/25 bg-sapphire/8 flex items-center justify-center group-hover:border-sapphire/50 group-hover:bg-sapphire/15 transition-all duration-200">
-                  <Icon className="w-4.5 h-4.5 text-sapphire group-hover:text-sapphire-light transition-colors" />
+                  <Icon className="w-[1.125rem] h-[1.125rem] text-sapphire group-hover:text-sapphire-light transition-colors" />
                 </div>
                 <div className="text-center">
                   <p className="text-sapphire text-[11px] font-semibold tracking-wider mb-1">
