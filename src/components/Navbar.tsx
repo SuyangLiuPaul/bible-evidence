@@ -69,6 +69,7 @@ export default function Navbar({ onToggleLanguage }: NavbarProps) {
         {/* Language Toggle */}
         <button
           onClick={onToggleLanguage}
+          aria-label={isEn ? 'Switch to Chinese' : '切换到英文'}
           className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-canvas-border bg-canvas-surface hover:border-sapphire/40 hover:bg-sapphire/8 hover:text-sapphire transition-all duration-200 group shadow-sm flex-shrink-0"
         >
           <Globe className="w-3.5 h-3.5 text-parchment-muted group-hover:text-sapphire transition-colors" />

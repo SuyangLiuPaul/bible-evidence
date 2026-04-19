@@ -59,7 +59,7 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
       initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.94 }}
-      transition={{ duration: 0.45, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.45, delay: Math.min(index, 12) * 0.05, ease: [0.22, 1, 0.36, 1] }}
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -116,7 +116,7 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
         </div>
 
         {/* Bottom fade */}
-        <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-canvas-surface to-transparent" />
       </div>
 
       {/* Content body */}

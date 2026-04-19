@@ -1,4 +1,4 @@
-import { useState, useMemo, lazy, Suspense } from 'react'
+import { useState, useMemo, lazy, Suspense, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
@@ -42,8 +42,16 @@ export default function App() {
   const isEn = i18n.language === 'en'
   const sourceCount = useMemo(() => evidences.reduce((sum, e) => sum + e.academicSources.length, 0), [])
 
+  // Sync HTML lang attribute with i18n
+  useEffect(() => {
+    document.documentElement.lang = i18n.language === 'zh' ? 'zh' : 'en'
+  }, [i18n.language])
+
   return (
     <div className="min-h-screen bg-canvas noise-overlay">
+      <a href="#evidence" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sapphire focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold">
+        Skip to evidence
+      </a>
       <Navbar onToggleLanguage={toggleLanguage} />
 
       <main>

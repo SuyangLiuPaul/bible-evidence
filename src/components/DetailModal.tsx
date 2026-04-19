@@ -119,7 +119,7 @@ export default function DetailModal({ evidence, onClose }: DetailModalProps) {
           </button>
 
           {/* Bottom overlay fade */}
-          <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-canvas-elevated to-transparent" />
+          <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-canvas-surface to-transparent" />
 
           {/* Category tag — bottom left */}
           <div className={`relative mb-5 ml-6 flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-[11px] font-bold uppercase tracking-widest backdrop-blur-sm ${catColors.bg} ${catColors.text} ${catColors.border}`}>
