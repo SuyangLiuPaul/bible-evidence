@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { MapPin, Calendar, BookOpen, ArrowUpRight } from 'lucide-react'
+import { BookOpen, ArrowUpRight } from 'lucide-react'
 import { type Evidence, type Category } from '../data/evidences'
 import ConfidenceBadge from './ConfidenceBadge'
 
@@ -67,12 +67,12 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
       aria-label={t(evidence.titleKey)}
       className="group relative flex flex-col rounded-2xl border border-canvas-border bg-canvas-surface cursor-pointer overflow-hidden transition-all duration-300 hover:border-sapphire/30 hover:shadow-[0_0_0_1px_rgba(10,54,157,0.15),0_24px_48px_rgba(10,54,157,0.10),0_4px_20px_rgba(232,163,23,0.10)] hover:-translate-y-1.5 hover:scale-[1.01]"
     >
-      {/* Vivid gradient hero area */}
+      {/* Image hero area */}
       <div
-        className="relative h-36 sm:h-44 flex items-end justify-start overflow-hidden"
+        className="relative h-28 sm:h-32 flex items-end justify-start overflow-hidden"
         style={{ background: `linear-gradient(145deg, ${grad.from} 0%, ${grad.to} 100%)` }}
       >
-        {/* Subtle grid texture */}
+        {/* Grid texture */}
         <div
           className="absolute inset-0 opacity-[0.10] group-hover:opacity-[0.18] transition-opacity duration-300"
           style={{
@@ -87,7 +87,7 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
           style={{ background: `radial-gradient(ellipse 80% 70% at 20% 110%, rgba(0,0,0,0.35), transparent)` }}
         />
 
-        {/* Evidence image or icon fallback */}
+        {/* Image or icon */}
         {showImage ? (
           <img
             src={evidence.images[0]}
@@ -97,63 +97,47 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
             onError={() => setImgFailed(true)}
           />
         ) : (
-          <span className="absolute inset-0 flex items-center justify-center text-6xl select-none opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-300 drop-shadow-lg">
+          <span className="absolute inset-0 flex items-center justify-center text-5xl select-none opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-300 drop-shadow-lg">
             {evidence.icon}
           </span>
         )}
 
-        {/* Category tag — top left */}
+        {/* Category tag */}
         <div
-          className="absolute top-3.5 left-3.5 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm border"
+          className="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm border"
           style={{ background: grad.tag, color: grad.tagText, borderColor: grad.tagBorder }}
         >
           {t(`filter.${evidence.category}`)}
         </div>
 
-        {/* Arrow chip — top right */}
-        <div className="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-white/20 border border-white/40 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200">
-          <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+        {/* Arrow chip */}
+        <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-white/20 border border-white/40 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200">
+          <ArrowUpRight className="w-3 h-3 text-white" />
         </div>
 
-        {/* Bottom fade into white card body */}
-        <div className="absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-white to-transparent" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-white to-transparent" />
       </div>
 
       {/* Content body */}
-      <div className="flex flex-col flex-1 px-5 pt-3 pb-5 gap-3">
-        {/* Confidence badge */}
-        <ConfidenceBadge level={evidence.confidenceLevel} />
-
+      <div className="flex flex-col flex-1 px-4 pt-2.5 pb-4 gap-2">
         {/* Title */}
-        <h3 className="font-display text-[1.05rem] font-semibold text-parchment leading-snug group-hover:text-sapphire transition-colors duration-200 line-clamp-2">
+        <h3 className="font-display text-[0.95rem] font-semibold text-parchment leading-snug group-hover:text-sapphire transition-colors duration-200 line-clamp-2">
           {t(evidence.titleKey)}
         </h3>
 
         {/* Summary */}
-        <p className="text-parchment-muted text-sm leading-relaxed line-clamp-3 flex-1">
+        <p className="text-parchment-muted text-xs leading-relaxed line-clamp-2 flex-1">
           {t(evidence.summaryKey)}
         </p>
 
-        {/* Metadata */}
-        <div className="flex flex-col gap-1.5 pt-3 border-t border-canvas-border">
-          <div className="flex items-center gap-2">
-            <Calendar className="w-3 h-3 text-parchment-muted/50 flex-shrink-0" />
-            <span className="text-parchment-muted text-xs truncate">{evidence.discoveryDate}</span>
+        {/* Footer: scripture + confidence */}
+        <div className="flex items-center justify-between pt-2.5 border-t border-canvas-border">
+          <div className="flex items-center gap-1.5 min-w-0">
+            <BookOpen className="w-3 h-3 text-gold/70 flex-shrink-0" />
+            <span className="text-gold text-[11px] font-semibold truncate">{evidence.scriptureReference}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="w-3 h-3 text-parchment-muted/50 flex-shrink-0" />
-            <span className="text-parchment-muted text-xs truncate">{evidence.location}</span>
-          </div>
-          <div className="flex items-center justify-between mt-0.5">
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-3 h-3 text-gold/70 flex-shrink-0" />
-              <span className="text-gold text-xs font-semibold">{evidence.scriptureReference}</span>
-            </div>
-            <span className="text-sapphire text-[10px] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center gap-0.5">
-              {t('card.view')}
-              <ArrowUpRight className="w-2.5 h-2.5" />
-            </span>
-          </div>
+          <ConfidenceBadge level={evidence.confidenceLevel} />
         </div>
       </div>
     </motion.article>

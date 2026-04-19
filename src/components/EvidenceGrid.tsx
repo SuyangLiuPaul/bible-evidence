@@ -2,10 +2,11 @@ import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen, Clock, X } from 'lucide-react'
-import { type Evidence, type Category } from '../data/evidences'
+import { type Evidence, type Category, type ConfidenceLevel } from '../data/evidences'
 import EvidenceCard from './EvidenceCard'
 
 const categories: Array<Category | 'All'> = ['All', 'Archaeology', 'Manuscripts', 'History', 'Science']
+const confidenceLevels: Array<ConfidenceLevel | 'All'> = ['All', 'Definitive', 'Strong', 'Circumstantial']
 
 // Standard Bible books grouped by Testament
 const OLD_TESTAMENT = [
@@ -42,6 +43,7 @@ interface EvidenceGridProps {
 export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGridProps) {
   const { t, i18n } = useTranslation()
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All')
+  const [selectedConfidence, setSelectedConfidence] = useState<ConfidenceLevel | 'All'>('All')
   const [selectedBook, setSelectedBook] = useState('All')
   const [selectedTimeline, setSelectedTimeline] = useState('All')
   const isEn = i18n.language === 'en'
@@ -81,12 +83,13 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
 
   const filtered = evidences.filter(e => {
     const catMatch = activeCategory === 'All' || e.category === activeCategory
+    const confMatch = selectedConfidence === 'All' || e.confidenceLevel === selectedConfidence
     const bookMatch = selectedBook === 'All' || e.bibleBooks.includes(selectedBook)
     const timelineMatch = selectedTimeline === 'All' || e.timeline === selectedTimeline
-    return catMatch && bookMatch && timelineMatch
+    return catMatch && confMatch && bookMatch && timelineMatch
   })
 
-  const hasSecondaryFilter = selectedBook !== 'All' || selectedTimeline !== 'All'
+  const hasFilters = selectedBook !== 'All' || selectedTimeline !== 'All' || selectedConfidence !== 'All'
 
   return (
     <section id="evidence" className="py-24 px-6">
@@ -131,9 +134,9 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
           className="mb-10 rounded-2xl border border-canvas-border bg-canvas-surface shadow-sm p-5"
         >
           {/* Row 1: Category pills */}
-          <div className="mb-4">
-            <p className="text-parchment-muted text-[10px] font-bold uppercase tracking-widest mb-2.5">
-              {isEn ? 'Filter by Category' : '按类别筛选'}
+          <div className="mb-3">
+            <p className="text-parchment-muted text-[10px] font-bold uppercase tracking-widest mb-2">
+              {isEn ? 'Category' : '类别'}
             </p>
             <div className="flex flex-wrap gap-2">
               {categories.map(cat => {
@@ -143,14 +146,14 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-200 ${
+                    className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold border transition-all duration-200 ${
                       isActive
                         ? 'border-sapphire bg-sapphire text-white shadow-sm'
                         : 'border-canvas-border text-parchment-muted bg-canvas-elevated hover:border-sapphire/40 hover:text-sapphire'
                     }`}
                   >
                     {cat === 'All' ? t('filter.all') : t(`filter.${cat}`)}
-                    <span className={`ml-2 text-[10px] font-bold tabular-nums ${isActive ? 'text-white/80' : 'text-parchment-muted'}`}>
+                    <span className={`ml-1.5 text-[10px] font-bold tabular-nums ${isActive ? 'text-white/80' : 'text-parchment-muted'}`}>
                       {count}
                     </span>
                   </button>
@@ -159,9 +162,38 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
             </div>
           </div>
 
-          {/* Row 2: Book & Timeline dropdowns */}
-          <div className="pt-4 border-t border-canvas-border flex flex-wrap gap-4 items-end">
-            {/* Bible Book — grouped by Testament */}
+          {/* Row 2: Confidence pills */}
+          <div className="mb-3">
+            <p className="text-parchment-muted text-[10px] font-bold uppercase tracking-widest mb-2">
+              {isEn ? 'Confidence' : '置信度'}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {confidenceLevels.map(level => {
+                const isActive = selectedConfidence === level
+                const count = level === 'All' ? evidences.length : evidences.filter(e => e.confidenceLevel === level).length
+                return (
+                  <button
+                    key={level}
+                    onClick={() => setSelectedConfidence(level)}
+                    className={`px-3.5 py-1.5 rounded-xl text-sm font-semibold border transition-all duration-200 ${
+                      isActive
+                        ? 'border-sapphire bg-sapphire text-white shadow-sm'
+                        : 'border-canvas-border text-parchment-muted bg-canvas-elevated hover:border-sapphire/40 hover:text-sapphire'
+                    }`}
+                  >
+                    {level === 'All' ? (isEn ? 'All' : '全部') : t(`confidence.${level}`)}
+                    <span className={`ml-1.5 text-[10px] font-bold tabular-nums ${isActive ? 'text-white/80' : 'text-parchment-muted'}`}>
+                      {count}
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Row 3: Book & Timeline dropdowns */}
+          <div className="pt-3 border-t border-canvas-border flex flex-wrap gap-4 items-end">
+            {/* Bible Book */}
             <div className="flex flex-col gap-1.5 min-w-[220px]">
               <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
                 <BookOpen className="w-3 h-3" />
@@ -191,7 +223,7 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
               </select>
             </div>
 
-            {/* Timeline / Era */}
+            {/* Timeline */}
             <div className="flex flex-col gap-1.5 min-w-[200px]">
               <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
                 <Clock className="w-3 h-3" />
@@ -208,9 +240,9 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
             </div>
 
             {/* Clear filters */}
-            {hasSecondaryFilter && (
+            {hasFilters && (
               <button
-                onClick={() => { setSelectedBook('All'); setSelectedTimeline('All') }}
+                onClick={() => { setSelectedBook('All'); setSelectedTimeline('All'); setSelectedConfidence('All') }}
                 className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-gold/40 text-gold text-sm font-semibold bg-gold/8 hover:bg-gold/15 transition-colors"
               >
                 <X className="w-3.5 h-3.5" />
@@ -229,7 +261,7 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
         {/* ── Card grid ───────────────────────────────────────────── */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 items-start"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-start"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((evidence, i) => (

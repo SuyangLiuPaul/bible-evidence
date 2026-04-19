@@ -2097,31 +2097,28 @@ export const categoryColors: Record<Category, { bg: string; text: string; border
 }
 
 export const confidenceConfig: Record<ConfidenceLevel, {
-  bg: string; text: string; border: string; barColor: string; tier: string; tierZh: string
+  bg: string; text: string; border: string; barColor: string; dot: string
 }> = {
   Definitive: {
     bg: 'bg-[rgba(232,163,23,0.12)]',
     text: 'text-[#B87C10]',
     border: 'border-[rgba(232,163,23,0.4)]',
     barColor: 'bg-gold',
-    tier: 'A-Tier',
-    tierZh: '甲级',
+    dot: 'bg-gold',
   },
   Strong: {
     bg: 'bg-[rgba(42,157,107,0.10)]',
     text: 'text-[#1e7250]',
     border: 'border-[rgba(42,157,107,0.35)]',
     barColor: 'bg-emerald',
-    tier: 'B-Tier',
-    tierZh: '乙级',
+    dot: 'bg-emerald',
   },
   Circumstantial: {
     bg: 'bg-[rgba(90,122,184,0.10)]',
     text: 'text-[#3d5a8a]',
     border: 'border-[rgba(90,122,184,0.35)]',
     barColor: 'bg-slate-evidence',
-    tier: 'C-Tier',
-    tierZh: '丙级',
+    dot: 'bg-slate-evidence',
   },
 }
 
