@@ -1,11 +1,12 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy, Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import EvidenceGrid from './components/EvidenceGrid'
-import DetailModal from './components/DetailModal'
 import { evidences, type Evidence } from './data/evidences'
+
+const DetailModal = lazy(() => import('./components/DetailModal'))
 
 export default function App() {
   const { i18n } = useTranslation()
@@ -109,10 +110,12 @@ export default function App() {
 
       <AnimatePresence>
         {selectedEvidence && (
-          <DetailModal
-            evidence={selectedEvidence}
-            onClose={() => setSelectedEvidence(null)}
-          />
+          <Suspense fallback={null}>
+            <DetailModal
+              evidence={selectedEvidence}
+              onClose={() => setSelectedEvidence(null)}
+            />
+          </Suspense>
         )}
       </AnimatePresence>
     </div>
