@@ -55,7 +55,7 @@ export default function Navbar({ onToggleLanguage }: NavbarProps) {
             {isEn ? 'Evidence' : '实证'}
           </a>
           <a
-            href="#about"
+            href="#methodology"
             className="text-parchment-muted text-sm font-medium hover:text-parchment transition-colors duration-200"
           >
             {isEn ? 'Methodology' : '研究方法'}

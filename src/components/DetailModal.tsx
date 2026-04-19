@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { X, MapPin, Calendar, BookOpen, ScrollText, Quote, ExternalLink } from 'lucide-react'
@@ -31,6 +31,7 @@ function SectionHeader({ icon, label }: { icon: React.ReactNode; label: string }
 
 export default function DetailModal({ evidence, onClose }: DetailModalProps) {
   const { t } = useTranslation()
+  const [imgFailed, setImgFailed] = useState(false)
   const catColors = categoryColors[evidence.category]
   const grad = categoryGradients[evidence.category]
 
@@ -61,7 +62,7 @@ export default function DetailModal({ evidence, onClose }: DetailModalProps) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
         onClick={onClose}
-        className="fixed inset-0 z-50 bg-black/88 backdrop-blur-md"
+        className="fixed inset-0 z-[60] bg-black/88 backdrop-blur-md"
       />
 
       {/* Modal panel */}
@@ -70,7 +71,9 @@ export default function DetailModal({ evidence, onClose }: DetailModalProps) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 12 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed inset-x-4 top-[4vh] bottom-[4vh] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-3xl z-50 flex flex-col rounded-2xl border border-canvas-border bg-canvas-elevated shadow-[0_40px_120px_rgba(10,54,157,0.12),0_0_0_1px_rgba(10,54,157,0.08)] overflow-hidden"
+        className="fixed inset-x-4 top-[4vh] bottom-[4vh] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-3xl z-[60] flex flex-col rounded-2xl border border-canvas-border bg-canvas-elevated shadow-[0_40px_120px_rgba(10,54,157,0.12),0_0_0_1px_rgba(10,54,157,0.08)] overflow-hidden"
+        role="dialog"
+        aria-modal="true"
       >
         {/* ── Hero band ─────────────────────────────────────────── */}
         <div
@@ -93,11 +96,12 @@ export default function DetailModal({ evidence, onClose }: DetailModalProps) {
           />
 
           {/* Evidence image or icon fallback */}
-          {evidence.images.length > 0 ? (
+          {evidence.images.length > 0 && !imgFailed ? (
             <img
               src={evidence.images[0]}
               alt={t(evidence.titleKey)}
               className="absolute inset-0 w-full h-full object-cover opacity-55"
+              onError={() => setImgFailed(true)}
             />
           ) : (
             <span className="absolute inset-0 flex items-center justify-center text-8xl select-none opacity-45">

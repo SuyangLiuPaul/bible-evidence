@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { MapPin, Calendar, BookOpen, ArrowUpRight } from 'lucide-react'
@@ -47,9 +48,10 @@ const categoryGradients: Record<Category, { from: string; to: string; grid: stri
 }
 
 export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardProps) {
-  const { t, i18n } = useTranslation()
-  const isEn = i18n.language === 'en'
+  const { t } = useTranslation()
   const grad = categoryGradients[evidence.category]
+  const [imgFailed, setImgFailed] = useState(false)
+  const showImage = evidence.images.length > 0 && !imgFailed
 
   return (
     <motion.article
@@ -59,6 +61,10 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
       exit={{ opacity: 0, scale: 0.94 }}
       transition={{ duration: 0.45, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
       onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick() } }}
+      aria-label={t(evidence.titleKey)}
       className="group relative flex flex-col rounded-2xl border border-canvas-border bg-canvas-surface cursor-pointer overflow-hidden transition-all duration-300 hover:border-sapphire/30 hover:shadow-[0_0_0_1px_rgba(10,54,157,0.15),0_24px_48px_rgba(10,54,157,0.10),0_4px_20px_rgba(232,163,23,0.10)] hover:-translate-y-1.5 hover:scale-[1.01]"
     >
       {/* Vivid gradient hero area */}
@@ -82,12 +88,13 @@ export default function EvidenceCard({ evidence, index, onClick }: EvidenceCardP
         />
 
         {/* Evidence image or icon fallback */}
-        {evidence.images.length > 0 ? (
+        {showImage ? (
           <img
             src={evidence.images[0]}
             alt={t(evidence.titleKey)}
             className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
             loading="lazy"
+            onError={() => setImgFailed(true)}
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center text-6xl select-none opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-300 drop-shadow-lg">

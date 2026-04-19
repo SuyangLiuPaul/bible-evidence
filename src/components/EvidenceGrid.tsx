@@ -12,7 +12,7 @@ const OLD_TESTAMENT = [
   'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
   'Joshua', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings',
   '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah',
-  'Psalms', 'Ecclesiastes', 'Isaiah', 'Jeremiah', 'Daniel',
+  'Job', 'Psalms', 'Ecclesiastes', 'Isaiah', 'Jeremiah', 'Daniel',
   'Amos', 'Micah',
 ]
 const NEW_TESTAMENT = [
