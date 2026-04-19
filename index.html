@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>圣经与科学实证档案 | Biblical Evidence Archive</title>
     <meta name="description" content="A rigorous academic examination of archaeological, manuscript, and historical evidence that intersects with biblical accounts." />
+
+    <!-- PWA meta tags -->
+    <meta name="theme-color" content="#0A369D" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bible Evidence" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
-      /* Prevent white flash before React hydrates — match site light theme */
+      /* Splash screen — matches app theme, React replaces on mount */
       body {
         margin: 0;
         background: #FDFBF7;
         color: #2C2820;
       }
-      /* Loading screen inside #root — React replaces on mount */
       #app-loader {
         display: flex;
         flex-direction: column;
@@ -24,29 +32,67 @@
         min-height: 100vh;
         font-family: 'Playfair Display', Georgia, serif;
       }
+      #app-loader .logo-icon {
+        width: 80px; height: 80px;
+        margin-bottom: 20px;
+        animation: _fadeIn 0.4s ease-out;
+      }
       #app-loader .spinner {
-        width: 44px; height: 44px;
-        border: 3px solid rgba(232,163,23,0.2);
-        border-top-color: #E8A317;
+        width: 32px; height: 32px;
+        border: 3px solid rgba(10,54,157,0.15);
+        border-top-color: #0A369D;
         border-radius: 50%;
         animation: _spin 0.8s linear infinite;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
       }
-      #app-loader p {
+      #app-loader .title {
+        color: #0A369D;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+      }
+      #app-loader .subtitle {
         color: #8A7E6B;
-        font-size: 13px;
+        font-size: 11px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         margin: 0;
       }
       @keyframes _spin { to { transform: rotate(360deg); } }
+      @keyframes _fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
     </style>
   </head>
   <body>
     <div id="root">
       <div id="app-loader">
+        <svg class="logo-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0A369D"/>
+              <stop offset="100%" stop-color="#1A50C8"/>
+            </linearGradient>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#E8A317"/>
+              <stop offset="50%" stop-color="#F5C842"/>
+              <stop offset="100%" stop-color="#E8A317"/>
+            </linearGradient>
+          </defs>
+          <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+          <rect x="120" y="130" width="272" height="280" rx="16" fill="#FDFBF7" opacity="0.95"/>
+          <rect x="136" y="130" width="8" height="280" rx="4" fill="url(#gold)"/>
+          <rect x="228" y="170" width="56" height="12" rx="6" fill="url(#gold)"/>
+          <rect x="250" y="148" width="12" height="56" rx="6" fill="url(#gold)"/>
+          <rect x="168" y="230" width="216" height="8" rx="4" fill="#0A369D" opacity="0.25"/>
+          <rect x="168" y="254" width="180" height="8" rx="4" fill="#0A369D" opacity="0.18"/>
+          <rect x="168" y="278" width="200" height="8" rx="4" fill="#0A369D" opacity="0.18"/>
+          <rect x="168" y="302" width="160" height="8" rx="4" fill="#0A369D" opacity="0.18"/>
+          <rect x="168" y="326" width="190" height="8" rx="4" fill="#0A369D" opacity="0.18"/>
+          <circle cx="256" cy="376" r="20" fill="url(#gold)"/>
+        </svg>
         <div class="spinner"></div>
-        <p>Loading Archive…</p>
+        <p class="title">Bible Evidence</p>
+        <p class="subtitle">Loading Archive…</p>
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
