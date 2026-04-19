@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
   }
 
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply bg-canvas text-parchment font-sans antialiased;
     min-height: 100vh;

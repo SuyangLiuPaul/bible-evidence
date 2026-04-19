@@ -16,8 +16,6 @@ export interface Evidence {
   images: string[]
   academicSources: string[]
   confidenceLevel: ConfidenceLevel
-  gradientFrom: string
-  gradientTo: string
   icon: string
 }
 
@@ -38,8 +36,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#1a1000',
-    gradientTo: '#2c1f00',
     academicSources: [
       'Tov, Emanuel. Scribal Practices and Approaches Reflected in the Texts Found in the Judean Desert. Brill, 2004.',
       'Ulrich, Eugene. The Dead Sea Scrolls and the Origins of the Bible. Eerdmans, 1999.',
@@ -62,8 +58,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tel_Dan_Stele.jpg/400px-Tel_Dan_Stele.jpg'],
     confidenceLevel: 'Strong',
     icon: '🪨',
-    gradientFrom: '#001a0a',
-    gradientTo: '#00291a',
     academicSources: [
       'Biran, Avraham, and Joseph Naveh. "An Aramaic Stele Fragment from Tel Dan." Israel Exploration Journal 43 (1993): 81–98.',
       'Biran, Avraham, and Joseph Naveh. "The Tel Dan Inscription: A New Fragment." Israel Exploration Journal 45 (1995): 1–18.',
@@ -85,8 +79,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pontius_Pilate_inscription.jpg/400px-Pontius_Pilate_inscription.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
-    gradientFrom: '#0a0014',
-    gradientTo: '#180024',
     academicSources: [
       "Frova, Antonio. \"L'iscrizione di Ponzio Pilato a Cesarea.\" Rendiconti dell'Istituto Lombardo 95 (1961): 419–434.",
       "Vardaman, Jerry. \"A New Inscription Which Mentions Pilate as 'Prefect'.\" Journal of Biblical Literature 81 (1962): 70–71.",
@@ -108,8 +100,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hezekiahs_tunnel.jpg/400px-Hezekiahs_tunnel.jpg'],
     confidenceLevel: 'Definitive',
     icon: '⛏️',
-    gradientFrom: '#001018',
-    gradientTo: '#001c28',
     academicSources: [
       'Gill, Dan. "How They Met: Geology and Hydrology of the Siloam Tunnel." Biblical Archaeologist 57 (1994): 20–26.',
       'Frumkin, Amos, et al. "Dating the Siloam Tunnel, Jerusalem." Nature 425 (2003): 169–171.',
@@ -131,8 +121,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ketef_Hinnom.jpg/400px-Ketef_Hinnom.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📿',
-    gradientFrom: '#140a00',
-    gradientTo: '#231200',
     academicSources: [
       'Barkay, Gabriel. "The Priestly Benediction on Silver Plaques from Ketef Hinnom in Jerusalem." Tel Aviv 19 (1992): 139–192.',
       'Barkay, Gabriel, et al. "The Amulets from Ketef Hinnom: A New Edition and Evaluation." BASOR 334 (2004): 41–71.',
@@ -154,8 +142,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cyrus_cylinder.jpg/400px-Cyrus_cylinder.jpg'],
     confidenceLevel: 'Strong',
     icon: '🏺',
-    gradientFrom: '#0d0800',
-    gradientTo: '#1a1200',
     academicSources: [
       'Kuhrt, Amélie. "The Cyrus Cylinder and Achaemenid Imperial Policy." JSOT 25 (1983): 83–97.',
       "Finkel, Irving, ed. The Cyrus Cylinder. I.B. Tauris, 2013.",
@@ -177,8 +163,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sphinx_Gate%2C_Hattusa_01.jpg/400px-Sphinx_Gate%2C_Hattusa_01.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🗿',
-    gradientFrom: '#100800',
-    gradientTo: '#1e1000',
     academicSources: [
       'Bryce, Trevor. The Kingdom of the Hittites. Oxford University Press, 2005.',
       'Gurney, O. R. The Hittites. Penguin Books, 1990.',
@@ -200,8 +184,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PoolOfSiloam.jpg/400px-PoolOfSiloam.jpg'],
     confidenceLevel: 'Definitive',
     icon: '💧',
-    gradientFrom: '#000d18',
-    gradientTo: '#001525',
     academicSources: [
       'Reich, Ronny, and Eli Shukron. "The Siloam Pool." Biblical Archaeology Review 31.3 (2005): 16–23.',
       'Shanks, Hershel. "The Siloam Pool: Where Jesus Cured the Blind Man." BAR 31.5 (2005): 16–23.',
@@ -224,8 +206,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mesha_Stele.jpg/400px-Mesha_Stele.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🪨',
-    gradientFrom: '#0a1200',
-    gradientTo: '#152000',
     academicSources: [
       'Dearman, J. Andrew, ed. Studies in the Mesha Inscription and Moab. Scholars Press, 1989.',
       'Lemaire, André. "House of David Restored in Moabite Inscription." BAR 20.3 (1994): 30–37.',
@@ -247,8 +227,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sennacherib_Prism.jpg/400px-Sennacherib_Prism.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📐',
-    gradientFrom: '#0f0a00',
-    gradientTo: '#201500',
     academicSources: [
       'Luckenbill, Daniel D. The Annals of Sennacherib. University of Chicago Press, 1924.',
       'Cogan, Mordechai. "Sennacherib\'s Siege of Jerusalem." COS 2 (2000): 302–303.',
@@ -270,8 +248,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Karnak_Tempel_06.jpg/400px-Karnak_Tempel_06.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
-    gradientFrom: '#180800',
-    gradientTo: '#2c1200',
     academicSources: [
       'Kitchen, K. A. The Third Intermediate Period in Egypt. Aris & Phillips, 1986.',
       'Shea, William H. "The Campaigns of Shishak." AUSS 29 (1991): 155–172.',
@@ -293,8 +269,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Black_obelisk_of_shalmaneser_III.jpg/400px-Black_obelisk_of_shalmaneser_III.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🗿',
-    gradientFrom: '#080010',
-    gradientTo: '#100020',
     academicSources: [
       'Layard, Austen Henry. Discoveries in the Ruins of Nineveh and Babylon. John Murray, 1853.',
       'Millard, Alan R. "The Black Obelisk of Shalmaneser III." COS 2 (2000): 269–270.',
@@ -316,8 +290,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caiaphas_ossuary.jpg/400px-Caiaphas_ossuary.jpg'],
     confidenceLevel: 'Strong',
     icon: '⚱️',
-    gradientFrom: '#140000',
-    gradientTo: '#220800',
     academicSources: [
       'Reich, Ronny. "Caiaphas Name Inscribed on Bone Boxes." BAR 18.5 (1992): 38–44.',
       'Evans, Craig A. Jesus and the Ossuaries. Baylor University Press, 2003.',
@@ -339,8 +311,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Crucifixion_nail_through_heel_bone.jpg/400px-Crucifixion_nail_through_heel_bone.jpg'],
     confidenceLevel: 'Definitive',
     icon: '✝️',
-    gradientFrom: '#180000',
-    gradientTo: '#2a0000',
     academicSources: [
       'Haas, Nicu. "Anthropological Observations on the Skeletal Remains from Giv\'at ha-Mivtar." IEJ 20 (1970): 38–59.',
       'Zias, Joseph, and Eliezer Sekeles. "The Crucified Man from Giv\'at ha-Mivtar." IEJ 35 (1985): 22–27.',
@@ -362,8 +332,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Temple_warning_inscription.jpg/400px-Temple_warning_inscription.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
-    gradientFrom: '#0a0800',
-    gradientTo: '#181400',
     academicSources: [
       'Clermont-Ganneau, Charles. "Une stèle du Temple de Jérusalem." Revue archéologique 23 (1872): 214–234.',
       'Bickerman, Elias J. "The Warning Inscriptions of Herod\'s Temple." JQR 37 (1947): 387–405.',
@@ -385,8 +353,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gezer_calendar.jpg/400px-Gezer_calendar.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#0d1000',
-    gradientTo: '#1a1c00',
     academicSources: [
       'Talmon, Shemaryahu. "The Gezer Calendar and the Seasonal Cycle." JAOS 83 (1963): 177–187.',
       'Albright, William F. "The Gezer Calendar." BASOR 92 (1943): 16–26.',
@@ -408,8 +374,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Lachish_letters.jpg/400px-Lachish_letters.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#100800',
-    gradientTo: '#1e1200',
     academicSources: [
       'Torczyner, Harry. The Lachish Letters. Oxford University Press, 1938.',
       'Pardee, Dennis. "Letters from Lachish." COS 3 (2002): 78–81.',
@@ -431,8 +395,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Balaam_inscription.jpg/400px-Balaam_inscription.jpg'],
     confidenceLevel: 'Strong',
     icon: '📝',
-    gradientFrom: '#001400',
-    gradientTo: '#002200',
     academicSources: [
       'Hoftijzer, Jacob, and G. van der Kooij. Aramaic Texts from Deir Alla. Brill, 1976.',
       'Moore, Michael S. The Balaam Traditions. Scholars Press, 1990.',
@@ -454,8 +416,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Capernaum_synagogue.jpg/400px-Capernaum_synagogue.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🕍',
-    gradientFrom: '#001010',
-    gradientTo: '#001c1c',
     academicSources: [
       'Loffreda, Stanislao. Recovering Capharnaum. Franciscan Printing Press, 1985.',
       'Corbo, Virgilio. Cafarnao I: Gli edifici della città. Franciscan Printing Press, 1975.',
@@ -477,8 +437,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/House_of_Saint_Peter_Capernaum.jpg/400px-House_of_Saint_Peter_Capernaum.jpg'],
     confidenceLevel: 'Strong',
     icon: '🏠',
-    gradientFrom: '#0a0808',
-    gradientTo: '#181212',
     academicSources: [
       'Corbo, Virgilio C. The House of Saint Peter at Capernaum. Franciscan Printing Press, 1972.',
       'Strange, James F. "The House of Peter: The Home of Jesus?" BAR 29.5 (2003).',
@@ -500,8 +458,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Nazareth_inscription.jpg/400px-Nazareth_inscription.jpg'],
     confidenceLevel: 'Strong',
     icon: '🪨',
-    gradientFrom: '#0c0c00',
-    gradientTo: '#1a1a00',
     academicSources: [
       'Cumont, Franz. "Un rescrit impérial sur la violation de sépulture." Revue historique 163 (1930): 241–266.',
       'Clarysse, Willy, and Mark Depauw. "The Nazareth Inscription Reconsidered." Analecta Papyrologica (2020).',
@@ -523,8 +479,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Jericho_Tell_es-Sultan.jpg/400px-Jericho_Tell_es-Sultan.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '🏰',
-    gradientFrom: '#0f0800',
-    gradientTo: '#201500',
     academicSources: [
       'Wood, Bryant G. "Did the Israelites Conquer Jericho?" BAR 16.2 (1990): 44–58.',
       'Kenyon, Kathleen M. Digging Up Jericho. Ernest Benn, 1957.',
@@ -546,8 +500,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Dead_Sea_by_David_Shankbone.jpg/400px-Dead_Sea_by_David_Shankbone.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '🔥',
-    gradientFrom: '#1a0800',
-    gradientTo: '#2c1000',
     academicSources: [
       'Collins, Steven, et al. "A Tall el-Hammam Cosmic Airburst Event." Scientific Reports 11 (2021).',
       'Collins, Steven. Discovering the City of Sodom. Howard Books, 2013.',
@@ -569,8 +521,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bulla_from_the_City_of_David.jpg/400px-Bulla_from_the_City_of_David.jpg'],
     confidenceLevel: 'Strong',
     icon: '🔏',
-    gradientFrom: '#100800',
-    gradientTo: '#1e1200',
     academicSources: [
       'Avigad, Nahman. "Baruch the Scribe and Jerahmeel the King\'s Son." IEJ 28 (1978): 52–56.',
       'Shanks, Hershel. "Jeremiah\'s Scribe and Confidant Speaks from a Hoard of Clay Seals." BAR 13.5 (1987).',
@@ -591,8 +541,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bulla_from_the_City_of_David.jpg/400px-Bulla_from_the_City_of_David.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#0a0c14',
-    gradientTo: '#141a24',
     academicSources: [
       'Vainstub, Daniel. "A Fiscal Bulla from the Reign of Hezekiah." IEJ 62 (2012): 160–168.',
       'Israel Antiquities Authority. "First Seal Impression Bearing the Name Bethlehem Found." Press Release, 2012.',
@@ -613,8 +561,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lachish_relief_from_Sennacherib%27s_palace_at_Nineveh%2C_built_c._700-692_BC.jpg/400px-Lachish_relief_from_Sennacherib%27s_palace_at_Nineveh%2C_built_c._700-692_BC.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏺',
-    gradientFrom: '#100a00',
-    gradientTo: '#201400',
     academicSources: [
       'Ussishkin, David. The Conquest of Lachish by Sennacherib. Tel Aviv University Press, 1982.',
       'Barnett, Richard D., et al. Sculptures from the South-West Palace of Sennacherib at Nineveh. British Museum, 1998.',
@@ -635,8 +581,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ivory_inlay_Samaria.jpg/400px-Ivory_inlay_Samaria.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🐘',
-    gradientFrom: '#0a1008',
-    gradientTo: '#161e10',
     academicSources: [
       'Crowfoot, J. W., and Grace M. Crowfoot. Early Ivories from Samaria. Palestine Exploration Fund, 1938.',
       'Winter, Irene. "Is There a South Syrian Style?" Iraq 43 (1981): 101–130.',
@@ -657,8 +601,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PoolOfBethesda.jpg/400px-PoolOfBethesda.jpg'],
     confidenceLevel: 'Definitive',
     icon: '💧',
-    gradientFrom: '#000c18',
-    gradientTo: '#001425',
     academicSources: [
       'Jeremias, Joachim. Die Wiederentdeckung von Bethesda. Vandenhoeck & Ruprecht, 1966.',
       'Duprez, Antoine. Jésus et les dieux guérisseurs. Gabalda, 1970.',
@@ -679,8 +621,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Magdala_stone.jpg/400px-Magdala_stone.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🕍',
-    gradientFrom: '#080c10',
-    gradientTo: '#10161c',
     academicSources: [
       'Avshalom-Gorni, Dina, and Arfan Najar. "Migdal." Excavations and Surveys in Israel 125 (2013).',
       'Zapata-Meza, Marcela. "The Magdala Stone." BAR 43.2 (2017).',
@@ -701,8 +641,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Merenptah_Stele.jpg/400px-Merenptah_Stele.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
-    gradientFrom: '#140800',
-    gradientTo: '#241200',
     academicSources: [
       'Hasel, Michael G. "Israel in the Merneptah Stele." BASOR 296 (1994): 45–61.',
       'Kitchen, K. A. "The Victories of Merenptah." Ancient Near Eastern Texts. Princeton University Press, 1969.',
@@ -724,8 +662,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Siloam_inscription.jpg/400px-Siloam_inscription.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📝',
-    gradientFrom: '#001418',
-    gradientTo: '#002028',
     academicSources: [
       'Rogerson, John, and Philip Davies. "Was the Siloam Tunnel Built by Hezekiah?" BA 59.3 (1996).',
       'Hendel, Ronald S. "The Siloam Tunnel Inscription." COS 2 (2000): 145–146.',
@@ -746,8 +682,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hazor_Archaeological_Site.jpg/400px-Hazor_Archaeological_Site.jpg'],
     confidenceLevel: 'Strong',
     icon: '🔥',
-    gradientFrom: '#1a0600',
-    gradientTo: '#2c0e00',
     academicSources: [
       'Yadin, Yigael. Hazor: The Schweich Lectures. Oxford University Press, 1972.',
       'Ben-Tor, Amnon. "Who Destroyed Canaanite Hazor?" BAR 39.4 (2013).',
@@ -769,8 +703,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/City_of_David.jpg/400px-City_of_David.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏙️',
-    gradientFrom: '#0c0c00',
-    gradientTo: '#181800',
     academicSources: [
       'Warren, Charles. Underground Jerusalem. Richard Bentley & Son, 1876.',
       'Mazar, Eilat. "Did I Find King David\'s Palace?" BAR 32.1 (2006).',
@@ -792,8 +724,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tiglath-Pileser_III.jpg/400px-Tiglath-Pileser_III.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#08080e',
-    gradientTo: '#101018',
     academicSources: [
       'Tadmor, Hayim. The Inscriptions of Tiglath-Pileser III. Israel Academy of Sciences, 1994.',
       'Cogan, Mordechai. "Tiglath-Pileser III." COS 2 (2000): 284–292.',
@@ -816,8 +746,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#1a1000',
-    gradientTo: '#2c1c00',
     academicSources: [
       'Roberts, Colin Henderson. An Unpublished Fragment of the Fourth Gospel in the John Rylands Library. Manchester University Press, 1935.',
       'Comfort, Philip W. Encountering the Manuscripts. Broadman & Holman, 2005.',
@@ -839,8 +767,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Chester_Beatty_Library.jpg/400px-Chester_Beatty_Library.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#160e00',
-    gradientTo: '#251800',
     academicSources: [
       'Kenyon, Frederic G. The Chester Beatty Biblical Papyri. Emery Walker, 1933.',
       'Comfort, Philip W. New Testament Text and Translation Commentary. Tyndale, 2008.',
@@ -861,8 +787,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/Sinaiticus_text.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📗',
-    gradientFrom: '#0e0014',
-    gradientTo: '#180022',
     academicSources: [
       'Tischendorf, Constantin von. Codex Sinaiticus. Giesecke & Devrient, 1862.',
       'Milne, H. J. M., and T. C. Skeat. Scribes and Correctors of the Codex Sinaiticus. British Museum, 1938.',
@@ -884,8 +808,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Codex_Vaticanus_1464_11r.jpg/400px-Codex_Vaticanus_1464_11r.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📗',
-    gradientFrom: '#0e0010',
-    gradientTo: '#180018',
     academicSources: [
       'Canart, Paul. Il Codice Vaticano Greco 1209. Biblioteca Apostolica Vaticana, 1999.',
       'Metzger, Bruce M. The Text of the New Testament. Oxford University Press, 1992.',
@@ -906,8 +828,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nash_Papyrus.jpg/400px-Nash_Papyrus.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#14100a',
-    gradientTo: '#221c10',
     academicSources: [
       'Nash, W. L. "A Hebrew Papyrus." Proceedings of the Society of Biblical Archaeology 22 (1900): 21–34.',
       'Albright, William F. "A Biblical Fragment from the Maccabaean Age." JBL 56 (1937): 145–176.',
@@ -928,8 +848,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aleppo_Codex_Joshua_1_1.jpg/400px-Aleppo_Codex_Joshua_1_1.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📗',
-    gradientFrom: '#120a00',
-    gradientTo: '#201400',
     academicSources: [
       'Goshen-Gottstein, Moshe. The Aleppo Codex. Hebrew University Bible Project, 1976.',
       'Ben-Zvi, Izhak. "The Codex of Ben Asher." Textus 1 (1960): 1–16.',
@@ -950,8 +868,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Leningrad_Codex_Carpet_page_folio_475a.jpg/400px-Leningrad_Codex_Carpet_page_folio_475a.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📗',
-    gradientFrom: '#0a0c14',
-    gradientTo: '#141820',
     academicSources: [
       'Freedman, David Noel, ed. The Leningrad Codex. Eerdmans / Facsimile, 1998.',
       'Tov, Emanuel. Textual Criticism of the Hebrew Bible. Fortress Press, 2012.',
@@ -972,8 +888,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Elephantine_papyri.jpg/400px-Elephantine_papyri.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#181200',
-    gradientTo: '#281e00',
     academicSources: [
       'Cowley, Arthur Ernest. Aramaic Papyri of the Fifth Century B.C. Clarendon Press, 1923.',
       'Porten, Bezalel. Archives from Elephantine. University of California Press, 1968.',
@@ -994,8 +908,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg/250px-Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg'],
     confidenceLevel: 'Strong',
     icon: '🔩',
-    gradientFrom: '#0a0e08',
-    gradientTo: '#141810',
     academicSources: [
       'Milik, J. T. "Le rouleau de cuivre provenant de la grotte 3Q." DJD 3. Oxford University Press, 1962.',
       'Lefkovits, Judah K. The Copper Scroll. Brill, 2000.',
@@ -1016,8 +928,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/1/15/Temple_Scroll.png'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#14100a',
-    gradientTo: '#22180e',
     academicSources: [
       'Yadin, Yigael. The Temple Scroll. Israel Exploration Society, 1983.',
       'Maier, Johann. The Temple Scroll. JSOT Press, 1985.',
@@ -1038,8 +948,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#180e00',
-    gradientTo: '#281800',
     academicSources: [
       'Thiede, Carsten Peter, and Matthew d\'Ancona. Eyewitness to Jesus. Doubleday, 1996.',
       'Head, Peter M. "The Date of the Magdalen Papyrus of Matthew." TynBul 46 (1995): 251–285.',
@@ -1060,8 +968,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Greek_minuscule_manuscript.jpg/400px-Greek_minuscule_manuscript.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📚',
-    gradientFrom: '#0e0c18',
-    gradientTo: '#181628',
     academicSources: [
       'Metzger, Bruce M. The Text of the New Testament. Oxford University Press, 1992.',
       'Aland, Kurt. Kurzgefasste Liste der griechischen Handschriften des Neuen Testaments. De Gruyter, 1994.',
@@ -1083,8 +989,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Papyrus_Bodmer_II.jpg/400px-Papyrus_Bodmer_II.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#160c00',
-    gradientTo: '#241800',
     academicSources: [
       'Martin, Victor. Papyrus Bodmer II: Évangile de Jean. Bibliotheca Bodmeriana, 1956.',
       'Comfort, Philip W. Encountering the Manuscripts. Broadman & Holman, 2005.',
@@ -1105,8 +1009,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Codex_Alexandrinus_fol_41r.jpg/400px-Codex_Alexandrinus_fol_41r.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📗',
-    gradientFrom: '#0a1000',
-    gradientTo: '#121c00',
     academicSources: [
       'Kenyon, Frederic G. The Codex Alexandrinus. British Museum, 1909.',
       'Skeat, T. C. "The Provenance of the Codex Alexandrinus." JTS 6 (1955): 233–235.',
@@ -1127,8 +1029,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Cairo_Genizah_manuscript.jpg/400px-Cairo_Genizah_manuscript.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📚',
-    gradientFrom: '#14100a',
-    gradientTo: '#221c10',
     academicSources: [
       'Schechter, Solomon. Documents of Jewish Sectaries. Cambridge University Press, 1910.',
       'Reif, Stefan C. A Jewish Archive from Old Cairo. Curzon Press, 2000.',
@@ -1149,8 +1049,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg/250px-Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0c1000',
-    gradientTo: '#181c00',
     academicSources: [
       'Benoit, Pierre, et al. Les Grottes de Murabba\'ât. DJD 2. Oxford University Press, 1961.',
       'Yadin, Yigael. Bar-Kokhba. Random House, 1971.',
@@ -1171,8 +1069,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Oxyrhynchus_papyri.jpg/400px-Oxyrhynchus_papyri.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#1a1000',
-    gradientTo: '#281800',
     academicSources: [
       'Grenfell, Bernard P., and Arthur S. Hunt. The Oxyrhynchus Papyri. Vol. 1–. Egypt Exploration Society, 1898–.',
       'Comfort, Philip W. Encountering the Manuscripts. Broadman & Holman, 2005.',
@@ -1193,8 +1089,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Syriac_Bible.jpg/400px-Syriac_Bible.jpg'],
     confidenceLevel: 'Strong',
     icon: '📖',
-    gradientFrom: '#100c00',
-    gradientTo: '#1e1800',
     academicSources: [
       'Brock, Sebastian. The Bible in the Syriac Tradition. St. Ephrem Ecumenical Research Institute, 1988.',
       'Metzger, Bruce M. Early Versions of the New Testament. Oxford University Press, 1977.',
@@ -1215,8 +1109,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/The_War_Scroll_-_Dead_Sea_Scroll.jpg/400px-The_War_Scroll_-_Dead_Sea_Scroll.jpg'],
     confidenceLevel: 'Strong',
     icon: '⚔️',
-    gradientFrom: '#14000a',
-    gradientTo: '#220012',
     academicSources: [
       'Yadin, Yigael. The Scroll of the War of the Sons of Light against the Sons of Darkness. Oxford University Press, 1962.',
       'Duhaime, Jean. "War Scroll." EDSS 2 (2000): 965–977.',
@@ -1237,8 +1129,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Rahlfs_Septuaginta.jpg/400px-Rahlfs_Septuaginta.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0a1000',
-    gradientTo: '#121c00',
     academicSources: [
       'Hengel, Martin. The Septuagint as Christian Scripture. Baker Academic, 2002.',
       'Tov, Emanuel. The Text-Critical Use of the Septuagint in Biblical Research. Eisenbrauns, 1997.',
@@ -1259,8 +1149,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Masada aerial view.jpg/400px-Masada_aerial_view.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0e0a00',
-    gradientTo: '#1c1400',
     academicSources: [
       'Yadin, Yigael. Masada: Herod\'s Fortress and the Zealots\' Last Stand. Weidenfeld & Nicolson, 1966.',
       'Talmon, Shemaryahu. Masada VI: The Yigael Yadin Excavations. Israel Exploration Society, 1999.',
@@ -1283,8 +1171,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#100018',
-    gradientTo: '#1c0028',
     academicSources: [
       'Meier, John P. A Marginal Jew. Vol. 1. Doubleday, 1991.',
       'Feldman, Louis H. Josephus and Modern Scholarship. De Gruyter, 1984.',
@@ -1306,8 +1192,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#120012',
-    gradientTo: '#200020',
     academicSources: [
       'Meier, John P. A Marginal Jew. Vol. 1. Doubleday, 1991.',
       'Chilton, Bruce, and Craig Evans. James the Just and Christian Origins. Brill, 1999.',
@@ -1328,8 +1212,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tacitus.jpg/400px-Tacitus.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0a000e',
-    gradientTo: '#14001c',
     academicSources: [
       'Tacitus. Annales. Trans. Michael Grant. Penguin Classics, 1996.',
       'Van Voorst, Robert E. Jesus Outside the New Testament. Eerdmans, 2000.',
@@ -1351,8 +1233,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pliny_the_Younger.jpg/400px-Pliny_the_Younger.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0c0a0e',
-    gradientTo: '#181518',
     academicSources: [
       'Pliny the Younger. Letters and Panegyricus. Trans. Betty Radice. Loeb Classical Library, 1969.',
       'Wilken, Robert L. The Christians as the Romans Saw Them. Yale University Press, 1984.',
@@ -1373,8 +1253,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Suetonius.jpg/400px-Suetonius.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#0e0c10',
-    gradientTo: '#1a1820',
     academicSources: [
       'Suetonius. Lives of the Twelve Caesars. Trans. J. C. Rolfe. Loeb Classical Library, 1914.',
       'Riesner, Rainer. Paul\'s Early Period. Eerdmans, 1998.',
@@ -1395,8 +1273,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/British_Museum_Ancient_letters.jpg/400px-British_Museum_Ancient_letters.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
-    gradientFrom: '#100a00',
-    gradientTo: '#1e1400',
     academicSources: [
       'Cureton, William. Spicilegium Syriacum. Rivington, 1855.',
       'Van Voorst, Robert E. Jesus Outside the New Testament. Eerdmans, 2000.',
@@ -1417,8 +1293,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#0a0400',
-    gradientTo: '#160c00',
     academicSources: [
       'Wiseman, D. J. Chronicles of Chaldaean Kings. British Museum, 1956.',
       'Grayson, A. K. Assyrian and Babylonian Chronicles. J. J. Augustin, 1975.',
@@ -1439,8 +1313,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nabonidus_Chronicle.jpg/400px-Nabonidus_Chronicle.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#08060e',
-    gradientTo: '#10101c',
     academicSources: [
       'Oppenheim, A. Leo. "Nabonidus Chronicle." ANET. Princeton University Press, 1969.',
       'Grayson, A. K. Assyrian and Babylonian Chronicles. J. J. Augustin, 1975.',
@@ -1461,8 +1333,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amarna_letter.jpg/400px-Amarna_letter.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#160e00',
-    gradientTo: '#241a00',
     academicSources: [
       'Moran, William L. The Amarna Letters. Johns Hopkins University Press, 1992.',
       'Rainey, Anson F. The El-Amarna Correspondence. Brill, 2015.',
@@ -1483,8 +1353,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Mari_tablets.jpg/400px-Mari_tablets.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#140800',
-    gradientTo: '#221200',
     academicSources: [
       'Parrot, André. Mission archéologique de Mari. Geuthner, 1956.',
       'Freedman, David Noel, ed. Anchor Bible Dictionary. Vol. 4. Doubleday, 1992.',
@@ -1505,8 +1373,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuneiform_tablet.jpg/400px-Cuneiform_tablet.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#120a00',
-    gradientTo: '#201400',
     academicSources: [
       'Gordon, Cyrus H. "Biblical Customs and the Nuzu Tablets." BA 3 (1940): 1–12.',
       'Thompson, Thomas L. The Historicity of the Patriarchal Narratives. De Gruyter, 1974.',
@@ -1527,8 +1393,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ugaritic_tablet.jpg/400px-Ugaritic_tablet.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#0a0c00',
-    gradientTo: '#141800',
     academicSources: [
       'Parker, Simon B., ed. Ugaritic Narrative Poetry. Scholars Press, 1997.',
       'Smith, Mark S. The Origins of Biblical Monotheism. Oxford University Press, 2001.',
@@ -1549,8 +1413,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Esarhaddon_prism.jpg/400px-Esarhaddon_prism.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#0e0800',
-    gradientTo: '#1c1200',
     academicSources: [
       'Borger, Rykle. Die Inschriften Asarhaddons. Archiv für Orientforschung Beiheft 9, 1956.',
       'Cogan, Mordechai, and Hayim Tadmor. II Kings. Anchor Bible. Doubleday, 1988.',
@@ -1571,8 +1433,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gilgamesh_Flood_Tablet.jpg/400px-Gilgamesh_Flood_Tablet.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#0a0600',
-    gradientTo: '#160e00',
     academicSources: [
       'George, Andrew R. The Babylonian Gilgamesh Epic. Oxford University Press, 2003.',
       'Millard, Alan. "A New Babylonian Genesis Story." TynBul 18 (1967): 3–18.',
@@ -1593,8 +1453,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nebuchadnezzar_chronicle.jpg/400px-Nebuchadnezzar_chronicle.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#0e0400',
-    gradientTo: '#1a0c00',
     academicSources: [
       'Wiseman, D. J. Chronicles of Chaldaean Kings. British Museum, 1956.',
       'Bright, John. A History of Israel. Westminster John Knox Press, 2000.',
@@ -1615,8 +1473,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Roman_census_relief.jpg/400px-Roman_census_relief.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#0c0a10',
-    gradientTo: '#181518',
     academicSources: [
       'Brunt, P. A. Italian Manpower 225 BC–AD 14. Oxford University Press, 1971.',
       'Millar, Fergus. The Emperor in the Roman World. Duckworth, 1977.',
@@ -1637,8 +1493,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bar_Kokhba_coins.jpg/400px-Bar_Kokhba_coins.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0c0008',
-    gradientTo: '#180012',
     academicSources: [
       'Yadin, Yigael. Bar-Kokhba. Random House, 1971.',
       'Yadin, Yigael. "Expedition D — Cave of Letters." IEJ 12 (1962): 227–257.',
@@ -1659,8 +1513,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ipuwer_Papyrus.jpg/400px-Ipuwer_Papyrus.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
-    gradientFrom: '#160c00',
-    gradientTo: '#261600',
     academicSources: [
       'Gardiner, Alan H. The Admonitions of an Egyptian Sage. J. C. Hinrichs, 1909.',
       'Hoffmeier, James K. Israel in Egypt. Oxford University Press, 1997.',
@@ -1681,8 +1533,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ptolemy_Canon.jpg/400px-Ptolemy_Canon.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#0a0810',
-    gradientTo: '#141218',
     academicSources: [
       'Toomer, G. J. Ptolemy\'s Almagest. Duckworth, 1984.',
       'Thiele, Edwin R. The Mysterious Numbers of the Hebrew Kings. Eerdmans, 1983.',
@@ -1703,8 +1553,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Res_Gestae_Divi_Augusti.jpg/400px-Res_Gestae_Divi_Augusti.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#10080c',
-    gradientTo: '#1c1018',
     academicSources: [
       'Cooley, Alison E. Res Gestae Divi Augusti. Cambridge University Press, 2009.',
       'Riesner, Rainer. Paul\'s Early Period. Eerdmans, 1998.',
@@ -1727,8 +1575,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/The_Blue_Marble_%28remastered%29.jpg/400px-The_Blue_Marble_%28remastered%29.jpg'],
     confidenceLevel: 'Strong',
     icon: '🌍',
-    gradientFrom: '#001018',
-    gradientTo: '#001c28',
     academicSources: [
       'Seely, Paul H. "The Geographical Meaning of \'Earth\' and \'Seas\' in Genesis 1:10." WTJ 59 (1997): 231–255.',
       'Kaiser, Walter C. Hard Sayings of the Bible. IVP, 1996.',
@@ -1749,8 +1595,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Earth_Western_Hemisphere_transparent_background.png/400px-Earth_Western_Hemisphere_transparent_background.png'],
     confidenceLevel: 'Strong',
     icon: '🌌',
-    gradientFrom: '#000818',
-    gradientTo: '#001028',
     academicSources: [
       'Stoner, Peter W. Science Speaks. Moody Press, 1963.',
       'Waltke, Bruce K. An Introduction to Biblical Hebrew Syntax. Eisenbrauns, 1990.',
@@ -1771,8 +1615,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Hubble_Ultra_Deep_Field_2014.jpg/400px-Hubble_Ultra_Deep_Field_2014.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '🔭',
-    gradientFrom: '#000010',
-    gradientTo: '#00001e',
     academicSources: [
       'Hubble, Edwin. "A Relation Between Distance and Radial Velocity Among Extra-Galactic Nebulae." PNAS 15 (1929): 168–173.',
       'Ross, Hugh. The Creator and the Cosmos. NavPress, 2001.',
@@ -1793,8 +1635,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Water_cycle.png/400px-Water_cycle.png'],
     confidenceLevel: 'Strong',
     icon: '💧',
-    gradientFrom: '#000c14',
-    gradientTo: '#001420',
     academicSources: [
       'Perrault, Pierre. De l\'Origine des Fontaines. Paris, 1674.',
       'Strahler, Arthur N. Physical Geography. Wiley, 1975.',
@@ -1815,8 +1655,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ocean_currents_1943.jpg/400px-Ocean_currents_1943.jpg'],
     confidenceLevel: 'Strong',
     icon: '🌊',
-    gradientFrom: '#000e1a',
-    gradientTo: '#001628',
     academicSources: [
       'Maury, Matthew Fontaine. The Physical Geography of the Sea. Harper & Brothers, 1855.',
       'Williams, Frances Leigh. Matthew Fontaine Maury: Scientist of the Sea. Rutgers University Press, 1963.',
@@ -1837,8 +1675,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Black_smoker_hydrothermal_vent.jpg/400px-Black_smoker_hydrothermal_vent.jpg'],
     confidenceLevel: 'Strong',
     icon: '🌊',
-    gradientFrom: '#000814',
-    gradientTo: '#001020',
     academicSources: [
       'Corliss, J. B., et al. "Submarine Thermal Springs on the Galapagos Rift." Science 203 (1979): 1073–1083.',
       'Childress, James J. "Life in Sulfidic Environments." American Zoologist 28 (1988): 79–96.',
@@ -1859,8 +1695,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Milky_Way_Visitor_Center.jpg/400px-Milky_Way_Visitor_Center.jpg'],
     confidenceLevel: 'Definitive',
     icon: '⭐',
-    gradientFrom: '#000008',
-    gradientTo: '#000014',
     academicSources: [
       'van den Bergh, Sidney. "The Sizes of Galaxies and the Number of Stars." JRASC 94 (2000).',
       'Lauer, Tod R., et al. "New Horizons Observations of the Cosmic Optical Background." Astrophysical Journal Letters 906 (2021).',
@@ -1881,8 +1715,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ebers_Medical_Papyrus.jpg/400px-Ebers_Medical_Papyrus.jpg'],
     confidenceLevel: 'Strong',
     icon: '⚕️',
-    gradientFrom: '#000c08',
-    gradientTo: '#001410',
     academicSources: [
       'McMillen, S. I. None of These Diseases. Revell, 1984.',
       'Rubin, Jordan. The Maker\'s Diet. Siloam Press, 2004.',
@@ -1904,8 +1736,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Red_blood_cells.jpg/400px-Red_blood_cells.jpg'],
     confidenceLevel: 'Strong',
     icon: '🩸',
-    gradientFrom: '#140000',
-    gradientTo: '#220000',
     academicSources: [
       'Harvey, William. De Motu Cordis. 1628.',
       'McMillen, S. I. None of These Diseases. Revell, 1984.',
@@ -1926,8 +1756,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Plague_bible.jpg/400px-Plague_bible.jpg'],
     confidenceLevel: 'Strong',
     icon: '🏥',
-    gradientFrom: '#001008',
-    gradientTo: '#001c10',
     academicSources: [
       'Pasteur, Louis. Germ Theory. Académie de Médecine, 1878.',
       'McMillen, S. I. None of These Diseases. Revell, 1984.',
@@ -1949,8 +1777,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Atmospheric_circulation.jpg/400px-Atmospheric_circulation.jpg'],
     confidenceLevel: 'Strong',
     icon: '💨',
-    gradientFrom: '#000c10',
-    gradientTo: '#00141c',
     academicSources: [
       'Maury, Matthew Fontaine. The Physical Geography of the Sea. Harper & Brothers, 1855.',
       'Wallace, John M. Atmospheric Science: An Introductory Survey. Academic Press, 2006.',
@@ -1971,8 +1797,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Pleiades_large.jpg/400px-Pleiades_large.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '✨',
-    gradientFrom: '#04000e',
-    gradientTo: '#0a001c',
     academicSources: [
       'Robichon, C., and A. Pêtre. "On the Pleiades Star Cluster." A&A 315 (1996): 549–557.',
       'Ross, Hugh. The Creator and the Cosmos. NavPress, 2001.',
@@ -1993,8 +1817,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hubble_sequence_photo.png/400px-Hubble_sequence_photo.png'],
     confidenceLevel: 'Circumstantial',
     icon: '♾️',
-    gradientFrom: '#080008',
-    gradientTo: '#100010',
     academicSources: [
       'Clausius, Rudolf. The Mechanical Theory of Heat. John van Voorst, 1867.',
       'Penrose, Roger. The Road to Reality. Vintage Books, 2004.',
@@ -2015,8 +1837,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ancient_food.jpg/400px-Ancient_food.jpg'],
     confidenceLevel: 'Strong',
     icon: '🥩',
-    gradientFrom: '#0c0800',
-    gradientTo: '#181200',
     academicSources: [
       'Harris, Marvin. Cows, Pigs, Wars, and Witches. Vintage Books, 1974.',
       'McMillen, S. I. None of These Diseases. Revell, 1984.',
@@ -2038,8 +1858,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Prism_rainbow.jpg/400px-Prism_rainbow.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '💡',
-    gradientFrom: '#100c00',
-    gradientTo: '#1c1600',
     academicSources: [
       'Rømer, Ole. "Démonstration touchant le mouvement de la lumière." Journal des Sçavans (1676).',
       'Hawking, Stephen. A Brief History of Time. Bantam Books, 1988.',
@@ -2061,8 +1879,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seal_of_King_Hezekiah.jpg/400px-Seal_of_King_Hezekiah.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🔏',
-    gradientFrom: '#0e0a00',
-    gradientTo: '#1c1400',
     academicSources: [
       'Mazar, Eilat. "Is This the Royal Seal of King Hezekiah?" BAR 41.6 (2015).',
       'Israel Antiquities Authority. "Royal Bulla of King Hezekiah." Press Release, 2015.',
@@ -2083,8 +1899,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/James_Ossuary.jpg/400px-James_Ossuary.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '📦',
-    gradientFrom: '#120800',
-    gradientTo: '#201200',
     academicSources: [
       'Lemaire, André. "Burial Box of James the Brother of Jesus." BAR 28.6 (2002): 24–33.',
       'Shanks, Hershel, and Ben Witherington III. The Brother of Jesus. HarperSanFrancisco, 2003.',
@@ -2105,8 +1919,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Erastus_inscription_Corinth.jpg/400px-Erastus_inscription_Corinth.jpg'],
     confidenceLevel: 'Strong',
     icon: '🏛️',
-    gradientFrom: '#0c0e10',
-    gradientTo: '#161820',
     academicSources: [
       'Kent, John Harvey. Corinth, Volume VIII: The Inscriptions. ASCSA, 1966.',
       'Gill, David W. J. "Erastus the Aedile." TynBul 40 (1989): 293–301.',
@@ -2127,8 +1939,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Arch_of_Galerius_and_Rotunda_Thessaloniki.jpg/400px-Arch_of_Galerius_and_Rotunda_Thessaloniki.jpg'],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
-    gradientFrom: '#080c14',
-    gradientTo: '#101620',
     academicSources: [
       'Horsley, G. H. R. "The Politarchs." The Book of Acts in Its Graeco-Roman Setting. Eerdmans, 1994.',
       'Finegan, Jack. The Archaeology of the New Testament. Princeton University Press, 1992.',
@@ -2150,8 +1960,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Dead_Sea_Scrolls_Exhibition_elevator_poster_Calif_Science_Center.jpg/250px-Dead_Sea_Scrolls_Exhibition_elevator_poster_Calif_Science_Center.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#12100a',
-    gradientTo: '#1e1c12',
     academicSources: [
       'Leaney, A. R. C. The Rule of Qumran and Its Meaning. SCM Press, 1966.',
       'Charlesworth, James H. The Dead Sea Scrolls: Rule of the Community. Mohr Siebeck, 1994.',
@@ -2172,8 +1980,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Codex_Bezae_fol_407v.jpg/400px-Codex_Bezae_fol_407v.jpg'],
     confidenceLevel: 'Strong',
     icon: '📗',
-    gradientFrom: '#0a0c08',
-    gradientTo: '#141810',
     academicSources: [
       'Parker, David C. Codex Bezae: An Early Christian Manuscript and Its Text. Cambridge University Press, 1992.',
       'Metzger, Bruce M. The Text of the New Testament. Oxford University Press, 1992.',
@@ -2195,8 +2001,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Ebla_tablets.jpg/400px-Ebla_tablets.jpg'],
     confidenceLevel: 'Strong',
     icon: '📋',
-    gradientFrom: '#160a00',
-    gradientTo: '#241400',
     academicSources: [
       'Matthiae, Paolo. Ebla: An Empire Rediscovered. Doubleday, 1981.',
       'Pettinato, Giovanni. The Archives of Ebla. Doubleday, 1981.',
@@ -2218,8 +2022,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Delphi_temple.jpg/400px-Delphi_temple.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📋',
-    gradientFrom: '#0c0010',
-    gradientTo: '#16001c',
     academicSources: [
       'Murphy-O\'Connor, Jerome. "Paul and Gallio." JBL 112 (1993): 315–317.',
       'Riesner, Rainer. Paul\'s Early Period. Eerdmans, 1998.',
@@ -2240,8 +2042,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
     confidenceLevel: 'Definitive',
     icon: '📜',
-    gradientFrom: '#0e0610',
-    gradientTo: '#1a0e1c',
     academicSources: [
       'Josephus, Flavius. Jewish Antiquities. Trans. Louis H. Feldman. Loeb Classical Library, 1965.',
       'Richardson, Peter. Herod: King of the Jews and Friend of the Romans. University of South Carolina Press, 1996.',
@@ -2262,8 +2062,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ancient_papyrus_fragment.jpg/400px-Ancient_papyrus_fragment.jpg'],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
-    gradientFrom: '#0c0800',
-    gradientTo: '#181200',
     academicSources: [
       'Carrier, Richard. "Thallus: An Analysis." The Empty Tomb. Prometheus Books, 2005.',
       'Van Voorst, Robert E. Jesus Outside the New Testament. Eerdmans, 2000.',
@@ -2284,8 +2082,6 @@ export const evidences: Evidence[] = [
     images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hodayot_4Q432_f2.jpg/400px-Hodayot_4Q432_f2.jpg'],
     confidenceLevel: 'Strong',
     icon: '📜',
-    gradientFrom: '#140e00',
-    gradientTo: '#221800',
     academicSources: [
       'Holm-Nielsen, Svend. Hodayot: Psalms from Qumran. Universitetsforlaget, 1960.',
       'Stegemann, Hartmut. The Library of Qumran. Eerdmans, 1998.',

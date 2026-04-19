@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
@@ -16,13 +16,14 @@ export default function App() {
   }
 
   const isEn = i18n.language === 'en'
+  const sourceCount = useMemo(() => evidences.reduce((sum, e) => sum + e.academicSources.length, 0), [])
 
   return (
     <div className="min-h-screen bg-canvas noise-overlay">
       <Navbar onToggleLanguage={toggleLanguage} />
 
       <main>
-        <HeroSection evidenceCount={evidences.length} />
+        <HeroSection evidenceCount={evidences.length} sourceCount={sourceCount} />
         <EvidenceGrid
           evidences={evidences}
           onSelectEvidence={setSelectedEvidence}

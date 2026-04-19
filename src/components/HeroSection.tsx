@@ -12,9 +12,10 @@ const fadeUp = (delay = 0) => ({
 
 interface HeroSectionProps {
   evidenceCount: number
+  sourceCount: number
 }
 
-export default function HeroSection({ evidenceCount }: HeroSectionProps) {
+export default function HeroSection({ evidenceCount, sourceCount }: HeroSectionProps) {
   const { t, i18n } = useTranslation()
   const isEn = i18n.language === 'en'
 
@@ -23,7 +24,7 @@ export default function HeroSection({ evidenceCount }: HeroSectionProps) {
   const stats = [
     { value: evidenceCount, label: t('hero.stats.artifacts') },
     { value: 4, label: t('hero.stats.categories') },
-    { value: 18, label: t('hero.stats.sources') },
+    { value: sourceCount, label: t('hero.stats.sources') },
   ]
 
   return (
