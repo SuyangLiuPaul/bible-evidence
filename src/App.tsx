@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
+import BackToTop from './components/BackToTop'
 import { evidences, type Evidence } from './data/evidences'
 
 const EvidenceGrid = lazy(() => import('./components/EvidenceGrid'))
@@ -131,6 +132,8 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      <BackToTop />
 
       <AnimatePresence>
         {selectedEvidence && (

@@ -30,24 +30,28 @@ export default function Navbar({ onToggleLanguage }: NavbarProps) {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-3">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg border border-sapphire/40 flex items-center justify-center bg-sapphire/8 group-hover:bg-sapphire/15 group-hover:border-sapphire/70 transition-all duration-200">
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+          <div className="w-8 h-8 rounded-lg border border-sapphire/40 flex items-center justify-center bg-sapphire/8 group-hover:bg-sapphire/15 group-hover:border-sapphire/70 transition-all duration-200 flex-shrink-0">
             <ScrollText className="w-4 h-4 text-sapphire" />
           </div>
-          <div className="hidden sm:block">
-            <p className="text-parchment font-display font-semibold text-sm leading-none">
+          <div className="hidden sm:block min-w-0">
+            <p className="text-parchment font-display font-semibold text-sm leading-none truncate">
               {isEn ? 'Biblical Evidence Archive' : '圣经证据档案'}
             </p>
-            <p className="text-parchment-muted text-[11px] leading-none mt-1">
+            <p className="text-parchment-muted text-[11px] leading-none mt-1 truncate">
               {isEn ? '圣经与科学实证档案' : 'Biblical & Scientific Evidence Archive'}
             </p>
           </div>
+          {/* Short title on mobile */}
+          <span className="sm:hidden text-parchment font-display font-semibold text-sm truncate">
+            {isEn ? 'Bible Evidence' : '圣经证据'}
+          </span>
         </a>
 
-        {/* Nav links */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Nav links — visible on all screens */}
+        <div className="flex items-center gap-4 sm:gap-6">
           <a
             href="#evidence"
             className="text-parchment-muted text-sm font-medium hover:text-parchment transition-colors duration-200"
@@ -56,7 +60,7 @@ export default function Navbar({ onToggleLanguage }: NavbarProps) {
           </a>
           <a
             href="#methodology"
-            className="text-parchment-muted text-sm font-medium hover:text-parchment transition-colors duration-200"
+            className="hidden xs:block text-parchment-muted text-sm font-medium hover:text-parchment transition-colors duration-200"
           >
             {isEn ? 'Methodology' : '研究方法'}
           </a>
@@ -65,7 +69,7 @@ export default function Navbar({ onToggleLanguage }: NavbarProps) {
         {/* Language Toggle */}
         <button
           onClick={onToggleLanguage}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-canvas-border bg-canvas-surface hover:border-sapphire/40 hover:bg-sapphire/8 hover:text-sapphire transition-all duration-200 group shadow-sm"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-canvas-border bg-canvas-surface hover:border-sapphire/40 hover:bg-sapphire/8 hover:text-sapphire transition-all duration-200 group shadow-sm flex-shrink-0"
         >
           <Globe className="w-3.5 h-3.5 text-parchment-muted group-hover:text-sapphire transition-colors" />
           <span className="text-parchment-muted group-hover:text-sapphire text-xs font-semibold transition-colors tracking-widest">

@@ -1,12 +1,15 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
-import { BookOpen, Clock, X } from 'lucide-react'
+import { BookOpen, Clock, X, Search, ArrowUpDown } from 'lucide-react'
 import { type Evidence, type Category, type ConfidenceLevel } from '../data/evidences'
 import EvidenceCard from './EvidenceCard'
 
 const categories: Array<Category | 'All'> = ['All', 'Archaeology', 'Manuscripts', 'History', 'Science']
 const confidenceLevels: Array<ConfidenceLevel | 'All'> = ['All', 'Definitive', 'Strong', 'Circumstantial']
+type SortKey = 'confidence' | 'date' | 'name'
+
+const CONFIDENCE_ORDER: Record<ConfidenceLevel, number> = { Definitive: 0, Strong: 1, Circumstantial: 2 }
 
 // Standard Bible books grouped by Testament
 const OLD_TESTAMENT = [
@@ -42,10 +45,12 @@ interface EvidenceGridProps {
 
 export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGridProps) {
   const { t, i18n } = useTranslation()
+  const [searchQuery, setSearchQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All')
   const [selectedConfidence, setSelectedConfidence] = useState<ConfidenceLevel | 'All'>('All')
   const [selectedBook, setSelectedBook] = useState('All')
   const [selectedTimeline, setSelectedTimeline] = useState('All')
+  const [sortBy, setSortBy] = useState<SortKey>('confidence')
   const isEn = i18n.language === 'en'
   const bookLabel = (b: string) => isEn ? b : (BOOK_ZH[b] || b)
   const translateTimeline = (tl: string) => {
@@ -63,6 +68,16 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
       .replace(/~\s*/g, '约')
   }
 
+  const searchLower = searchQuery.toLowerCase()
+
+  const matchSearch = useCallback((e: Evidence) => {
+    if (!searchLower) return true
+    const title = t(e.titleKey).toLowerCase()
+    const summary = t(e.summaryKey).toLowerCase()
+    const id = e.id.replace(/_/g, ' ')
+    return title.includes(searchLower) || summary.includes(searchLower) || id.includes(searchLower)
+  }, [searchLower, t])
+
   // Extract unique individual books from the bibleBooks arrays
   const bookCounts = useMemo(() => {
     const counts = new Map<string, number>()
@@ -74,22 +89,39 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
     return counts
   }, [evidences])
 
-  // Filter books by what actually exists in data, keep defined order
   const otBooks = OLD_TESTAMENT.filter(b => bookCounts.has(b))
   const ntBooks = NEW_TESTAMENT.filter(b => bookCounts.has(b))
   const specialBooks = SPECIAL.filter(b => bookCounts.has(b))
-
   const timelines = Array.from(new Set(evidences.map(e => e.timeline)))
 
-  const filtered = evidences.filter(e => {
-    const catMatch = activeCategory === 'All' || e.category === activeCategory
-    const confMatch = selectedConfidence === 'All' || e.confidenceLevel === selectedConfidence
-    const bookMatch = selectedBook === 'All' || e.bibleBooks.includes(selectedBook)
-    const timelineMatch = selectedTimeline === 'All' || e.timeline === selectedTimeline
-    return catMatch && confMatch && bookMatch && timelineMatch
-  })
+  const filtered = useMemo(() => {
+    const result = evidences.filter(e => {
+      const catMatch = activeCategory === 'All' || e.category === activeCategory
+      const confMatch = selectedConfidence === 'All' || e.confidenceLevel === selectedConfidence
+      const bookMatch = selectedBook === 'All' || e.bibleBooks.includes(selectedBook)
+      const timelineMatch = selectedTimeline === 'All' || e.timeline === selectedTimeline
+      const searchMatch = matchSearch(e)
+      return catMatch && confMatch && bookMatch && timelineMatch && searchMatch
+    })
 
-  const hasFilters = selectedBook !== 'All' || selectedTimeline !== 'All' || selectedConfidence !== 'All'
+    result.sort((a, b) => {
+      if (sortBy === 'confidence') return CONFIDENCE_ORDER[a.confidenceLevel] - CONFIDENCE_ORDER[b.confidenceLevel]
+      if (sortBy === 'name') return t(a.titleKey).localeCompare(t(b.titleKey))
+      // date: sort by discoveryDate string
+      return a.discoveryDate.localeCompare(b.discoveryDate)
+    })
+
+    return result
+  }, [evidences, activeCategory, selectedConfidence, selectedBook, selectedTimeline, sortBy, matchSearch, t])
+
+  const hasFilters = searchQuery || selectedBook !== 'All' || selectedTimeline !== 'All' || selectedConfidence !== 'All'
+
+  const clearAll = () => {
+    setSearchQuery('')
+    setSelectedBook('All')
+    setSelectedTimeline('All')
+    setSelectedConfidence('All')
+  }
 
   return (
     <section id="evidence" className="py-24 px-6">
@@ -133,6 +165,23 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
           transition={{ duration: 0.4 }}
           className="mb-10 rounded-2xl border border-canvas-border bg-canvas-surface shadow-sm p-5"
         >
+          {/* Search bar */}
+          <div className="relative mb-4">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-parchment-muted" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder={isEn ? 'Search evidence...' : '搜索证据...'}
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium placeholder:text-parchment-muted/60 focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors"
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-parchment-muted hover:text-parchment transition-colors">
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+
           {/* Row 1: Category pills */}
           <div className="mb-3">
             <p className="text-parchment-muted text-[10px] font-bold uppercase tracking-widest mb-2">
@@ -191,10 +240,10 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
             </div>
           </div>
 
-          {/* Row 3: Book & Timeline dropdowns */}
+          {/* Row 3: Book, Timeline, Sort */}
           <div className="pt-3 border-t border-canvas-border flex flex-wrap gap-4 items-end">
             {/* Bible Book */}
-            <div className="flex flex-col gap-1.5 min-w-[220px]">
+            <div className="flex flex-col gap-1.5 min-w-[200px] flex-1">
               <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
                 <BookOpen className="w-3 h-3" />
                 {isEn ? 'Bible Book' : '圣经书卷'}
@@ -224,10 +273,10 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
             </div>
 
             {/* Timeline */}
-            <div className="flex flex-col gap-1.5 min-w-[200px]">
+            <div className="flex flex-col gap-1.5 min-w-[180px]">
               <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
                 <Clock className="w-3 h-3" />
-                {isEn ? 'Historical Period' : '历史年代'}
+                {isEn ? 'Period' : '年代'}
               </label>
               <select
                 value={selectedTimeline}
@@ -239,10 +288,27 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
               </select>
             </div>
 
+            {/* Sort */}
+            <div className="flex flex-col gap-1.5">
+              <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
+                <ArrowUpDown className="w-3 h-3" />
+                {isEn ? 'Sort' : '排序'}
+              </label>
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value as SortKey)}
+                className="px-3 py-2 rounded-lg border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors cursor-pointer"
+              >
+                <option value="confidence">{isEn ? 'Confidence' : '置信度'}</option>
+                <option value="name">{isEn ? 'Name A-Z' : '名称'}</option>
+                <option value="date">{isEn ? 'Discovery Date' : '发现日期'}</option>
+              </select>
+            </div>
+
             {/* Clear filters */}
             {hasFilters && (
               <button
-                onClick={() => { setSelectedBook('All'); setSelectedTimeline('All'); setSelectedConfidence('All') }}
+                onClick={clearAll}
                 className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-gold/40 text-gold text-sm font-semibold bg-gold/8 hover:bg-gold/15 transition-colors"
               >
                 <X className="w-3.5 h-3.5" />
