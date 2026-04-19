@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-parchment font-sans antialiased;
+    min-height: 100vh;
+    font-size: 17px;
+  }
+
+  ::selection {
+    background-color: rgba(10, 54, 157, 0.18);
+    color: #0A369D;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(20,18,15,0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(200,191,168,0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E8A317;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200,191,168,0.3) transparent;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  }
+
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232,163,23,0.6), transparent);
+  }
+
+  .card-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(10, 54, 157, 0.18),
+      0 20px 56px rgba(10, 54, 157, 0.10),
+      0 4px 16px rgba(232, 163, 23, 0.12),
+      inset 0 1px 0 rgba(232, 163, 23, 0.06);
+  }
+
+  .prose-archive p {
+    @apply text-parchment-dim leading-relaxed mb-4;
+  }
+
+  .prose-archive p:last-child {
+    @apply mb-0;
+  }
+
+  .duration-400 {
+    transition-duration: 400ms;
+  }
+}
+
+/* Subtle noise texture for depth */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.25;
+}

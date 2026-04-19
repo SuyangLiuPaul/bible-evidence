@@ -1,0 +1,191 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion, AnimatePresence } from 'framer-motion'
+import { BookOpen, Clock, X } from 'lucide-react'
+import { type Evidence, type Category } from '../data/evidences'
+import EvidenceCard from './EvidenceCard'
+
+const categories: Array<Category | 'All'> = ['All', 'Archaeology', 'Manuscripts', 'History', 'Science']
+
+interface EvidenceGridProps {
+  evidences: Evidence[]
+  onSelectEvidence: (e: Evidence) => void
+}
+
+export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGridProps) {
+  const { t, i18n } = useTranslation()
+  const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All')
+  const [selectedBook, setSelectedBook] = useState('All')
+  const [selectedTimeline, setSelectedTimeline] = useState('All')
+  const isEn = i18n.language === 'en'
+
+  const books = Array.from(new Set(evidences.map(e => e.bibleBook))).sort()
+  const timelines = Array.from(new Set(evidences.map(e => e.timeline)))
+
+  const filtered = evidences.filter(e => {
+    const catMatch = activeCategory === 'All' || e.category === activeCategory
+    const bookMatch = selectedBook === 'All' || e.bibleBook === selectedBook
+    const timelineMatch = selectedTimeline === 'All' || e.timeline === selectedTimeline
+    return catMatch && bookMatch && timelineMatch
+  })
+
+  const hasSecondaryFilter = selectedBook !== 'All' || selectedTimeline !== 'All'
+
+  return (
+    <section id="evidence" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-gold text-xs tracking-[0.25em] uppercase font-medium mb-3"
+          >
+            {isEn ? 'Curated Evidence' : '精选实证'}
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-display text-5xl md:text-6xl font-bold text-parchment mb-4"
+          >
+            {t('section.title')}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.18 }}
+            className="text-parchment-dim text-lg max-w-xl mx-auto"
+          >
+            {t('section.subtitle')}
+          </motion.p>
+          <div className="gold-line mt-8" />
+        </div>
+
+        {/* ── Filter panel (non-sticky, full-width card) ─────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="mb-10 rounded-2xl border border-canvas-border bg-canvas-surface shadow-sm p-5"
+        >
+          {/* Row 1: Category pills */}
+          <div className="mb-4">
+            <p className="text-parchment-muted text-[10px] font-bold uppercase tracking-widest mb-2.5">
+              {isEn ? 'Filter by Category' : '按类别筛选'}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {categories.map(cat => {
+                const isActive = activeCategory === cat
+                const count = cat === 'All' ? evidences.length : evidences.filter(e => e.category === cat).length
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-200 ${
+                      isActive
+                        ? 'border-sapphire bg-sapphire text-white shadow-sm'
+                        : 'border-canvas-border text-parchment-muted bg-canvas-elevated hover:border-sapphire/40 hover:text-sapphire'
+                    }`}
+                  >
+                    {cat === 'All' ? t('filter.all') : t(`filter.${cat}`)}
+                    <span className={`ml-2 text-[10px] font-bold tabular-nums ${isActive ? 'text-white/80' : 'text-parchment-muted'}`}>
+                      {count}
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Row 2: Book & Timeline dropdowns */}
+          <div className="pt-4 border-t border-canvas-border flex flex-wrap gap-4 items-end">
+            {/* Bible Book */}
+            <div className="flex flex-col gap-1.5 min-w-[200px]">
+              <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
+                <BookOpen className="w-3 h-3" />
+                {isEn ? 'Bible Book' : '圣经书卷'}
+              </label>
+              <select
+                value={selectedBook}
+                onChange={e => setSelectedBook(e.target.value)}
+                className="px-3 py-2 rounded-lg border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors cursor-pointer"
+              >
+                <option value="All">{isEn ? 'All Books' : '全部书卷'}</option>
+                {books.map(b => <option key={b} value={b}>{b}</option>)}
+              </select>
+            </div>
+
+            {/* Timeline / Era */}
+            <div className="flex flex-col gap-1.5 min-w-[200px]">
+              <label className="flex items-center gap-1.5 text-parchment-muted text-[10px] font-bold uppercase tracking-widest">
+                <Clock className="w-3 h-3" />
+                {isEn ? 'Historical Period' : '历史年代'}
+              </label>
+              <select
+                value={selectedTimeline}
+                onChange={e => setSelectedTimeline(e.target.value)}
+                className="px-3 py-2 rounded-lg border border-canvas-border bg-canvas-elevated text-parchment text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sapphire/30 focus:border-sapphire/50 hover:border-sapphire/30 transition-colors cursor-pointer"
+              >
+                <option value="All">{isEn ? 'All Periods' : '全部年代'}</option>
+                {timelines.map(tl => <option key={tl} value={tl}>{tl}</option>)}
+              </select>
+            </div>
+
+            {/* Clear filters */}
+            {hasSecondaryFilter && (
+              <button
+                onClick={() => { setSelectedBook('All'); setSelectedTimeline('All') }}
+                className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-gold/40 text-gold text-sm font-semibold bg-gold/8 hover:bg-gold/15 transition-colors"
+              >
+                <X className="w-3.5 h-3.5" />
+                {isEn ? 'Clear' : '清除'}
+              </button>
+            )}
+
+            {/* Results count */}
+            <div className="ml-auto self-end text-parchment-muted text-sm">
+              <span className="font-bold text-sapphire">{filtered.length}</span>
+              {' '}{t('grid.results')}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── Card grid ───────────────────────────────────────────── */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 items-start"
+        >
+          <AnimatePresence mode="popLayout">
+            {filtered.map((evidence, i) => (
+              <motion.div
+                key={evidence.id}
+                layout
+              >
+                <EvidenceCard
+                  evidence={evidence}
+                  index={i}
+                  onClick={() => onSelectEvidence(evidence)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {filtered.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-20 text-parchment-muted"
+          >
+            {t('grid.empty')}
+          </motion.div>
+        )}
+      </div>
+    </section>
+  )
+}
