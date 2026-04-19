@@ -21,6 +21,19 @@ const NEW_TESTAMENT = [
 ]
 const SPECIAL = ['Multiple Books', 'Hebrew Bible']
 
+const BOOK_ZH: Record<string, string> = {
+  Genesis: '创世记', Exodus: '出埃及记', Leviticus: '利未记', Numbers: '民数记',
+  Deuteronomy: '申命记', Joshua: '约书亚记', '1 Samuel': '撒母耳记上', '2 Samuel': '撒母耳记下',
+  '1 Kings': '列王纪上', '2 Kings': '列王纪下', '1 Chronicles': '历代志上', '2 Chronicles': '历代志下',
+  Ezra: '以斯拉记', Nehemiah: '尼希米记', Esther: '以斯帖记',
+  Job: '约伯记', Psalms: '诗篇', Proverbs: '箴言', Ecclesiastes: '传道书',
+  Isaiah: '以赛亚书', Jeremiah: '耶利米书', Ezekiel: '以西结书', Daniel: '但以理书',
+  Amos: '阿摩司书', Micah: '弥迦书',
+  Matthew: '马太福音', Mark: '马可福音', Luke: '路加福音', John: '约翰福音',
+  Acts: '使徒行传', Romans: '罗马书', Galatians: '加拉太书', James: '雅各书',
+  'Multiple Books': '多卷书', 'Hebrew Bible': '希伯来圣经',
+}
+
 interface EvidenceGridProps {
   evidences: Evidence[]
   onSelectEvidence: (e: Evidence) => void
@@ -32,6 +45,7 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
   const [selectedBook, setSelectedBook] = useState('All')
   const [selectedTimeline, setSelectedTimeline] = useState('All')
   const isEn = i18n.language === 'en'
+  const bookLabel = (b: string) => isEn ? b : (BOOK_ZH[b] || b)
 
   // Extract unique individual books from the bibleBooks arrays
   const bookCounts = useMemo(() => {
@@ -147,17 +161,17 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
                 <option value="All">{isEn ? 'All Books' : '全部书卷'}</option>
                 <optgroup label={isEn ? 'Old Testament' : '旧约'}>
                   {otBooks.map(b => (
-                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                    <option key={b} value={b}>{bookLabel(b)} ({bookCounts.get(b)})</option>
                   ))}
                 </optgroup>
                 <optgroup label={isEn ? 'New Testament' : '新约'}>
                   {ntBooks.map(b => (
-                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                    <option key={b} value={b}>{bookLabel(b)} ({bookCounts.get(b)})</option>
                   ))}
                 </optgroup>
                 <optgroup label={isEn ? 'General' : '综合'}>
                   {specialBooks.map(b => (
-                    <option key={b} value={b}>{b} ({bookCounts.get(b)})</option>
+                    <option key={b} value={b}>{bookLabel(b)} ({bookCounts.get(b)})</option>
                   ))}
                 </optgroup>
               </select>
