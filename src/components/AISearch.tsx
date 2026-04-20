@@ -29,32 +29,29 @@ interface Message {
 }
 
 function buildEvidenceSummary(): string {
-  return evidences.map((e, i) => {
-    const id = e.id.replace(/_/g, ' ')
-    const cat = e.category
-    const conf = e.confidenceLevel
-    return `${i + 1}. [${cat}/${conf}] "${id}"`
-  }).join('\n')
+  return evidences.map((e) => `${e.id}[${e.category}/${e.confidenceLevel}]`).join(',')
 }
 
 async function askGemini(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
   const lang = isEn ? 'English' : 'Chinese'
-  const systemPrompt = `You are the search assistant for a Biblical Evidence Archive (${evidences.length} entries). Respond ONLY in ${lang}. Be VERY brief (1-3 sentences max).
-
-Database entries (id / category / confidence):
-${evidenceContext}
-
-Rules:
-1. If the user asks about something IN the database, give a 1-sentence summary with its category and confidence level. The user can click the link below for full details — do NOT write long descriptions.
-2. If NOT in the database, say briefly it is not in the archive and give a 1-sentence general note.
-3. ALWAYS end with: [RELATED: id1, id2, id3] using exact IDs from the list (underscores, not spaces). If none match: [RELATED: none]`
 
   const body = {
     contents: [
-      { role: 'user', parts: [{ text: systemPrompt + '\n\nUser question: ' + question }] },
+      { role: 'user', parts: [{ text: question }] },
     ],
+    systemInstruction: {
+      parts: [{ text: `You are the search assistant for a Biblical Evidence Archive. Respond ONLY in ${lang}. Be VERY brief (1-2 sentences only).
+
+Archive entries (id[category/confidence]):
+${evidenceContext}
+
+Rules:
+1. If the user asks about something IN the archive, give a 1-sentence summary. Do NOT write long descriptions — the user will click the link for details.
+2. If NOT in the archive, say so briefly in 1 sentence.
+3. IMPORTANT: You MUST end your response with this exact line: [RELATED: id1, id2, id3] — use the EXACT ids from the list above (keep underscores). If none match: [RELATED: none]` }]
+    },
     generationConfig: {
-      maxOutputTokens: 256,
+      maxOutputTokens: 512,
       temperature: 0.2,
     },
   }
