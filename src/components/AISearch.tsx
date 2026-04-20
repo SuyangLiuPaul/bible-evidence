@@ -12,7 +12,7 @@ const GEMINI_API_KEYS = [
   'AIzaSyBV4x-EGShf2sa5WR7Q0j7K3G0lGUCFT9s',
 ]
 
-const GEMINI_MODEL = 'gemini-2.0-flash'
+const GEMINI_MODEL = 'gemini-3-flash-preview'
 
 let keyIndex = 0
 
