@@ -38,25 +38,24 @@ function buildEvidenceSummary(): string {
 }
 
 async function askGemini(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
-  const systemPrompt = `You are a helpful assistant for the "Biblical Evidence Archive" — an academic database of ${evidences.length} archaeological, manuscript, scientific, and historical evidences that corroborate biblical accounts.
+  const lang = isEn ? 'English' : 'Chinese'
+  const systemPrompt = `You are the search assistant for a Biblical Evidence Archive (${evidences.length} entries). Respond ONLY in ${lang}. Be VERY brief (1-3 sentences max).
 
-The database contains these entries (id, category, confidence level):
+Database entries (id / category / confidence):
 ${evidenceContext}
 
 Rules:
-1. If the user's question relates to an entry IN the database, confirm it exists and briefly describe it (category, confidence level, what it is). Mention 1-3 related entry IDs.
-2. If the question is about biblical evidence NOT in the database, answer helpfully with general knowledge, and clearly state it is not currently in the archive.
-3. Provide thorough, detailed answers (1-2 paragraphs). Be academically neutral. Give rich context and explanation.
-4. If the user asks in Chinese, respond in Chinese. If in English, respond in English.
-5. At the end of your response, on a new line, list any related database entry IDs in this exact format: [RELATED: id1, id2, id3] (use the exact IDs from the list above, replacing spaces with underscores). If none match, write [RELATED: none]`
+1. If the user asks about something IN the database, give a 1-sentence summary with its category and confidence level. The user can click the link below for full details — do NOT write long descriptions.
+2. If NOT in the database, say briefly it is not in the archive and give a 1-sentence general note.
+3. ALWAYS end with: [RELATED: id1, id2, id3] using exact IDs from the list (underscores, not spaces). If none match: [RELATED: none]`
 
   const body = {
     contents: [
       { role: 'user', parts: [{ text: systemPrompt + '\n\nUser question: ' + question }] },
     ],
     generationConfig: {
-      maxOutputTokens: 2048,
-      temperature: 0.3,
+      maxOutputTokens: 256,
+      temperature: 0.2,
     },
   }
 
