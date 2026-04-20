@@ -109,7 +109,7 @@ export default function AISearch() {
   const [error, setError] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
-  const evidenceContext = useRef(buildEvidenceSummary())
+  const evidenceContext = useRef<string | null>(null)
 
   useEffect(() => {
     if (isOpen) setTimeout(() => inputRef.current?.focus(), 100)
@@ -124,6 +124,10 @@ export default function AISearch() {
   const handleSend = async () => {
     const q = query.trim()
     if (!q || loading) return
+
+    if (!evidenceContext.current) {
+      evidenceContext.current = buildEvidenceSummary()
+    }
 
     setMessages(prev => [...prev, { role: 'user', content: q }])
     setQuery('')
