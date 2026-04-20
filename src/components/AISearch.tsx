@@ -28,27 +28,44 @@ interface Message {
   relatedEvidence?: string[]
 }
 
-function buildEvidenceSummary(): string {
-  return evidences.map((e) => `${e.id}[${e.category}/${e.confidenceLevel}]`).join(',')
+function localSearch(question: string): Evidence[] {
+  const q = question.toLowerCase()
+  const keywords = q.split(/\s+/).filter(w => w.length > 2)
+  const scored = evidences.map(e => {
+    const fields = [e.id, e.category, ...e.bibleBooks, e.scriptureReference, e.timeline, e.location].join(' ').toLowerCase()
+    let score = 0
+    for (const kw of keywords) {
+      if (fields.includes(kw)) score++
+    }
+    return { e, score }
+  }).filter(s => s.score > 0).sort((a, b) => b.score - a.score)
+  return scored.slice(0, 8).map(s => s.e)
 }
 
-async function askGemini(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
+async function askGemini(question: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
   const lang = isEn ? 'English' : 'Chinese'
+  const matches = localSearch(question)
+  const hasMatches = matches.length > 0
+
+  const matchedEntries = matches.map(e => `${e.id}[${e.category}/${e.confidenceLevel}]`).join(',')
+
+  const systemText = hasMatches
+    ? `You are the search assistant for a Biblical Evidence Archive. Respond ONLY in ${lang}. Be brief (1-2 sentences).
+
+The user's question matches these archive entries:
+${matchedEntries}
+
+Say a brief 1-sentence summary confirming what's in the archive, then end with: [RELATED: id1, id2, id3] using exact IDs above.`
+    : `You are the search assistant for a Biblical Evidence Archive. Respond ONLY in ${lang}. Be brief (1 sentence).
+
+The user's question does NOT match any archive entries. Say so briefly. End with: [RELATED: none]`
 
   const body = {
     contents: [
       { role: 'user', parts: [{ text: question }] },
     ],
     systemInstruction: {
-      parts: [{ text: `You are the search assistant for a Biblical Evidence Archive. Respond ONLY in ${lang}. Be VERY brief (1-2 sentences only).
-
-Archive entries (id[category/confidence]):
-${evidenceContext}
-
-Rules:
-1. If the user asks about something IN the archive, give a 1-sentence summary. Do NOT write long descriptions — the user will click the link for details.
-2. If NOT in the archive, say so briefly in 1 sentence.
-3. IMPORTANT: You MUST end your response with this exact line: [RELATED: id1, id2, id3] — use the EXACT ids from the list above (keep underscores). If none match: [RELATED: none]` }]
+      parts: [{ text: systemText }]
     },
     generationConfig: {
       maxOutputTokens: 512,
@@ -105,7 +122,6 @@ export default function AISearch() {
   const [error, setError] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
-  const evidenceContext = useRef<string | null>(null)
 
   useEffect(() => {
     if (isOpen) setTimeout(() => inputRef.current?.focus(), 100)
@@ -121,17 +137,13 @@ export default function AISearch() {
     const q = query.trim()
     if (!q || loading) return
 
-    if (!evidenceContext.current) {
-      evidenceContext.current = buildEvidenceSummary()
-    }
-
     setMessages(prev => [...prev, { role: 'user', content: q }])
     setQuery('')
     setLoading(true)
     setError('')
 
     try {
-      const { answer, relatedIds } = await askGemini(q, evidenceContext.current, isEn)
+      const { answer, relatedIds } = await askGemini(q, isEn)
       setMessages(prev => [...prev, { role: 'assistant', content: answer, relatedEvidence: relatedIds }])
     } catch (err: any) {
       setError(err.message || 'Failed to get response')
