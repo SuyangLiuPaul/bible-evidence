@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Apple Glassmorphism Foundation ────────────────────────── */
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -12,9 +14,11 @@
   }
 
   body {
-    @apply bg-canvas text-parchment font-sans antialiased;
+    @apply text-parchment font-sans antialiased;
     min-height: 100vh;
     font-size: 17px;
+    background: linear-gradient(135deg, #e8edf5 0%, #f5f0e8 35%, #f0f5f0 65%, #f5f2ea 100%);
+    background-attachment: fixed;
   }
 
   ::selection {
@@ -22,42 +26,177 @@
     color: #0A369D;
   }
 
+  /* Focus ring for all interactive elements */
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(10, 54, 157, 0.4);
+    border-radius: inherit;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   ::-webkit-scrollbar {
     width: 5px;
   }
   ::-webkit-scrollbar-track {
-    background: rgba(20,18,15,0.3);
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(200,191,168,0.3);
+    background: rgba(200,191,168,0.25);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #E8A317;
+    background: rgba(232,163,23,0.5);
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(200,191,168,0.3) transparent;
+    scrollbar-color: rgba(200,191,168,0.25) transparent;
   }
 }
+
+/* ── Floating background orbs ──────────────────────────────── */
+
+.bg-orbs::before,
+.bg-orbs::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-orbs::before {
+  width: 800px;
+  height: 800px;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(10,54,157,0.07) 0%, transparent 70%);
+  animation: orbFloat1 20s ease-in-out infinite;
+}
+.bg-orbs::after {
+  width: 600px;
+  height: 600px;
+  bottom: 5%;
+  right: -5%;
+  background: radial-gradient(circle, rgba(232,163,23,0.08) 0%, transparent 70%);
+  animation: orbFloat2 25s ease-in-out infinite;
+}
+
+.bg-orb-accent {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  bottom: 10%;
+  left: -8%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(90,60,180,0.05) 0%, transparent 70%);
+  animation: orbFloat3 22s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(30px); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-25px) translateX(-20px); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ── Glass Utility Classes ─────────────────────────────────── */
 
 @layer components {
   .font-display {
     font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
   }
 
+  /* Primary glass surface */
+  .glass {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  /* Subtle glass — for nested elements */
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  /* Heavy glass — for modals/top-layer */
+  .glass-heavy {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(60px) saturate(200%);
+    -webkit-backdrop-filter: blur(60px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  /* Glass hover lift */
+  .glass-hover {
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.70);
+    box-shadow:
+      0 16px 48px rgba(0, 0, 0, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+  }
+
+  /* Card shimmer effect on hover */
+  .card-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  .card-shimmer:hover::after {
+    animation: shimmerSlide 0.6s ease forwards;
+  }
+
   .gold-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(232,163,23,0.6), transparent);
+    background: linear-gradient(90deg, transparent, rgba(232,163,23,0.5), transparent);
   }
 
   .card-glow:hover {
     box-shadow:
-      0 0 0 1px rgba(10, 54, 157, 0.18),
-      0 20px 56px rgba(10, 54, 157, 0.10),
-      0 4px 16px rgba(232, 163, 23, 0.12),
-      inset 0 1px 0 rgba(232, 163, 23, 0.06);
+      0 0 0 1px rgba(10, 54, 157, 0.15),
+      0 20px 56px rgba(10, 54, 157, 0.08),
+      0 4px 16px rgba(232, 163, 23, 0.10);
   }
 
   .prose-archive p {
@@ -73,6 +212,40 @@
   }
 }
 
+/* ── Performance Utilities ─────────────────────────────────── */
+
+@layer utilities {
+  .gpu-accelerated {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  .contain-paint {
+    contain: layout style paint;
+  }
+}
+
+/* ── Mobile Performance: reduce glass cost ─────────────────── */
+
+@media (max-width: 767px) {
+  .glass {
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+  }
+  .glass-heavy {
+    backdrop-filter: blur(30px) saturate(160%);
+    -webkit-backdrop-filter: blur(30px) saturate(160%);
+  }
+  .bg-orbs::before,
+  .bg-orbs::after,
+  .bg-orb-accent {
+    display: none;
+  }
+}
+
+@keyframes shimmerSlide {
+  to { left: 150%; }
+}
+
 /* Subtle noise texture for depth */
 .noise-overlay::before {
   content: '';
@@ -81,5 +254,5 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
-  opacity: 0.25;
+  opacity: 0.12;
 }

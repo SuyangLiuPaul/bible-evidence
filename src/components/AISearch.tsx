@@ -4,7 +4,23 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, X, Send, Loader2, BookOpen, ExternalLink } from 'lucide-react'
 import { evidences, type Evidence } from '../data/evidences'
 
-const GLM_API_KEY = 'dcdb90052f3e4052a76153190e71a2af.eQQewo5LAFCKV4xT'
+const GEMINI_API_KEYS = [
+  'AIzaSyBv-3oTaOVyrZeqqVGnK4OoTHoA3F68Xjc',
+  'AIzaSyDZNNor_v1eK5YArF0qkEJCGsN_TA13JGo',
+  'AIzaSyAMQgiw8z6u8l9fkhkDwDqkOvPDU7KsMtE',
+  'AIzaSyAcgXyWKOY5tmOEkKN8GflcnEbyJG21O2A',
+  'AIzaSyBV4x-EGShf2sa5WR7Q0j7K3G0lGUCFT9s',
+]
+
+const GEMINI_MODEL = 'gemini-2.0-flash'
+
+let keyIndex = 0
+
+function getNextKey(): string {
+  const key = GEMINI_API_KEYS[keyIndex % GEMINI_API_KEYS.length]
+  keyIndex++
+  return key
+}
 
 interface Message {
   role: 'user' | 'assistant'
@@ -21,7 +37,7 @@ function buildEvidenceSummary(): string {
   }).join('\n')
 }
 
-async function askGLM(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
+async function askGemini(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
   const systemPrompt = `You are a helpful assistant for the "Biblical Evidence Archive" — an academic database of ${evidences.length} archaeological, manuscript, scientific, and historical evidences that corroborate biblical accounts.
 
 The database contains these entries (id, category, confidence level):
@@ -34,41 +50,53 @@ Rules:
 4. If the user asks in Chinese, respond in Chinese. If in English, respond in English.
 5. At the end of your response, on a new line, list any related database entry IDs in this exact format: [RELATED: id1, id2, id3] (use the exact IDs from the list above, replacing spaces with underscores). If none match, write [RELATED: none]`
 
-  const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${GLM_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: 'glm-4-flash',
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: question },
-      ],
-      max_tokens: 2048,
+  const body = {
+    contents: [
+      { role: 'user', parts: [{ text: systemPrompt + '\n\nUser question: ' + question }] },
+    ],
+    generationConfig: {
+      maxOutputTokens: 2048,
       temperature: 0.3,
-    }),
-  })
-
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}))
-    throw new Error(err?.error?.message || `API error ${res.status}`)
+    },
   }
 
-  const data = await res.json()
-  const text = data?.choices?.[0]?.message?.content || 'No response generated.'
+  // Try up to all keys on failure
+  let lastError = ''
+  for (let attempt = 0; attempt < GEMINI_API_KEYS.length; attempt++) {
+    const key = getNextKey()
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      },
+    )
 
-  // Extract related IDs
-  const relatedMatch = text.match(/\[RELATED:\s*(.*?)\]/)
-  const relatedIds = relatedMatch
-    ? relatedMatch[1].split(',').map((s: string) => s.trim()).filter((s: string) => s && s !== 'none')
-    : []
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}))
+      lastError = err?.error?.message || `API error ${res.status}`
+      // If rate-limited or quota, try next key
+      if (res.status === 429 || res.status === 403) continue
+      throw new Error(lastError)
+    }
 
-  // Remove the [RELATED: ...] tag from display text
-  const answer = text.replace(/\[RELATED:\s*.*?\]/, '').trim()
+    const data = await res.json()
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.'
 
-  return { answer, relatedIds }
+    // Extract related IDs
+    const relatedMatch = text.match(/\[RELATED:\s*(.*?)\]/)
+    const relatedIds = relatedMatch
+      ? relatedMatch[1].split(',').map((s: string) => s.trim()).filter((s: string) => s && s !== 'none')
+      : []
+
+    // Remove the [RELATED: ...] tag from display text
+    const answer = text.replace(/\[RELATED:\s*.*?\]/, '').trim()
+
+    return { answer, relatedIds }
+  }
+
+  throw new Error(lastError || 'All API keys exhausted. Please try again later.')
 }
 
 export default function AISearch() {
@@ -103,7 +131,7 @@ export default function AISearch() {
     setError('')
 
     try {
-      const { answer, relatedIds } = await askGLM(q, evidenceContext.current, isEn)
+      const { answer, relatedIds } = await askGemini(q, evidenceContext.current, isEn)
       setMessages(prev => [...prev, { role: 'assistant', content: answer, relatedEvidence: relatedIds }])
     } catch (err: any) {
       setError(err.message || 'Failed to get response')

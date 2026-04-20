@@ -4,6 +4,8 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import BackToTop from './components/BackToTop'
+import ScrollProgress from './components/ScrollProgress'
+import AISearch from './components/AISearch'
 import { evidences, type Evidence } from './data/evidences'
 
 const EvidenceGrid = lazy(() => import('./components/EvidenceGrid'))
@@ -14,15 +16,25 @@ function GridSkeleton() {
     <section id="evidence" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="animate-pulse space-y-8">
-          <div className="h-6 bg-canvas-elevated rounded w-48 mx-auto" />
-          <div className="flex gap-3 justify-center">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-9 w-24 bg-canvas-elevated rounded-lg" />
-            ))}
+          <div className="h-6 bg-white/30 backdrop-blur-xl rounded-xl w-48 mx-auto" />
+          <div className="glass rounded-3xl p-5 space-y-4">
+            <div className="h-10 bg-white/30 rounded-xl" />
+            <div className="flex gap-3">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="h-9 w-24 bg-white/25 rounded-xl" />
+              ))}
+            </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {[...Array(8)].map((_, i) => (
-              <div key={i} className="h-56 bg-canvas-elevated rounded-xl" />
+              <div key={i} className="rounded-3xl overflow-hidden bg-white/55 backdrop-blur-2xl border border-white/40">
+                <div className="h-28 sm:h-32 bg-gradient-to-br from-sapphire/10 to-sapphire/5" />
+                <div className="p-4 space-y-3">
+                  <div className="h-4 bg-parchment/10 rounded-lg w-3/4" />
+                  <div className="h-3 bg-parchment/8 rounded-lg w-full" />
+                  <div className="h-3 bg-parchment/8 rounded-lg w-2/3" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -42,16 +54,28 @@ export default function App() {
   const isEn = i18n.language === 'en'
   const sourceCount = useMemo(() => evidences.reduce((sum, e) => sum + e.academicSources.length, 0), [])
 
-  // Sync HTML lang attribute with i18n
   useEffect(() => {
     document.documentElement.lang = i18n.language === 'zh' ? 'zh' : 'en'
   }, [i18n.language])
 
+  // Listen for AI search evidence selection
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const id = (e as CustomEvent).detail
+      const ev = evidences.find(e => e.id === id)
+      if (ev) setSelectedEvidence(ev)
+    }
+    window.addEventListener('select-evidence', handler)
+    return () => window.removeEventListener('select-evidence', handler)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-canvas noise-overlay">
-      <a href="#evidence" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sapphire focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold">
+    <div className="min-h-screen noise-overlay bg-orbs">
+      <div className="bg-orb-accent" />
+      <a href="#evidence" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sapphire focus:text-white focus:rounded-xl focus:text-sm focus:font-semibold">
         Skip to evidence
       </a>
+      <ScrollProgress />
       <Navbar onToggleLanguage={toggleLanguage} />
 
       <main>
@@ -115,8 +139,9 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-canvas-border mt-16 py-14 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      {/* Footer */}
+      <footer className="mt-16 py-14 px-6">
+        <div className="max-w-3xl mx-auto glass rounded-3xl px-8 py-10 text-center">
           <div className="gold-line mb-8" />
           <p className="text-parchment-muted text-sm leading-relaxed max-w-2xl mx-auto font-display italic">
             {isEn
@@ -142,6 +167,7 @@ export default function App() {
       </footer>
 
       <BackToTop />
+      <AISearch />
 
       <AnimatePresence>
         {selectedEvidence && (

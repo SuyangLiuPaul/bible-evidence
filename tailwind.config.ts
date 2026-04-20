@@ -47,6 +47,14 @@ const config: Config = {
         'gold-gradient': 'linear-gradient(135deg, #E8A317 0%, #F5C842 50%, #E8A317 100%)',
         'parchment-gradient': 'linear-gradient(180deg, #FDFBF7 0%, #F5F2EA 100%)',
       },
+      boxShadow: {
+        'glass': '0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6)',
+        'glass-hover': '0 16px 48px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.7)',
+        'glass-heavy': '0 24px 80px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.7)',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
       animation: {
         'fade-up': 'fadeUp 0.6s ease forwards',
         'scale-in': 'scaleIn 0.3s ease forwards',
