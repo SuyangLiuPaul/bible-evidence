@@ -1,0 +1,290 @@
+import { useState, useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Sparkles, X, Send, Loader2, BookOpen, ExternalLink } from 'lucide-react'
+import { evidences, type Evidence } from '../data/evidences'
+
+const GLM_API_KEY = 'dcdb90052f3e4052a76153190e71a2af.eQQewo5LAFCKV4xT'
+
+interface Message {
+  role: 'user' | 'assistant'
+  content: string
+  relatedEvidence?: string[]
+}
+
+function buildEvidenceSummary(): string {
+  return evidences.map((e, i) => {
+    const id = e.id.replace(/_/g, ' ')
+    const cat = e.category
+    const conf = e.confidenceLevel
+    return `${i + 1}. [${cat}/${conf}] "${id}"`
+  }).join('\n')
+}
+
+async function askGLM(question: string, evidenceContext: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
+  const systemPrompt = `You are a helpful assistant for the "Biblical Evidence Archive" — an academic database of ${evidences.length} archaeological, manuscript, scientific, and historical evidences that corroborate biblical accounts.
+
+The database contains these entries (id, category, confidence level):
+${evidenceContext}
+
+Rules:
+1. If the user's question relates to an entry IN the database, confirm it exists and briefly describe it (category, confidence level, what it is). Mention 1-3 related entry IDs.
+2. If the question is about biblical evidence NOT in the database, answer helpfully with general knowledge, and clearly state it is not currently in the archive.
+3. Provide thorough, detailed answers (1-2 paragraphs). Be academically neutral. Give rich context and explanation.
+4. If the user asks in Chinese, respond in Chinese. If in English, respond in English.
+5. At the end of your response, on a new line, list any related database entry IDs in this exact format: [RELATED: id1, id2, id3] (use the exact IDs from the list above, replacing spaces with underscores). If none match, write [RELATED: none]`
+
+  const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${GLM_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: 'glm-4-flash',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: question },
+      ],
+      max_tokens: 2048,
+      temperature: 0.3,
+    }),
+  })
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    throw new Error(err?.error?.message || `API error ${res.status}`)
+  }
+
+  const data = await res.json()
+  const text = data?.choices?.[0]?.message?.content || 'No response generated.'
+
+  // Extract related IDs
+  const relatedMatch = text.match(/\[RELATED:\s*(.*?)\]/)
+  const relatedIds = relatedMatch
+    ? relatedMatch[1].split(',').map((s: string) => s.trim()).filter((s: string) => s && s !== 'none')
+    : []
+
+  // Remove the [RELATED: ...] tag from display text
+  const answer = text.replace(/\[RELATED:\s*.*?\]/, '').trim()
+
+  return { answer, relatedIds }
+}
+
+export default function AISearch() {
+  const { t, i18n } = useTranslation()
+  const isEn = i18n.language === 'en'
+  const [isOpen, setIsOpen] = useState(false)
+  const [query, setQuery] = useState('')
+  const [messages, setMessages] = useState<Message[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const evidenceContext = useRef(buildEvidenceSummary())
+
+  useEffect(() => {
+    if (isOpen) setTimeout(() => inputRef.current?.focus(), 100)
+  }, [isOpen])
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight
+    }
+  }, [messages])
+
+  const handleSend = async () => {
+    const q = query.trim()
+    if (!q || loading) return
+
+    setMessages(prev => [...prev, { role: 'user', content: q }])
+    setQuery('')
+    setLoading(true)
+    setError('')
+
+    try {
+      const { answer, relatedIds } = await askGLM(q, evidenceContext.current, isEn)
+      setMessages(prev => [...prev, { role: 'assistant', content: answer, relatedEvidence: relatedIds }])
+    } catch (err: any) {
+      setError(err.message || 'Failed to get response')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
+  }
+
+  const findEvidence = (id: string): Evidence | undefined =>
+    evidences.find(e => e.id === id)
+
+  return (
+    <>
+      {/* FAB */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            onClick={() => setIsOpen(true)}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 z-40 h-12 px-5 rounded-2xl glass flex items-center gap-2 hover:bg-white/70 transition-all shadow-glass"
+            aria-label={isEn ? 'AI Search' : 'AI 搜索'}
+          >
+            <Sparkles className="w-5 h-5 text-sapphire" />
+            <span className="text-parchment text-sm font-semibold hidden sm:inline">
+              {isEn ? 'Ask AI' : 'AI 问答'}
+            </span>
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      {/* Chat Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-x-4 bottom-4 top-[15vh] md:inset-x-auto md:right-6 md:top-auto md:bottom-6 md:w-[420px] md:h-[520px] z-[55] flex flex-col rounded-3xl glass-heavy overflow-hidden"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/20 flex-shrink-0">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-sapphire" />
+                <span className="text-parchment font-semibold text-sm">
+                  {isEn ? 'Evidence AI' : '实证 AI'}
+                </span>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 rounded-xl bg-white/30 backdrop-blur-md flex items-center justify-center hover:bg-white/50 transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4 text-parchment-muted" />
+              </button>
+            </div>
+
+            {/* Messages */}
+            <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+              {messages.length === 0 && (
+                <div className="text-center py-8">
+                  <div className="w-14 h-14 rounded-2xl glass-subtle flex items-center justify-center mx-auto mb-4">
+                    <Sparkles className="w-7 h-7 text-sapphire/50" />
+                  </div>
+                  <p className="text-parchment-muted text-sm mb-3">
+                    {isEn ? 'Ask about any biblical evidence' : '询问任何圣经证据'}
+                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {[
+                      isEn ? 'Is the Dead Sea Scrolls in the archive?' : '死海古卷在档案中吗？',
+                      isEn ? 'What evidence exists for King David?' : '大卫王有什么证据？',
+                      isEn ? 'Tell me about Noah\'s Ark evidence' : '诺亚方舟的证据',
+                    ].map((suggestion, i) => (
+                      <button
+                        key={i}
+                        onClick={() => { setQuery(suggestion); inputRef.current?.focus() }}
+                        className="px-3 py-1.5 rounded-xl bg-white/25 backdrop-blur-md border border-white/30 text-parchment-muted text-xs hover:bg-white/40 transition-colors"
+                      >
+                        {suggestion}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {messages.map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+                    msg.role === 'user'
+                      ? 'bg-sapphire/90 text-white rounded-br-md'
+                      : 'bg-white/40 backdrop-blur-md border border-white/30 text-parchment-dim rounded-bl-md'
+                  }`}>
+                    <p className="whitespace-pre-wrap">{msg.content}</p>
+
+                    {/* Related evidence links */}
+                    {msg.relatedEvidence && msg.relatedEvidence.length > 0 && (
+                      <div className="mt-3 pt-2 border-t border-white/20 space-y-1.5">
+                        <p className="text-[11px] font-semibold text-parchment-muted uppercase tracking-wider">
+                          {isEn ? 'In this archive:' : '本档案中：'}
+                        </p>
+                        {msg.relatedEvidence.map(id => {
+                          const ev = findEvidence(id)
+                          if (!ev) return null
+                          return (
+                            <a
+                              key={id}
+                              href="#evidence"
+                              onClick={() => {
+                                // Dispatch custom event to trigger evidence selection
+                                window.dispatchEvent(new CustomEvent('select-evidence', { detail: id }))
+                                setIsOpen(false)
+                              }}
+                              className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-sapphire/10 hover:bg-sapphire/20 transition-colors group"
+                            >
+                              <BookOpen className="w-3 h-3 text-sapphire flex-shrink-0" />
+                              <span className="text-xs text-sapphire font-medium truncate group-hover:underline">
+                                {t(ev.titleKey)}
+                              </span>
+                              <ExternalLink className="w-3 h-3 text-sapphire/50 ml-auto flex-shrink-0" />
+                            </a>
+                          )
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+
+              {loading && (
+                <div className="flex justify-start">
+                  <div className="bg-white/40 backdrop-blur-md border border-white/30 px-4 py-3 rounded-2xl rounded-bl-md">
+                    <Loader2 className="w-4 h-4 text-sapphire animate-spin" />
+                  </div>
+                </div>
+              )}
+
+              {error && (
+                <div className="text-center py-2">
+                  <p className="text-red-500/80 text-xs">{error}</p>
+                  <button onClick={handleSend} className="text-sapphire text-xs underline mt-1">
+                    {isEn ? 'Retry' : '重试'}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Input */}
+            <div className="px-4 py-3 border-t border-white/20 flex-shrink-0">
+              <div className="flex items-center gap-2">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder={isEn ? 'Ask about biblical evidence...' : '询问圣经证据...'}
+                  className="flex-1 px-4 py-2.5 rounded-xl bg-white/40 backdrop-blur-xl border border-white/40 text-parchment text-sm placeholder:text-parchment-muted/50 focus:outline-none focus:ring-2 focus:ring-sapphire/20 focus:border-sapphire/30"
+                  disabled={loading}
+                />
+                <button
+                  onClick={handleSend}
+                  disabled={loading || !query.trim()}
+                  className="w-10 h-10 rounded-xl bg-sapphire text-white flex items-center justify-center hover:bg-sapphire-light disabled:opacity-40 transition-colors flex-shrink-0"
+                  aria-label={isEn ? 'Send' : '发送'}
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  )
+}
