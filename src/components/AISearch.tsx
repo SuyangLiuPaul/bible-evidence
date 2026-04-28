@@ -31,23 +31,87 @@ interface Message {
   relatedEvidence?: string[]
 }
 
-function localSearch(question: string): Evidence[] {
-  const q = question.toLowerCase()
+// Load the actual translations so we can search title / summary /
+// description / scripturalCorrelation as well as id / books /
+// reference. Without this the search ignored the entire body of
+// every entry — common queries like "What evidence supports the
+// Exodus" returned 0 hits because the word "Exodus" appears in
+// titles and descriptions but not in the bibleBooks list (which
+// uses "Exodus 1:11" as a scriptureReference, not as a bookname).
+import enLocale from '../locales/en.json'
+import zhLocale from '../locales/zh.json'
+
+type LocaleBundle = Record<string, unknown>
+
+function lookupKey(bundle: LocaleBundle, key: string): string {
+  // i18n keys are dotted paths like "evidences.dead_sea_scrolls.title".
+  let cur: unknown = bundle
+  for (const part of key.split('.')) {
+    if (cur && typeof cur === 'object' && part in (cur as Record<string, unknown>)) {
+      cur = (cur as Record<string, unknown>)[part]
+    } else {
+      return ''
+    }
+  }
+  return typeof cur === 'string' ? cur : ''
+}
+
+function localSearch(question: string, isEn: boolean = true): Evidence[] {
+  const q = question.toLowerCase().trim()
+  if (q.length === 0) return []
+  // Word-level (length >= 3) AND raw substring fallback so single-word
+  // queries like "exodus" or short keywords like "Job" still match.
   const keywords = q.split(/\s+/).filter(w => w.length > 2)
+  if (keywords.length === 0) keywords.push(q)
+
+  // Search both locales so a Chinese user typing "出埃及" matches and
+  // an English user typing "Exodus" matches even if the title in the
+  // active locale is the other script.
+  const localeBundles: LocaleBundle[] = isEn
+    ? [enLocale as LocaleBundle, zhLocale as LocaleBundle]
+    : [zhLocale as LocaleBundle, enLocale as LocaleBundle]
+
   const scored = evidences.map(e => {
-    const fields = [e.id, e.category, ...e.bibleBooks, e.scriptureReference, e.timeline, e.location].join(' ').toLowerCase()
+    const titleStrs = localeBundles.map(b => lookupKey(b, e.titleKey))
+    const summaryStrs = localeBundles.map(b => lookupKey(b, e.summaryKey))
+    const descStrs = localeBundles.map(b => lookupKey(b, e.detailedDescriptionKey))
+    const corrStrs = localeBundles.map(b => lookupKey(b, e.scripturalCorrelationKey))
+    const fields = [
+      e.id,
+      e.category,
+      e.confidenceLevel,
+      ...e.bibleBooks,
+      e.scriptureReference,
+      e.timeline,
+      e.location,
+      ...titleStrs,
+      ...summaryStrs,
+      ...descStrs,
+      ...corrStrs,
+    ].join(' ').toLowerCase()
     let score = 0
     for (const kw of keywords) {
       if (fields.includes(kw)) score++
     }
+    // Title hit is a strong signal — bonus its score so e.g. searching
+    // "Tel Dan" surfaces the Tel Dan Stele entry first even if other
+    // entries mention it in passing.
+    for (const t of titleStrs) {
+      const tl = t.toLowerCase()
+      for (const kw of keywords) {
+        if (tl.includes(kw)) score += 2
+      }
+    }
     return { e, score }
-  }).filter(s => s.score > 0).sort((a, b) => b.score - a.score)
+  })
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
   return scored.slice(0, 8).map(s => s.e)
 }
 
 async function askGemini(question: string, isEn: boolean): Promise<{ answer: string; relatedIds: string[] }> {
   const lang = isEn ? 'English' : 'Chinese'
-  const matches = localSearch(question)
+  const matches = localSearch(question, isEn)
   const hasMatches = matches.length > 0
 
   const matchedEntries = matches.map(e => `${e.id}[${e.category}/${e.confidenceLevel}]`).join(',')
