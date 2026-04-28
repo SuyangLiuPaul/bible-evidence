@@ -4,19 +4,33 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, X, Send, Loader2, BookOpen, ExternalLink } from 'lucide-react'
 import { evidences, type Evidence } from '../data/evidences'
 
-const GEMINI_API_KEYS = [
-  'AIzaSyBv-3oTaOVyrZeqqVGnK4OoTHoA3F68Xjc',
-  'AIzaSyDZNNor_v1eK5YArF0qkEJCGsN_TA13JGo',
-  'AIzaSyAMQgiw8z6u8l9fkhkDwDqkOvPDU7KsMtE',
-  'AIzaSyAcgXyWKOY5tmOEkKN8GflcnEbyJG21O2A',
-  'AIzaSyBV4x-EGShf2sa5WR7Q0j7K3G0lGUCFT9s',
-]
+// SECURITY NOTE — 2026-04-28
+// This component used to hardcode 5 Gemini API keys in source. Those
+// keys were committed to a public repo (this one) and Gemini's
+// automated leak scanner flagged them. ALL FIVE MUST BE REVOKED in
+// Google AI Studio (https://aistudio.google.com/app/apikey) — even
+// though this UI is sunset (the project is now part of YsWords), the
+// keys remain in git history forever and anyone with the commit can
+// burn through quota / rack up charges if billing is ever enabled.
+//
+// This sunset build no longer ships with embedded keys. If anyone
+// resurrects the standalone Vite UI in the future, supply
+// `import.meta.env.VITE_GEMINI_API_KEYS` (comma-separated for
+// round-robin) and rotate any committed key immediately.
+const GEMINI_API_KEYS: string[] = (
+  (import.meta as { env?: { VITE_GEMINI_API_KEYS?: string } }).env
+    ?.VITE_GEMINI_API_KEYS || ''
+)
+  .split(',')
+  .map((s: string) => s.trim())
+  .filter((s: string) => s.length > 0)
 
 const GEMINI_MODEL = 'gemini-3-flash-preview'
 
 let keyIndex = 0
 
-function getNextKey(): string {
+function getNextKey(): string | null {
+  if (GEMINI_API_KEYS.length === 0) return null
   const key = GEMINI_API_KEYS[keyIndex % GEMINI_API_KEYS.length]
   keyIndex++
   return key
@@ -71,6 +85,17 @@ The user's question does NOT match any archive entries. Say so briefly. End with
       maxOutputTokens: 512,
       temperature: 0.2,
     },
+  }
+
+  // No keys configured: this build is sunset; the standalone Vite UI
+  // is no longer the primary surface (visitors should use YsWords).
+  // Fail loudly and clearly instead of hitting Google with `key=null`.
+  if (GEMINI_API_KEYS.length === 0) {
+    throw new Error(
+      'AI search is not configured in this sunset build. The active '
+      + 'YsWords app at https://yswords.netlify.app provides the same '
+      + 'feature with a server-side Gemini proxy.'
+    )
   }
 
   // Try up to all keys on failure
