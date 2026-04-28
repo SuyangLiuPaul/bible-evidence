@@ -5,36 +5,25 @@ import { Sparkles, X, Send, Loader2, BookOpen, ExternalLink } from 'lucide-react
 import { evidences, type Evidence } from '../data/evidences'
 
 // SECURITY NOTE — 2026-04-28
-// This component used to hardcode 5 Gemini API keys in source. Those
-// keys were committed to a public repo (this one) and Gemini's
-// automated leak scanner flagged them. ALL FIVE MUST BE REVOKED in
-// Google AI Studio (https://aistudio.google.com/app/apikey) — even
-// though this UI is sunset (the project is now part of YsWords), the
-// keys remain in git history forever and anyone with the commit can
-// burn through quota / rack up charges if billing is ever enabled.
+// This component used to embed Gemini API keys directly in the JS
+// bundle. Even with a build-time env var the keys still shipped to
+// every visitor's browser, where anyone with devtools could extract
+// them. Round 53 moved the Gemini call server-side: the client posts
+// to `/api/aiSearch` (a Netlify Function — see
+// `netlify/functions/aiSearch.mjs`) which holds the key in Netlify
+// env vars and proxies the call to Google.
 //
-// This sunset build no longer ships with embedded keys. If anyone
-// resurrects the standalone Vite UI in the future, supply
-// `import.meta.env.VITE_GEMINI_API_KEYS` (comma-separated for
-// round-robin) and rotate any committed key immediately.
-const GEMINI_API_KEYS: string[] = (
-  (import.meta as { env?: { VITE_GEMINI_API_KEYS?: string } }).env
-    ?.VITE_GEMINI_API_KEYS || ''
-)
-  .split(',')
-  .map((s: string) => s.trim())
-  .filter((s: string) => s.length > 0)
-
-const GEMINI_MODEL = 'gemini-3-flash-preview'
-
-let keyIndex = 0
-
-function getNextKey(): string | null {
-  if (GEMINI_API_KEYS.length === 0) return null
-  const key = GEMINI_API_KEYS[keyIndex % GEMINI_API_KEYS.length]
-  keyIndex++
-  return key
-}
+// No keys live in this file or the bundle anymore. The 5 historically
+// hardcoded keys (visible in git history before commit 9e188f8) MUST
+// still be REVOKED in Google AI Studio:
+//   https://aistudio.google.com/app/apikey
+//
+// API contract for /api/aiSearch:
+//   POST  body  = { contents, systemInstruction, generationConfig }
+//   200   body  = full Gemini response (same shape the client used to
+//                 receive when calling Gemini directly)
+//   non-200     = { error: { message, status? } }
+const AISEARCH_ENDPOINT = '/api/aiSearch'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -87,54 +76,35 @@ The user's question does NOT match any archive entries. Say so briefly. End with
     },
   }
 
-  // No keys configured: this build is sunset; the standalone Vite UI
-  // is no longer the primary surface (visitors should use YsWords).
-  // Fail loudly and clearly instead of hitting Google with `key=null`.
-  if (GEMINI_API_KEYS.length === 0) {
-    throw new Error(
-      'AI search is not configured in this sunset build. The active '
-      + 'YsWords app at https://yswords.netlify.app provides the same '
-      + 'feature with a server-side Gemini proxy.'
-    )
+  // Server-side proxy. The function rotates through keys in
+  // GEMINI_API_KEYS env var, retries on 429/403, and returns the
+  // raw Gemini response so the parsing below stays the same.
+  const res = await fetch(AISEARCH_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  })
+  if (!res.ok) {
+    let msg = `AI search service error (${res.status})`
+    try {
+      const j = await res.json()
+      msg = j?.error?.message || msg
+    } catch (_) { /* ignore parse errors */ }
+    throw new Error(msg)
   }
+  const data = await res.json()
+  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.'
 
-  // Try up to all keys on failure
-  let lastError = ''
-  for (let attempt = 0; attempt < GEMINI_API_KEYS.length; attempt++) {
-    const key = getNextKey()
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${key}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      },
-    )
+  // Extract related IDs
+  const relatedMatch = text.match(/\[RELATED:\s*(.*?)\]/)
+  const relatedIds = relatedMatch
+    ? relatedMatch[1].split(',').map((s: string) => s.trim()).filter((s: string) => s && s !== 'none')
+    : []
 
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}))
-      lastError = err?.error?.message || `API error ${res.status}`
-      // If rate-limited or quota, try next key
-      if (res.status === 429 || res.status === 403) continue
-      throw new Error(lastError)
-    }
+  // Remove the [RELATED: ...] tag from display text
+  const answer = text.replace(/\[RELATED:\s*.*?\]/, '').trim()
 
-    const data = await res.json()
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.'
-
-    // Extract related IDs
-    const relatedMatch = text.match(/\[RELATED:\s*(.*?)\]/)
-    const relatedIds = relatedMatch
-      ? relatedMatch[1].split(',').map((s: string) => s.trim()).filter((s: string) => s && s !== 'none')
-      : []
-
-    // Remove the [RELATED: ...] tag from display text
-    const answer = text.replace(/\[RELATED:\s*.*?\]/, '').trim()
-
-    return { answer, relatedIds }
-  }
-
-  throw new Error(lastError || 'All API keys exhausted. Please try again later.')
+  return { answer, relatedIds }
 }
 
 export default function AISearch() {

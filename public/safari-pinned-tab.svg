@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="108" fill="#000"/>
+  <!-- Glass shine overlay -->
+  <rect width="512" height="512" rx="108" fill="#000" opacity="0.5"/>
+  <!-- Magnifying glass -->
+  <circle cx="232" cy="232" r="100" fill="none" stroke="#000" stroke-width="18"/>
+  <circle cx="232" cy="232" r="72" fill="#000"/>
+  <!-- Lens glare -->
+  <ellipse cx="205" cy="205" rx="30" ry="18" fill="#000" transform="rotate(-35 205 205)"/>
+  <!-- Handle -->
+  <line x1="303" y1="303" x2="380" y2="380" stroke="#000" stroke-width="18" stroke-linecap="round"/>
+  <!-- Cross inside lens -->
+  <rect x="222" y="195" width="20" height="74" rx="10" fill="#000"/>
+  <rect x="195" y="222" width="74" height="20" rx="10" fill="#000"/>
+</svg>

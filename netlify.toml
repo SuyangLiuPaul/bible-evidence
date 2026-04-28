@@ -5,7 +5,16 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# SPA fallback — all routes serve index.html
+# Server-side Gemini proxy. The client posts the same body it used to
+# send to Gemini directly; this function forwards it and only inserts
+# the API key (kept in Netlify env, never in the public bundle).
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# SPA fallback — all routes serve index.html EXCEPT the function path
+# and the SW / manifest paths above (they're matched by Netlify's
+# function routing before this catch-all fires).
 [[redirects]]
   from = "/*"
   to = "/index.html"

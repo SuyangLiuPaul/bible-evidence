@@ -7,7 +7,17 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'apple-touch-icon.png'],
+      includeAssets: [
+        'favicon.ico',
+        'favicon-16x16.png',
+        'favicon-32x32.png',
+        'favicon.png',
+        'apple-touch-icon.png',
+        'mstile-150x150.png',
+        'safari-pinned-tab.svg',
+        'icon.svg',
+        'og-image.png',
+      ],
       manifest: {
         name: 'Biblical Evidence Archive',
         short_name: 'Bible Evidence',
@@ -19,16 +29,29 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
+          // Generic 'any' purpose — used by older Android, Windows
+          // tile, and most other surfaces that don't speak the
+          // 'maskable' protocol.
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
+            purpose: 'any',
           },
           {
             src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable',
+            purpose: 'any',
+          },
+          // Dedicated maskable variant — Android adaptive icons clip
+          // to a circle / squircle so this version has 16% safe-zone
+          // padding so the magnifying glass stays clear of the cut.
+          {
+            src: 'pwa-maskable-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
           },
         ],
       },
