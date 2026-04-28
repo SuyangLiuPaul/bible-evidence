@@ -148,11 +148,10 @@ export default function App() {
               ? 'This archive presents academic and archaeological evidence for scholarly analysis. All evidence is evaluated objectively without theological agenda.'
               : '本档案以学术研究为目的，客观呈现考古与历史证据，不带任何神学立场。'}
           </p>
-          <p className="text-parchment font-semibold mt-6 tracking-wide">
-            {isEn ? 'Curated by Paul Liu (刘苏阳)' : '由刘苏阳整理'}
-          </p>
-          <p className="text-parchment-muted text-sm mt-1">
-            {isEn ? 'Contact: ' : '联系：'}
+          <p className="text-parchment text-sm mt-6 tracking-wide">
+            {isEn
+              ? 'Made by Paul Liu · Questions, feedback, or anything else: '
+              : '作者 Paul Liu · 问题、反馈或其他事宜：'}
             <a
               href="mailto:paul.sy.liu@gmail.com"
               className="text-gold font-semibold hover:text-gold-dark transition-colors"
