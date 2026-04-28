@@ -33,7 +33,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1946–1956',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Isaiah 40:8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Temple_Scroll.png/330px-Temple_Scroll.png"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -55,7 +55,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1993',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: '2 Samuel 7:11-16',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tel_Dan_Stele.jpg/400px-Tel_Dan_Stele.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JRSLM_300116_Tel_Dan_Stele_01.jpg/330px-JRSLM_300116_Tel_Dan_Stele_01.jpg"],
     confidenceLevel: 'Strong',
     icon: '🪨',
     academicSources: [
@@ -76,7 +76,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1961',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'Matthew 27:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pontius_Pilate_inscription.jpg/400px-Pontius_Pilate_inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pontius_Pilate_Inscription.JPG/330px-Pontius_Pilate_Inscription.JPG"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -97,7 +97,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1880 (Siloam Inscription)',
     location: 'City of David, Jerusalem',
     scriptureReference: '2 Kings 20:20',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Hezekiahs_tunnel.jpg/400px-Hezekiahs_tunnel.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Siloam22.jpg/330px-Siloam22.jpg"],
     confidenceLevel: 'Definitive',
     icon: '⛏️',
     academicSources: [
@@ -118,7 +118,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1979',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'Numbers 6:24-26',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ketef_Hinnom.jpg/400px-Ketef_Hinnom.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ketef_hinom_scrolls.JPG/330px-Ketef_hinom_scrolls.JPG"],
     confidenceLevel: 'Definitive',
     icon: '📿',
     academicSources: [
@@ -139,7 +139,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1879',
     location: 'British Museum, London (No. 90920)',
     scriptureReference: 'Ezra 1:1-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cyrus_cylinder.jpg/400px-Cyrus_cylinder.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cyrus_Cylinder_front.jpg/330px-Cyrus_Cylinder_front.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏺',
     academicSources: [
@@ -160,7 +160,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1906',
     location: 'Hattusa (Boğazkale), Turkey',
     scriptureReference: '1 Kings 10:29',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sphinx_Gate%2C_Hattusa_01.jpg/400px-Sphinx_Gate%2C_Hattusa_01.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sphinx_Gate%2C_Hattusa_01.jpg/400px-Sphinx_Gate%2C_Hattusa_01.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🗿',
     academicSources: [
@@ -181,7 +181,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2004',
     location: 'City of David, Jerusalem',
     scriptureReference: 'John 9:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PoolOfSiloam.jpg/400px-PoolOfSiloam.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Pool_of_Siloam_and_Lower_%28Old%29_Pool_in_the_Ordnance_Survey_of_Jerusalem.png/330px-Pool_of_Siloam_and_Lower_%28Old%29_Pool_in_the_Ordnance_Survey_of_Jerusalem.png"],
     confidenceLevel: 'Definitive',
     icon: '💧',
     academicSources: [
@@ -203,7 +203,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1868',
     location: 'Louvre Museum, Paris',
     scriptureReference: '2 Kings 3:4-5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mesha_Stele.jpg/400px-Mesha_Stele.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG/330px-P1120870_Louvre_st%C3%A8le_de_M%C3%A9sha_AO5066_rwk.JPG"],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -224,7 +224,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1830',
     location: 'Oriental Institute, University of Chicago',
     scriptureReference: '2 Kings 18:13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sennacherib_Prism.jpg/400px-Sennacherib_Prism.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/%C3%85hus_kyrka-10.jpg/330px-%C3%85hus_kyrka-10.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📐',
     academicSources: [
@@ -245,7 +245,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1828 (identified)',
     location: 'Temple of Amun, Karnak, Egypt',
     scriptureReference: '1 Kings 14:25-26',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Karnak_Tempel_06.jpg/400px-Karnak_Tempel_06.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Karnak_Tempel_19.jpg/330px-Karnak_Tempel_19.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -266,7 +266,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1846',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 9:2–10:36',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Black_obelisk_of_shalmaneser_III.jpg/400px-Black_obelisk_of_shalmaneser_III.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/The_Black_Obelisk_of_Shalmaneser_III%2C_9th_century_BC%2C_from_Nimrud%2C_Iraq._The_British_Museum.jpg/330px-The_Black_Obelisk_of_Shalmaneser_III%2C_9th_century_BC%2C_from_Nimrud%2C_Iraq._The_British_Museum.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🗿',
     academicSources: [
@@ -287,7 +287,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1990',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'Matthew 26:3',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Caiaphas_ossuary.jpg/400px-Caiaphas_ossuary.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ossuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG/330px-Ossuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG"],
     confidenceLevel: 'Strong',
     icon: '⚱️',
     academicSources: [
@@ -308,7 +308,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1968',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'John 19:17-18',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Crucifixion_nail_through_heel_bone.jpg/400px-Crucifixion_nail_through_heel_bone.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/330px-Cristo_crucificado.jpg"],
     confidenceLevel: 'Definitive',
     icon: '✝️',
     academicSources: [
@@ -329,7 +329,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1871 / 1935',
     location: 'Istanbul Archaeological Museum / Israel Museum',
     scriptureReference: 'Acts 21:28-29',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Temple_warning_inscription.jpg/400px-Temple_warning_inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Jerusalem_Temple_Warning_Inscription.jpg/330px-Jerusalem_Temple_Warning_Inscription.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -350,7 +350,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1908',
     location: 'Istanbul Archaeological Museum',
     scriptureReference: 'Leviticus 23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gezer_calendar.jpg/400px-Gezer_calendar.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Gezer_calendar_close_up.jpg/330px-Gezer_calendar_close_up.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -371,7 +371,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1935',
     location: 'British Museum, London / Israel Museum',
     scriptureReference: 'Jeremiah 34:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Lachish_letters.jpg/400px-Lachish_letters.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Steen_met_inscriptie_in_het_Lahish_schrift%2C_Bestanddeelnr_255-6141.jpg/330px-Steen_met_inscriptie_in_het_Lahish_schrift%2C_Bestanddeelnr_255-6141.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -392,7 +392,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1967',
     location: 'Jordan Museum, Amman',
     scriptureReference: 'Numbers 22-24',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Balaam_inscription.jpg/400px-Balaam_inscription.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '📝',
     academicSources: [
@@ -413,7 +413,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1838 / 1968+',
     location: 'Capernaum, Israel',
     scriptureReference: 'Matthew 4:13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Capernaum_synagogue.jpg/400px-Capernaum_synagogue.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Sites_of_Christianity_in_the_Galillee_-_Ruins_of_the_ancient_Great_Synagogue_at_Capernaum_%28or_Kfar_Nahum%29_on_the_shore_of_the_Lake_of_Galilee%2C_Northern_Israel.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '🕍',
     academicSources: [
@@ -434,7 +434,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1968',
     location: 'Capernaum, Israel',
     scriptureReference: 'Matthew 8:14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/House_of_Saint_Peter_Capernaum.jpg/400px-House_of_Saint_Peter_Capernaum.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Sites_of_Christianity_in_the_Galillee_-_Ruins_of_the_ancient_Great_Synagogue_at_Capernaum_%28or_Kfar_Nahum%29_on_the_shore_of_the_Lake_of_Galilee%2C_Northern_Israel.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '🏠',
     academicSources: [
@@ -455,7 +455,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1878 (acquired) / 1930 (published)',
     location: 'Bibliothèque nationale de France, Paris',
     scriptureReference: 'Matthew 28:12-13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Nazareth_inscription.jpg/400px-Nazareth_inscription.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '🪨',
     academicSources: [
@@ -476,7 +476,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1907-1958',
     location: 'Tell es-Sultan, Jericho, Palestine',
     scriptureReference: 'Joshua 6:1-27',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Jericho_Tell_es-Sultan.jpg/400px-Jericho_Tell_es-Sultan.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Walls_of_Jericho_-_Reload_Festival_2024_03.jpg?width=400"],
     confidenceLevel: 'Circumstantial',
     icon: '🏰',
     academicSources: [
@@ -497,7 +497,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2005+',
     location: 'Tall el-Hammam, Jordan',
     scriptureReference: 'Genesis 19:24-25',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Dead_Sea_by_David_Shankbone.jpg/400px-Dead_Sea_by_David_Shankbone.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Tunguska_Ereignis-1.jpg/330px-Tunguska_Ereignis-1.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🔥',
     academicSources: [
@@ -518,7 +518,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1975 (published)',
     location: 'Shlomo Moussaieff Collection',
     scriptureReference: 'Jeremiah 36:4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bulla_from_the_City_of_David.jpg/400px-Bulla_from_the_City_of_David.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Cippus_-_Louvre.jpg/330px-Cippus_-_Louvre.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔏',
     academicSources: [
@@ -538,7 +538,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2012',
     location: 'Israel Antiquities Authority, Jerusalem',
     scriptureReference: 'Micah 5:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bulla_from_the_City_of_David.jpg/400px-Bulla_from_the_City_of_David.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Church_of_the_Nativity_%287703592746%29.jpg/330px-Church_of_the_Nativity_%287703592746%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -558,7 +558,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1847',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 18:14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lachish_relief_from_Sennacherib%27s_palace_at_Nineveh%2C_built_c._700-692_BC.jpg/400px-Lachish_relief_from_Sennacherib%27s_palace_at_Nineveh%2C_built_c._700-692_BC.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Assyrian_siege-engine_attacking_the_city_wall_of_Lachish%2C_part_of_the_ascending_assaulting_wave._Detail_of_a_wall_relief_dating_back_to_the_reign_of_Sennacherib%2C_700-692_BCE._From_Nineveh%2C_Iraq%2C_currently_housed_in_the_British_Museum.jpg/330px-thumbnail.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏺',
     academicSources: [
@@ -578,7 +578,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1931-1935',
     location: 'Israel Museum, Jerusalem / Rockefeller Museum',
     scriptureReference: '1 Kings 22:39',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ivory_inlay_Samaria.jpg/400px-Ivory_inlay_Samaria.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ahab_rex.png/330px-Ahab_rex.png"],
     confidenceLevel: 'Definitive',
     icon: '🐘',
     academicSources: [
@@ -598,7 +598,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1888+',
     location: 'St. Anne\'s Church compound, Jerusalem',
     scriptureReference: 'John 5:2-9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PoolOfBethesda.jpg/400px-PoolOfBethesda.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Jerusalem_Bethesda_BW_1.JPG/330px-Jerusalem_Bethesda_BW_1.JPG"],
     confidenceLevel: 'Definitive',
     icon: '💧',
     academicSources: [
@@ -618,7 +618,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2009',
     location: 'Magdala, Sea of Galilee, Israel',
     scriptureReference: 'Matthew 4:23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Magdala_stone.jpg/400px-Magdala_stone.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/%D7%91%D7%99%D7%AA_%D7%94%D7%9B%D7%A0%D7%A1%D7%AA_%D7%9E%D7%92%D7%93%D7%9C%D7%90.JPG/330px-%D7%91%D7%99%D7%AA_%D7%94%D7%9B%D7%A0%D7%A1%D7%AA_%D7%9E%D7%92%D7%93%D7%9C%D7%90.JPG"],
     confidenceLevel: 'Definitive',
     icon: '🕍',
     academicSources: [
@@ -638,7 +638,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1896',
     location: 'Egyptian Museum, Cairo',
     scriptureReference: 'Exodus 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Merenptah_Stele.jpg/400px-Merenptah_Stele.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Merneptah_Steli_%28cropped%29.jpg/330px-Merneptah_Steli_%28cropped%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -659,7 +659,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1880',
     location: 'Istanbul Archaeological Museum',
     scriptureReference: '2 Kings 20:20',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Siloam_inscription.jpg/400px-Siloam_inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Siloam_Inscription_2.jpg/330px-Siloam_Inscription_2.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📝',
     academicSources: [
@@ -679,7 +679,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1955+',
     location: 'Israel Antiquities Authority / Hazor, Israel',
     scriptureReference: 'Joshua 11:10-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hazor_Archaeological_Site.jpg/400px-Hazor_Archaeological_Site.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/88338_gazar_mound_PikiWiki_Israel.jpg/330px-88338_gazar_mound_PikiWiki_Israel.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔥',
     academicSources: [
@@ -700,7 +700,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1867+',
     location: 'City of David National Park, Jerusalem',
     scriptureReference: '2 Samuel 5:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/City_of_David.jpg/400px-City_of_David.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/%D7%A2%D7%99%D7%A8_%D7%93%D7%95%D7%93_2.JPG?width=400"],
     confidenceLevel: 'Definitive',
     icon: '🏙️',
     academicSources: [
@@ -721,7 +721,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1847+',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 15:29',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tiglath-Pileser_III.jpg/400px-Tiglath-Pileser_III.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Tilglath_pileser_iii.jpg/330px-Tilglath_pileser_iii.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -743,7 +743,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1920 (acquired)',
     location: 'John Rylands Library, Manchester',
     scriptureReference: 'John 18:31-33, 37-38',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -764,7 +764,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1930-1931',
     location: 'Chester Beatty Library, Dublin',
     scriptureReference: 'Romans 8:18',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Chester_Beatty_Library.jpg/400px-Chester_Beatty_Library.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Dublin%2C_Chester_Beatty_Ms_Papyrus_45_BP_I_ff.13-14_Luke_11.50-12.12%3B_12.18-37%3B_12.42-13.1%3B_13.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -784,7 +784,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1844',
     location: 'British Library, London (primary portion)',
     scriptureReference: 'John 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/4/4a/Sinaiticus_text.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '📗',
     academicSources: [
@@ -805,7 +805,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '15th century (catalogued)',
     location: 'Vatican Apostolic Library, Vatican City',
     scriptureReference: 'Genesis 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Codex_Vaticanus_1464_11r.jpg/400px-Codex_Vaticanus_1464_11r.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📗',
     academicSources: [
@@ -825,7 +825,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1898',
     location: 'Cambridge University Library',
     scriptureReference: 'Exodus 20:2-17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Nash_Papyrus.jpg/400px-Nash_Papyrus.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -845,7 +845,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '10th century CE / 1947 (rediscovered)',
     location: 'National Library of Israel, Jerusalem',
     scriptureReference: 'Deuteronomy 17:18',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aleppo_Codex_Joshua_1_1.jpg/400px-Aleppo_Codex_Joshua_1_1.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Aleppo_Codex_Joshua_1_1.jpg/330px-Aleppo_Codex_Joshua_1_1.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📗',
     academicSources: [
@@ -865,7 +865,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1008-1009 CE',
     location: 'Russian National Library, St. Petersburg',
     scriptureReference: 'Isaiah 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Leningrad_Codex_Carpet_page_folio_475a.jpg/400px-Leningrad_Codex_Carpet_page_folio_475a.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Leningrad_Codex_Folio_474a.jpg/330px-Leningrad_Codex_Folio_474a.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📗',
     academicSources: [
@@ -885,7 +885,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1893+',
     location: 'Berlin / Cairo / New York',
     scriptureReference: 'Ezra 4:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Elephantine_papyri.jpg/400px-Elephantine_papyri.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Papyrus_narrating_the_story_of_the_wise_chancellor_Ahiqar._Aramaic_script._5th_century_BCE._From_Elephantine%2C_Egypt._Neues_Museum.jpg/330px-Papyrus_narrating_the_story_of_the_wise_chancellor_Ahiqar._Aramaic_script._5th_century_BCE._From_Elephantine%2C_Egypt._Neues_Museum.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -905,7 +905,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1952',
     location: 'Jordan Museum, Amman',
     scriptureReference: 'Nehemiah 7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg/250px-Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg/250px-Strip_11%2C_part_of_the_Copper_Dear_Sea_Scrolls%2C_from_Qumran_Cave_3%2C_Jordan_Museum.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔩',
     academicSources: [
@@ -925,7 +925,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1956 / 1967',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Deuteronomy 17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/1/15/Temple_Scroll.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/1/15/Temple_Scroll.png"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -945,7 +945,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1901',
     location: 'Magdalen College, Oxford',
     scriptureReference: 'Matthew 26:7-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg/250px-Manchester%2C_John_Rylands_Library_Ms_Greek_P_457_%28Papyrus_52%29_verso_John_18%2C_37-38.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -965,7 +965,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (1st–15th century CE)',
     location: 'Libraries worldwide',
     scriptureReference: '2 Timothy 3:16',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Greek_minuscule_manuscript.jpg/400px-Greek_minuscule_manuscript.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Codex_Ebnerianus_Prolog_J_1%2C_5b-10.JPG/330px-Codex_Ebnerianus_Prolog_J_1%2C_5b-10.JPG"],
     confidenceLevel: 'Definitive',
     icon: '📚',
     academicSources: [
@@ -986,7 +986,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1952-1956',
     location: 'Bodmer Library, Geneva / Vatican Library',
     scriptureReference: 'John 1:1-14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Papyrus_Bodmer_II.jpg/400px-Papyrus_Bodmer_II.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg/330px-Geneva%2C_Bodmer_Lab_Ms_Papyrus_66_%28P.Bodmer_II_-_PB_2%29_fol._1r.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1006,7 +1006,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1627 (given to King James I)',
     location: 'British Library, London',
     scriptureReference: 'Revelation 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Codex_Alexandrinus_fol_41r.jpg/400px-Codex_Alexandrinus_fol_41r.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Codex_Alexandrinus_f41v_-_Luke.jpg/330px-Codex_Alexandrinus_f41v_-_Luke.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📗',
     academicSources: [
@@ -1026,7 +1026,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1896',
     location: 'Cambridge University Library / Jewish Theological Seminary',
     scriptureReference: 'Ecclesiasticus (Sirach) 39:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Cairo_Genizah_manuscript.jpg/400px-Cairo_Genizah_manuscript.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Bab_voc_fragment_2.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📚',
     academicSources: [
@@ -1046,7 +1046,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1951-1952',
     location: 'Israel Antiquities Authority, Jerusalem',
     scriptureReference: 'Romans 13:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg/250px-Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1066,7 +1066,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1897+',
     location: 'Bodleian Library, Oxford / Various',
     scriptureReference: 'Matthew 5:3-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Oxyrhynchus_papyri.jpg/400px-Oxyrhynchus_papyri.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Grenfell-hunt-1896.jpg/330px-Grenfell-hunt-1896.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -1086,7 +1086,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2nd–5th century CE',
     location: 'Various libraries worldwide',
     scriptureReference: 'John 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Syriac_Bible.jpg/400px-Syriac_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Peshitta_%281%29.jpg/330px-Peshitta_%281%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '📖',
     academicSources: [
@@ -1106,7 +1106,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Daniel 12:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/The_War_Scroll_-_Dead_Sea_Scroll.jpg/400px-The_War_Scroll_-_Dead_Sea_Scroll.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/The_War_Scroll_-_Dead_Sea_Scroll.jpg/400px-The_War_Scroll_-_Dead_Sea_Scroll.jpg"],
     confidenceLevel: 'Strong',
     icon: '⚔️',
     academicSources: [
@@ -1126,7 +1126,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '~250 BCE (origin) / various MSS',
     location: 'Various libraries worldwide',
     scriptureReference: 'Isaiah 7:14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Rahlfs_Septuaginta.jpg/400px-Rahlfs_Septuaginta.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg/330px-Codex_Vaticanus_%281_Esdras_1-55_to_2-5%29_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1146,7 +1146,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1963-1965',
     location: 'Hebrew University, Jerusalem / Israel Antiquities Authority',
     scriptureReference: 'Psalm 81:3',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Masada aerial view.jpg/400px-Masada_aerial_view.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Israel-2013-Aerial_21-Masada.jpg/330px-Israel-2013-Aerial_21-Masada.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1168,7 +1168,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 93 CE (text)',
     location: 'Antiquities 18.3.3',
     scriptureReference: 'Matthew 27:50',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Josephus_Antiquitates_Iudaice.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -1189,7 +1189,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 93 CE (text)',
     location: 'Antiquities 20.9.1',
     scriptureReference: 'Acts 15:13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Josephus_Antiquitates_Iudaice.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1209,7 +1209,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 116 CE (text)',
     location: 'Annals 15.44',
     scriptureReference: 'Matthew 27:50',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tacitus.jpg/400px-Tacitus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Karl_von_Piloty_Nero_R%C3%B3ma_%C3%A9g%C3%A9s%C3%A9t_szeml%C3%A9li.jpg/330px-Karl_von_Piloty_Nero_R%C3%B3ma_%C3%A9g%C3%A9s%C3%A9t_szeml%C3%A9li.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1230,7 +1230,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 112 CE (letter)',
     location: 'Letters 10.96',
     scriptureReference: 'Acts 18:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pliny_the_Younger.jpg/400px-Pliny_the_Younger.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/0012_-_Milano_-_Sant%27Ambrogio_-_Atrio_-_Frammento_lapide_C._Plinio_-_Foto_Giovanni_Dall%27Orto_25-Apr-2007.jpg/330px-0012_-_Milano_-_Sant%27Ambrogio_-_Atrio_-_Frammento_lapide_C._Plinio_-_Foto_Giovanni_Dall%27Orto_25-Apr-2007.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1250,7 +1250,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 121 CE (text)',
     location: 'Life of Claudius 25.4',
     scriptureReference: 'Acts 18:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Suetonius.jpg/400px-Suetonius.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Claudius_crop.jpg/330px-Claudius_crop.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -1270,7 +1270,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 70–200 CE (letter)',
     location: 'British Museum, London (Add. MS 14658)',
     scriptureReference: 'Matthew 27:50',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/British_Museum_Ancient_letters.jpg/400px-British_Museum_Ancient_letters.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SVouet.jpg/330px-SVouet.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
     academicSources: [
@@ -1290,7 +1290,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1887 (published)',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 24:10-17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/ABC_05_Early_Years_of_Nebuchadnezzar_chronicle.jpg/330px-ABC_05_Early_Years_of_Nebuchadnezzar_chronicle.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -1310,7 +1310,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1882 (published)',
     location: 'British Museum, London',
     scriptureReference: 'Daniel 5:30-31',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nabonidus_Chronicle.jpg/400px-Nabonidus_Chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Nabonidus%27s_faults_and_absences_were_recorded_alongside_events_of_his_reign._By_the_autumn_of_539_BCE%2C_Babylon_had_surrendered_to_the_army_of_king_Cyrus_to_become_part_of_the_growing_Achaemenid_Empire._From_Babylon%2C_Iraq%2C_530-400_BCE.jpg/330px-thumbnail.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -1330,7 +1330,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1887',
     location: 'British Museum / Cairo / Berlin',
     scriptureReference: 'Genesis 12:10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amarna_letter.jpg/400px-Amarna_letter.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Five_Amarna_letters_on_display_at_the_British_Museum%2C_LondonA.jpg/330px-Five_Amarna_letters_on_display_at_the_British_Museum%2C_LondonA.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1350,7 +1350,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1933+',
     location: 'Louvre Museum, Paris / National Museum of Syria',
     scriptureReference: 'Genesis 11:31',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Mari_tablets.jpg/400px-Mari_tablets.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/MariZiggurat.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1370,7 +1370,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1925-1931',
     location: 'Iraq Museum, Baghdad / Harvard Semitic Museum',
     scriptureReference: 'Genesis 16:1-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuneiform_tablet.jpg/400px-Cuneiform_tablet.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1390,7 +1390,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1929+',
     location: 'Louvre Museum, Paris / National Museum of Syria',
     scriptureReference: 'Psalm 29',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ugaritic_tablet.jpg/400px-Ugaritic_tablet.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Sea_people02_upscayl_1x_remacri-4x.png?width=400"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1410,7 +1410,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 670 BCE / 1847+',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 19:37',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Esarhaddon_prism.jpg/400px-Esarhaddon_prism.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Nineveh_-_Mashki_Gate.jpg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -1430,7 +1430,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1872 (translated)',
     location: 'British Museum, London',
     scriptureReference: 'Genesis 6-9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gilgamesh_Flood_Tablet.jpg/400px-Gilgamesh_Flood_Tablet.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/British_Museum_Flood_Tablet_1.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1450,7 +1450,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1956 (published)',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 24:10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nebuchadnezzar_chronicle.jpg/400px-Nebuchadnezzar_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Nebuchadnezzar_II_crop.png/330px-Nebuchadnezzar_II_crop.png"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -1470,7 +1470,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various',
     location: 'Various museums worldwide',
     scriptureReference: 'Luke 2:1-5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Roman_census_relief.jpg/400px-Roman_census_relief.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Luke_13.29-35_and_14.10_%28CBL_BP_I%2C_f.15r%29.jpg/330px-Luke_13.29-35_and_14.10_%28CBL_BP_I%2C_f.15r%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1490,7 +1490,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1960-1961',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'Luke 21:20-24',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bar_Kokhba_coins.jpg/400px-Bar_Kokhba_coins.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bar_kochba22.jpg/330px-Bar_kochba22.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -1510,7 +1510,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1828 (acquired) / 1909 (published)',
     location: 'National Museum of Antiquities, Leiden',
     scriptureReference: 'Exodus 7-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ipuwer_Papyrus.jpg/400px-Ipuwer_Papyrus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Papyrus_van_Ipoewer_-_Google_Art_Project.jpg/330px-Papyrus_van_Ipoewer_-_Google_Art_Project.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
     academicSources: [
@@ -1530,7 +1530,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2nd century CE (text)',
     location: 'Various manuscript traditions',
     scriptureReference: 'Daniel 1:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ptolemy_Canon.jpg/400px-Ptolemy_Canon.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Claudio_Tolomeo_-_In_una_miniatura_del_trattato_%22Geografia%22_stampato_a_Ulm_%28Germania%29_nel_1482.jpg/330px-Claudio_Tolomeo_-_In_una_miniatura_del_trattato_%22Geografia%22_stampato_a_Ulm_%28Germania%29_nel_1482.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1550,7 +1550,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1555 (rediscovered)',
     location: 'Temple of Augustus, Ankara (original site) / Various',
     scriptureReference: 'Luke 2:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Res_Gestae_Divi_Augusti.jpg/400px-Res_Gestae_Divi_Augusti.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Octave_%2813668015683%29.jpg/330px-Octave_%2813668015683%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -1572,7 +1572,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 240 BCE (Eratosthenes) / confirmed 20th century',
     location: 'Isaiah 40:22',
     scriptureReference: 'Isaiah 40:22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/The_Blue_Marble_%28remastered%29.jpg/400px-The_Blue_Marble_%28remastered%29.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/American_Christian_Nationalism_4_Flags_Symbol.svg/330px-American_Christian_Nationalism_4_Flags_Symbol.svg.png"],
     confidenceLevel: 'Strong',
     icon: '🌍',
     academicSources: [
@@ -1592,7 +1592,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 1600 BCE (text) / 17th century CE (gravity confirmed)',
     location: 'Job 26:7',
     scriptureReference: 'Job 26:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Earth_Western_Hemisphere_transparent_background.png/400px-Earth_Western_Hemisphere_transparent_background.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/God_the_Geometer.jpg/330px-God_the_Geometer.jpg"],
     confidenceLevel: 'Strong',
     icon: '🌌',
     academicSources: [
@@ -1612,7 +1612,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1929 (Hubble)',
     location: 'Job 9:8 / Isaiah 40:22',
     scriptureReference: 'Job 9:8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Hubble_Ultra_Deep_Field_2014.jpg/400px-Hubble_Ultra_Deep_Field_2014.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CMB_Timeline300_no_WMAP.jpg/330px-CMB_Timeline300_no_WMAP.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🔭',
     academicSources: [
@@ -1632,7 +1632,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '17th century CE (Perrault / Mariotte)',
     location: 'Ecclesiastes 1:7 / Amos 9:6',
     scriptureReference: 'Ecclesiastes 1:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Water_cycle.png/400px-Water_cycle.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Lac_de_l%27Entonnoir_-_img_49473.jpg/330px-Lac_de_l%27Entonnoir_-_img_49473.jpg"],
     confidenceLevel: 'Strong',
     icon: '💧',
     academicSources: [
@@ -1652,7 +1652,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1855 (Maury)',
     location: 'Psalm 8:8',
     scriptureReference: 'Psalm 8:8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ocean_currents_1943.jpg/400px-Ocean_currents_1943.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/9/91/ThePathBetweenTheSeas.jpg"],
     confidenceLevel: 'Strong',
     icon: '🌊',
     academicSources: [
@@ -1672,7 +1672,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '20th century (oceanographic confirmation)',
     location: 'Job 38:16',
     scriptureReference: 'Job 38:16',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Black_smoker_hydrothermal_vent.jpg/400px-Black_smoker_hydrothermal_vent.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Blacksmoker_in_Atlantic_Ocean.jpg/330px-Blacksmoker_in_Atlantic_Ocean.jpg"],
     confidenceLevel: 'Strong',
     icon: '🌊',
     academicSources: [
@@ -1692,7 +1692,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '20th century (telescope confirmation)',
     location: 'Genesis 15:5 / Jeremiah 33:22',
     scriptureReference: 'Genesis 15:5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Milky_Way_Visitor_Center.jpg/400px-Milky_Way_Visitor_Center.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/0/07/Infinite_%282021_film%29_release_poster.jpeg"],
     confidenceLevel: 'Definitive',
     icon: '⭐',
     academicSources: [
@@ -1712,7 +1712,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '20th century (medical confirmation)',
     location: 'Genesis 17:12',
     scriptureReference: 'Genesis 17:12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ebers_Medical_Papyrus.jpg/400px-Ebers_Medical_Papyrus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/3/3e/David_Reimer.jpg"],
     confidenceLevel: 'Strong',
     icon: '⚕️',
     academicSources: [
@@ -1733,7 +1733,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '17th century CE (Harvey) / 19th century confirmed',
     location: 'Leviticus 17:11',
     scriptureReference: 'Leviticus 17:11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Red_blood_cells.jpg/400px-Red_blood_cells.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Venous_and_arterial_blood.jpg/330px-Venous_and_arterial_blood.jpg"],
     confidenceLevel: 'Strong',
     icon: '🩸',
     academicSources: [
@@ -1753,7 +1753,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '19th century (germ theory) / confirmed',
     location: 'Leviticus 13:4-5',
     scriptureReference: 'Leviticus 13:4-5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Plague_bible.jpg/400px-Plague_bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Wards_32-33_EBH%2C_1978.jpg/330px-Wards_32-33_EBH%2C_1978.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏥',
     academicSources: [
@@ -1774,7 +1774,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '17th-20th century (atmospheric science)',
     location: 'Ecclesiastes 1:6',
     scriptureReference: 'Ecclesiastes 1:6',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Atmospheric_circulation.jpg/400px-Atmospheric_circulation.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Weather_Station_at_Feilding_Waste_Water_Treatment_Plant.JPG/330px-Weather_Station_at_Feilding_Waste_Water_Treatment_Plant.JPG"],
     confidenceLevel: 'Strong',
     icon: '💨',
     academicSources: [
@@ -1794,7 +1794,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '20th century (gravity confirmed)',
     location: 'Job 38:31',
     scriptureReference: 'Job 38:31',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Pleiades_large.jpg/400px-Pleiades_large.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Artist%27s_impression_of_the_free-floating_planet_CFBDSIR_J214947.2-040308.9.ogv/330px--Artist%27s_impression_of_the_free-floating_planet_CFBDSIR_J214947.2-040308.9.ogv.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '✨',
     academicSources: [
@@ -1814,7 +1814,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '19th century (thermodynamics)',
     location: 'Psalm 102:25-27',
     scriptureReference: 'Psalm 102:25-27',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hubble_sequence_photo.png/400px-Hubble_sequence_photo.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/d/da/Doctor_Manhattan.png"],
     confidenceLevel: 'Circumstantial',
     icon: '♾️',
     academicSources: [
@@ -1834,7 +1834,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '19th-20th century (food science)',
     location: 'Leviticus 11',
     scriptureReference: 'Leviticus 11:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ancient_food.jpg/400px-Ancient_food.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/ALFiqh.png/330px-ALFiqh.png"],
     confidenceLevel: 'Strong',
     icon: '🥩',
     academicSources: [
@@ -1855,7 +1855,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '17th century (Rømer) / 19th century confirmed',
     location: 'Job 38:19',
     scriptureReference: 'Job 38:19',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Prism_rainbow.jpg/400px-Prism_rainbow.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Earth_to_Sun_-_en.png/330px-Earth_to_Sun_-_en.png"],
     confidenceLevel: 'Circumstantial',
     icon: '💡',
     academicSources: [
@@ -1876,7 +1876,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2015',
     location: 'Israel Antiquities Authority, Jerusalem',
     scriptureReference: '2 Kings 18:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seal_of_King_Hezekiah.jpg/400px-Seal_of_King_Hezekiah.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/LMLK%2C_Ezekiah_seals.jpg/330px-LMLK%2C_Ezekiah_seals.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🔏',
     academicSources: [
@@ -1896,7 +1896,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2002 (published)',
     location: 'Royal Ontario Museum, Toronto (on loan)',
     scriptureReference: 'Acts 12:17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/James_Ossuary.jpg/400px-James_Ossuary.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/JamesOssuary-1-.jpg/330px-JamesOssuary-1-.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '📦',
     academicSources: [
@@ -1916,7 +1916,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1929',
     location: 'Ancient Corinth Archaeological Site, Greece',
     scriptureReference: 'Romans 16:23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Erastus_inscription_Corinth.jpg/400px-Erastus_inscription_Corinth.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Erastus%2C_Olympus%2C_Rhodion%2C_Sosipater%2C_Quartus_and_Tertius_%28Menologion_of_Basil_II%29.jpg/330px-Erastus%2C_Olympus%2C_Rhodion%2C_Sosipater%2C_Quartus_and_Tertius_%28Menologion_of_Basil_II%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏛️',
     academicSources: [
@@ -1936,7 +1936,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '19th century',
     location: 'British Museum, London',
     scriptureReference: 'Acts 17:6',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Arch_of_Galerius_and_Rotunda_Thessaloniki.jpg/400px-Arch_of_Galerius_and_Rotunda_Thessaloniki.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%D0%A1%D0%B2%D1%98%D0%B5%D1%82%D0%BB%D0%BE%D0%BF%D0%B8%D1%81_%D0%B6%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D0%B0_%D0%A1%D0%B2._%D0%B0%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BB%D0%B0_%D0%90%D1%80%D0%B8%D1%81%D1%82%D0%B0%D1%80%D1%85%D0%B0_%D1%83_%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B8_%D1%85%D1%80%D0%B0%D0%BC%D0%B0_%D0%A1%D0%B2._%D0%A1%D0%B0%D0%B2%D0%B5_%D1%83_%D0%91%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83.jpg/330px-%D0%A1%D0%B2%D1%98%D0%B5%D1%82%D0%BB%D0%BE%D0%BF%D0%B8%D1%81_%D0%B6%D0%B8%D0%B2%D0%BE%D0%BF%D0%B8%D1%81%D0%B0_%D0%A1%D0%B2._%D0%B0%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BB%D0%B0_%D0%90%D1%80%D0%B8%D1%81%D1%82%D0%B0%D1%80%D1%85%D0%B0_%D1%83_%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B8_%D1%85%D1%80%D0%B0%D0%BC%D0%B0_%D0%A1%D0%B2._%D0%A1%D0%B0%D0%B2%D0%B5_%D1%83_%D0%91%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -1957,7 +1957,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Isaiah 40:3',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Dead_Sea_Scrolls_Exhibition_elevator_poster_Calif_Science_Center.jpg/250px-Dead_Sea_Scrolls_Exhibition_elevator_poster_Calif_Science_Center.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/330px-Qumran.jpeg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -1977,7 +1977,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '5th century CE / 1562 (donated)',
     location: 'Cambridge University Library',
     scriptureReference: 'Luke 1:1-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Codex_Bezae_fol_407v.jpg/400px-Codex_Bezae_fol_407v.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Codex_Bezae_-_Greek_Luke_23-47_to_24-1_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible_-_Plate_XXV%29.jpg/330px-Codex_Bezae_-_Greek_Luke_23-47_to_24-1_%28The_S.S._Teacher%27s_Edition-The_Holy_Bible_-_Plate_XXV%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '📗',
     academicSources: [
@@ -1998,7 +1998,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1974-1976',
     location: 'National Museum of Syria, Damascus',
     scriptureReference: 'Genesis 14:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Ebla_tablets.jpg/400px-Ebla_tablets.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Calco_di_tavoletta_in_terracotta_da_Ebla_-_Museo_d%27Arte_Orientale_Roma.jpg/330px-Calco_di_tavoletta_in_terracotta_da_Ebla_-_Museo_d%27Arte_Orientale_Roma.jpg"],
     confidenceLevel: 'Strong',
     icon: '📋',
     academicSources: [
@@ -2019,7 +2019,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1905',
     location: 'Delphi Museum, Greece',
     scriptureReference: 'Acts 18:12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Delphi_temple.jpg/400px-Delphi_temple.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Delphes_Gallion.jpg/330px-Delphes_Gallion.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -2039,7 +2039,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 75-93 CE (Josephus texts)',
     location: 'Jewish War / Antiquities of the Jews',
     scriptureReference: 'Matthew 2:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Josephus_bust.jpg/400px-Josephus_bust.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Herod_Antipas_medal.svg?width=400"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2059,7 +2059,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 52 CE (referenced by Julius Africanus, c. 221 CE)',
     location: 'Fragment cited in Julius Africanus, Chronography',
     scriptureReference: 'Matthew 27:45',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ancient_papyrus_fragment.jpg/400px-Ancient_papyrus_fragment.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Pilate_Inscription.JPG?width=400"],
     confidenceLevel: 'Circumstantial',
     icon: '📜',
     academicSources: [
@@ -2079,7 +2079,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Psalm 22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hodayot_4Q432_f2.jpg/400px-Hodayot_4Q432_f2.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Qumran.jpeg/330px-Qumran.jpeg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -2101,7 +2101,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1861',
     location: 'British Museum, London',
     scriptureReference: '1 Kings 16:28-34',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Kurkh_Monolith.jpg/400px-Kurkh_Monolith.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/e/ef/Karkar.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2121,7 +2121,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 1930s',
     location: 'Vorderasiatisches Museum, Berlin',
     scriptureReference: '2 Kings 25:27-30',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Tissot_The_Flight_of_the_Prisoners.jpg/330px-Tissot_The_Flight_of_the_Prisoners.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -2141,7 +2141,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1920s / identified 2007',
     location: 'British Museum, London',
     scriptureReference: 'Jeremiah 39:3',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2161,7 +2161,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1869+',
     location: 'Various museums; Israel Antiquities Authority',
     scriptureReference: '2 Chronicles 32:1-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/LMLK_seal.jpg/400px-LMLK_seal.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '🔏',
     academicSources: [
@@ -2181,7 +2181,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1996',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: '1 Samuel 5:10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ekron_Inscription.jpg/400px-Ekron_Inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/JRSLM_300116_Ekron_inscription.jpg/330px-JRSLM_300116_Ekron_inscription.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2201,7 +2201,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '81 CE (erected)',
     location: 'Roman Forum, Rome, Italy',
     scriptureReference: 'Matthew 24:1-2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Titus_arch.jpg/400px-Titus_arch.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Arch_Titus%2C_Forum_Romanum%2C_Rome%2C_Italy.jpg/330px-Arch_Titus%2C_Forum_Romanum%2C_Rome%2C_Italy.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -2221,7 +2221,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1849+',
     location: 'British Museum, London',
     scriptureReference: 'Joshua 10:10-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/K6205_Rawlinson_and_Smith_Azekah_Inscription.jpg/330px-K6205_Rawlinson_and_Smith_Azekah_Inscription.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2241,7 +2241,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2005',
     location: 'City of David, Jerusalem; IAA',
     scriptureReference: 'Jeremiah 37:3',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seal_of_King_Hezekiah.jpg/400px-Seal_of_King_Hezekiah.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/James_Wyld%2C_the_elder%2C_Land_of_Israel_Shewing_the_Purveyorships_in_the_Reign_of_Solomon._1._Kings%2C_Chap._4_%28FL45582276_3918323%29.jpg/330px-James_Wyld%2C_the_elder%2C_Land_of_Israel_Shewing_the_Purveyorships_in_the_Reign_of_Solomon._1._Kings%2C_Chap._4_%28FL45582276_3918323%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🔏',
     academicSources: [
@@ -2261,7 +2261,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2008',
     location: 'City of David, Jerusalem; IAA',
     scriptureReference: 'Jeremiah 38:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seal_of_King_Hezekiah.jpg/400px-Seal_of_King_Hezekiah.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Aleppo-HighRes2-Neviim6-Jeremiah_%28page_1_crop%29.jpg/330px-Aleppo-HighRes2-Neviim6-Jeremiah_%28page_1_crop%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🔏',
     academicSources: [
@@ -2281,7 +2281,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1962-1967',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: '2 Chronicles 11:5-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuneiform_tablet.jpg/400px-Cuneiform_tablet.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bible-Lands-Museum-Yemen-2999.jpg/330px-Bible-Lands-Museum-Yemen-2999.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏺',
     academicSources: [
@@ -2301,7 +2301,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1843',
     location: 'Louvre Museum, Paris / British Museum, London',
     scriptureReference: '2 Kings 17:1-6',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Esarhaddon_prism.jpg/400px-Esarhaddon_prism.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sargon_of_Akkad_on_his_victory_stele.jpg/330px-Sargon_of_Akkad_on_his_victory_stele.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏛️',
     academicSources: [
@@ -2321,7 +2321,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1967',
     location: 'Iraq Museum, Baghdad',
     scriptureReference: '2 Kings 13:10-25',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Esarhaddon_prism.jpg/400px-Esarhaddon_prism.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2341,7 +2341,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '19th century',
     location: 'British Museum, London',
     scriptureReference: '2 Kings 15:19-20',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuneiform_tablet.jpg/400px-Cuneiform_tablet.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -2361,7 +2361,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1903',
     location: 'National Museum, Damascus',
     scriptureReference: '2 Kings 8:7-15',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tel_Dan_Stele.jpg/400px-Tel_Dan_Stele.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Neohititas-en.svg/330px-Neohititas-en.svg.png"],
     confidenceLevel: 'Definitive',
     icon: '🪨',
     academicSources: [
@@ -2381,7 +2381,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2008',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: '1 Samuel 17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuneiform_tablet.jpg/400px-Cuneiform_tablet.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Qeiyafa-western-gate1_cr.jpg/330px-Qeiyafa-western-gate1_cr.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🏺',
     academicSources: [
@@ -2401,7 +2401,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (1st century CE coins)',
     location: 'Israel Museum; various collections',
     scriptureReference: 'Matthew 27:2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pontius_Pilate_inscription.jpg/400px-Pontius_Pilate_inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Roman_Empire_-_Iudaea_%28125_AD%29.svg/330px-Roman_Empire_-_Iudaea_%28125_AD%29.svg.png"],
     confidenceLevel: 'Definitive',
     icon: '🪙',
     academicSources: [
@@ -2421,7 +2421,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1962+ / tomb 2007',
     location: 'Herodium, Judean Desert, West Bank',
     scriptureReference: 'Matthew 2:1-19',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Herodium_2008.jpg/400px-Herodium_2008.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Herodium_from_above_2.jpg/330px-Herodium_from_above_2.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏰',
     academicSources: [
@@ -2443,7 +2443,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Isaiah 53',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Isaiah_Scroll_Ch53.jpg/330px-Great_Isaiah_Scroll_Ch53.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2463,7 +2463,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Habakkuk 1-2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Habakkuk_Pesher.png/330px-Habakkuk_Pesher.png"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2483,7 +2483,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1975-1976',
     location: 'Israel Museum, Jerusalem',
     scriptureReference: 'Judges 3:7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Cairo_Genizah_manuscript.jpg/400px-Cairo_Genizah_manuscript.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ajrud.jpg/330px-Ajrud.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🏺',
     academicSources: [
@@ -2503,7 +2503,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1947+',
     location: 'Various museums and collections',
     scriptureReference: 'Jude 14-15',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Paradise_Lost_1.jpg/330px-Paradise_Lost_1.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2523,7 +2523,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1941',
     location: 'Cairo / various collections',
     scriptureReference: 'Deuteronomy 6:4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Oxyrhynchus_papyri.jpg/400px-Oxyrhynchus_papyri.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Pap_266.jpg/330px-Pap_266.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2543,7 +2543,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1945',
     location: 'Coptic Museum, Cairo',
     scriptureReference: 'Luke 1:1-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg/250px-Dead_sea_scrolls_%28doitu_oyajibabaa_%2C_kyoto_koshin_yukishin%29.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/El_Evangelio_de_Tom%C3%A1s-Gospel_of_Thomas-_Codex_II_Manuscritos_de_Nag_Hammadi-The_Nag_Hammadi_manuscripts.png/330px-El_Evangelio_de_Tom%C3%A1s-Gospel_of_Thomas-_Codex_II_Manuscritos_de_Nag_Hammadi-The_Nag_Hammadi_manuscripts.png"],
     confidenceLevel: 'Circumstantial',
     icon: '📚',
     academicSources: [
@@ -2565,7 +2565,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1956+',
     location: 'British Museum, London',
     scriptureReference: 'Daniel 5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nabonidus_Chronicle.jpg/400px-Nabonidus_Chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Cylinder_of_Nabonidus_from_the_temple_of_Shamash_at_Larsa%2C_Mesopotamia..JPG/330px-Cylinder_of_Nabonidus_from_the_temple_of_Shamash_at_Larsa%2C_Mesopotamia..JPG"],
     confidenceLevel: 'Definitive',
     icon: '📋',
     academicSources: [
@@ -2585,7 +2585,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 40 CE (text)',
     location: 'Embassy to Gaius (preserved in manuscript)',
     scriptureReference: 'Matthew 27:11-26',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pontius_Pilate_inscription.jpg/400px-Pontius_Pilate_inscription.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg/330px-Ecce_homo_by_Antonio_Ciseri_%281%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2605,7 +2605,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (archaeological + literary)',
     location: 'Various museums and literary sources',
     scriptureReference: 'John 19:31-33',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ancient_papyrus_fragment.jpg/400px-Ancient_papyrus_fragment.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/330px-Cristo_crucificado.jpg"],
     confidenceLevel: 'Definitive',
     icon: '✝️',
     academicSources: [
@@ -2625,7 +2625,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 7 BCE-23 CE (text)',
     location: 'Geographica (preserved in manuscript)',
     scriptureReference: 'Various NT references',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Suetonius.jpg/400px-Suetonius.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ilion---metopa.jpg/330px-Ilion---metopa.jpg"],
     confidenceLevel: 'Definitive',
     icon: '📜',
     academicSources: [
@@ -2645,7 +2645,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'c. 440 BCE (text)',
     location: 'Histories (preserved in manuscript)',
     scriptureReference: 'Exodus 1:11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ipuwer_Papyrus.jpg/400px-Ipuwer_Papyrus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Palestine_with_the_Hauran_and_the_adjacent_districts%2C_William_Hughes_1843.jpg/330px-Palestine_with_the_Hauran_and_the_adjacent_districts%2C_William_Hughes_1843.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -2665,7 +2665,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (19th-20th century)',
     location: 'Various museum collections',
     scriptureReference: 'Luke 2:1-2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Res_Gestae_Divi_Augusti.jpg/400px-Res_Gestae_Divi_Augusti.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Meister_der_Kahriye-Cami-Kirche_in_Istanbul_005.jpg/330px-Meister_der_Kahriye-Cami-Kirche_in_Istanbul_005.jpg"],
     confidenceLevel: 'Strong',
     icon: '🪨',
     academicSources: [
@@ -2687,7 +2687,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1643 CE (Torricelli)',
     location: 'Job 28:25',
     scriptureReference: 'Job 28:25',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Prism_rainbow.jpg/400px-Prism_rainbow.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/330px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '💨',
     academicSources: [
@@ -2707,7 +2707,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Modern botany',
     location: '1 Corinthians 15:36-38',
     scriptureReference: '1 Corinthians 15:36-38',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ancient_food.jpg/400px-Ancient_food.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Hubble_ultra_deep_field_high_rez_edit1.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '🌱',
     academicSources: [
@@ -2727,7 +2727,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Modern myrmecology',
     location: 'Proverbs 6:6-8',
     scriptureReference: 'Proverbs 6:6-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ancient_food.jpg/400px-Ancient_food.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Hubble_ultra_deep_field_high_rez_edit1.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '🐜',
     academicSources: [
@@ -2747,7 +2747,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Modern soil science',
     location: 'Genesis 3:19',
     scriptureReference: 'Genesis 3:19',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/The_Blue_Marble_%28remastered%29.jpg/400px-The_Blue_Marble_%28remastered%29.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Great_Soil_Structure_in_Stehly_Crop_Field_in_Eastern%2C_SD_%2821480483232%29.jpg/330px-Great_Soil_Structure_in_Stehly_Crop_Field_in_Eastern%2C_SD_%2821480483232%29.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🌍',
     academicSources: [
@@ -2769,7 +2769,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '332 BCE (Alexander) / ongoing',
     location: 'Tyre, Lebanon / underwater ruins',
     scriptureReference: 'Ezekiel 26:3-14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gilgamesh_Flood_Tablet.jpg/400px-Gilgamesh_Flood_Tablet.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Empire_Trajan_117AD.png?width=400"],
     confidenceLevel: 'Strong',
     icon: '🔮',
     academicSources: [
@@ -2789,7 +2789,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (archaeological surveys)',
     location: 'Babylon ruins, Hillah, Iraq',
     scriptureReference: 'Isaiah 13:19-22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nebuchadnezzar_chronicle.jpg/400px-Nebuchadnezzar_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg/330px-SA_160-Jeremia_op_de_puinhopen_van_Jeruzalem.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔮',
     academicSources: [
@@ -2809,7 +2809,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1948 CE',
     location: 'Modern State of Israel',
     scriptureReference: 'Ezekiel 37:21-22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/400px-Flag_of_Israel.svg.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/400px-Flag_of_Israel.svg.png"],
     confidenceLevel: 'Strong',
     icon: '🔮',
     academicSources: [
@@ -2829,7 +2829,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1st Century CE',
     location: 'Various — texts preserved in manuscript tradition',
     scriptureReference: 'Isaiah 53; Psalm 22; Micah 5:2; Zechariah 11:12-13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Judaica.jpg/330px-Judaica.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔮',
     academicSources: [
@@ -2852,7 +2852,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various astronomical studies',
     location: 'Astronomical / Bethlehem',
     scriptureReference: 'Matthew 2:1-10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Milky_Way_Visitor_Center.jpg/400px-Milky_Way_Visitor_Center.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Portrait_of_Jupiter_from_Cassini.jpg/330px-Portrait_of_Jupiter_from_Cassini.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '⭐',
     academicSources: [
@@ -2872,7 +2872,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Modern scientific analysis',
     location: 'Egypt / Nile Delta',
     scriptureReference: 'Exodus 7-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ipuwer_Papyrus.jpg/400px-Ipuwer_Papyrus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Great_plague_of_london-1665.jpg/330px-Great_plague_of_london-1665.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🔬',
     academicSources: [
@@ -2892,7 +2892,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (ancient astronomical records)',
     location: 'Gibeon, Israel',
     scriptureReference: 'Joshua 10:12-14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Hubble_Ultra_Deep_Field_2014.jpg/400px-Hubble_Ultra_Deep_Field_2014.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Astronomical_unit_svg.svg/330px-Astronomical_unit_svg.svg.png"],
     confidenceLevel: 'Circumstantial',
     icon: '☀️',
     academicSources: [
@@ -2912,7 +2912,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various excavations',
     location: 'Mount Carmel, Israel',
     scriptureReference: '1 Kings 18:16-46',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Mari_tablets.jpg/400px-Mari_tablets.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg/330px-Giovanni_Girolamo_Savoldo%2C_Elijah_Fed_by_the_Raven%2C_c._1510%2C_NGA_46134.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔥',
     academicSources: [
@@ -2932,7 +2932,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (ongoing research)',
     location: 'Mountains of Ararat, Turkey',
     scriptureReference: 'Genesis 6-9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gilgamesh_Flood_Tablet.jpg/400px-Gilgamesh_Flood_Tablet.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg/330px-Edward_Hicks%2C_American_-_Noah%27s_Ark_-_Google_Art_Project.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🚢',
     academicSources: [
@@ -2953,7 +2953,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2005+',
     location: 'Tall el-Hammam, Jordan / Dead Sea region',
     scriptureReference: 'Genesis 19:24-28',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hubble_sequence_photo.png/400px-Hubble_sequence_photo.png'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Tall_el-Hammam_overlooking_the_Jordan_Valley_2007.jpg/330px-Tall_el-Hammam_overlooking_the_Jordan_Valley_2007.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🔥',
     academicSources: [
@@ -2974,7 +2974,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1867+',
     location: 'City of David, Jerusalem',
     scriptureReference: '2 Samuel 5:6-10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/LMLK_seal.jpg/400px-LMLK_seal.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/%D7%A2%D7%99%D7%A8_%D7%93%D7%95%D7%93_2.JPG/330px-%D7%A2%D7%99%D7%A8_%D7%93%D7%95%D7%93_2.JPG"],
     confidenceLevel: 'Definitive',
     icon: '🏰',
     academicSources: [
@@ -2994,7 +2994,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various excavations',
     location: 'Temple Mount, Jerusalem',
     scriptureReference: '1 Kings 6-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nabonidus_Chronicle.jpg/400px-Nabonidus_Chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg/330px-Francois_Vatable%2C_reconstructie_van_de_tempel_van_Salomo_%28detail%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏛️',
     academicSources: [
@@ -3014,7 +3014,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (historical correlation)',
     location: 'Various — texts preserved in manuscript tradition',
     scriptureReference: 'Daniel 2, 7, 8, 11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Babylonian_chronicle.jpg/400px-Babylonian_chronicle.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/The_Vision_of_Daniel.png/330px-The_Vision_of_Daniel.png"],
     confidenceLevel: 'Strong',
     icon: '🔮',
     academicSources: [
@@ -3035,7 +3035,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1st Century CE (events) / ongoing scholarly analysis',
     location: 'Jerusalem / early Christian communities',
     scriptureReference: '1 Corinthians 15:3-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ancient_papyrus_fragment.jpg/400px-Ancient_papyrus_fragment.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Rafael_-_ressureicaocristo01.jpg/330px-Rafael_-_ressureicaocristo01.jpg"],
     confidenceLevel: 'Strong',
     icon: '✝️',
     academicSources: [
@@ -3056,7 +3056,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (Garden Tomb / Church of Holy Sepulchre)',
     location: 'Jerusalem',
     scriptureReference: 'Matthew 28:5-7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ancient_papyrus_fragment.jpg/400px-Ancient_papyrus_fragment.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/PericopesHenryIIFol117rAngelOnTomb.jpg/330px-PericopesHenryIIFol117rAngelOnTomb.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏛️',
     academicSources: [
@@ -3077,7 +3077,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2010 (PLOS ONE Study)',
     location: 'Eastern Nile Delta / Gulf of Aqaba',
     scriptureReference: 'Exodus 14:21-22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Crossing_of_the_Red_Sea.jpg/400px-Crossing_of_the_Red_Sea.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Crossing_of_The_Red_Sea.jpg/330px-The_Crossing_of_The_Red_Sea.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🌊',
     academicSources: [
@@ -3098,7 +3098,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Various (Cyrus Cylinder, Nabonidus Chronicle, Harran Stele)',
     location: 'British Museum / Babylon',
     scriptureReference: 'Daniel 6:16-23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Briton_Rivi%C3%A8re_-_Daniel%27s_Answer_to_the_King.jpg/400px-Briton_Rivi%C3%A8re_-_Daniel%27s_Answer_to_the_King.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/9/99/Songe_Nabuchodonosor_statue.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🦁',
     academicSources: [
@@ -3119,7 +3119,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Babylonian court records / archaeological excavations of Babylon',
     location: 'Babylon (modern Iraq)',
     scriptureReference: 'Daniel 3:19-27',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Simeon_Solomon_-_Shadrach%2C_Meshach_and_Abednego.jpg/400px-Simeon_Solomon_-_Shadrach%2C_Meshach_and_Abednego.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Nebuchadnezzar_II_crop.png/330px-Nebuchadnezzar_II_crop.png"],
     confidenceLevel: 'Circumstantial',
     icon: '🔥',
     academicSources: [
@@ -3140,7 +3140,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1847 (Layard) / ongoing',
     location: 'Mosul, Iraq (Tell Kuyunjik and Tell Nebi Yunus)',
     scriptureReference: 'Jonah 3:3-5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Nineveh_Adad_gate_exterior_entrance_far2.JPG/400px-Nineveh_Adad_gate_exterior_entrance_far2.JPG'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Nineveh_-_Mashki_Gate.jpg/330px-Nineveh_-_Mashki_Gate.jpg"],
     confidenceLevel: 'Strong',
     icon: '🐋',
     academicSources: [
@@ -3161,7 +3161,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1998–present (University of South Florida excavations)',
     location: 'Khirbet Qana, Lower Galilee, Israel',
     scriptureReference: 'John 2:1-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Stone_jar_cana.jpg/400px-Stone_jar_cana.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Kafr_Kanna_BW_1.JPG?width=400"],
     confidenceLevel: 'Strong',
     icon: '🍷',
     academicSources: [
@@ -3182,7 +3182,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2017–2019 (el-Araj excavations)',
     location: 'el-Araj / Bethsaida, Sea of Galilee, Israel',
     scriptureReference: 'Luke 9:10-17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Tabgha_Mosaic_Loaves_and_Fishes.jpg/400px-Tabgha_Mosaic_Loaves_and_Fishes.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '🍞',
     academicSources: [
@@ -3203,7 +3203,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Veneration attested from 4th century CE (Eusebius, Jerome)',
     location: 'al-Eizariya (Bethany), West Bank',
     scriptureReference: 'John 11:38-44',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Tomb_of_Lazarus_in_Bethany.jpg/400px-Tomb_of_Lazarus_in_Bethany.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_L%C3%A1zaro%2C_L%C3%A1rnaca%2C_Chipre%2C_2021-12-12%2C_DD_06.jpg?width=400"],
     confidenceLevel: 'Circumstantial',
     icon: '⚰️',
     academicSources: [
@@ -3224,7 +3224,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Continuously venerated since the 1st century CE',
     location: 'Bir Ya\'qub, Nablus, West Bank',
     scriptureReference: 'John 4:5-14',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Jacob%27s_Well_interior_2017.jpg/400px-Jacob%27s_Well_interior_2017.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '💧',
     academicSources: [
@@ -3245,7 +3245,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2012 (National Research Council olive tree dating)',
     location: 'Mount of Olives, Jerusalem',
     scriptureReference: 'Matthew 26:36-46',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Garden_of_Gethsemane_olives.jpg/400px-Garden_of_Gethsemane_olives.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Olivesfromjordan.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '🌿',
     academicSources: [
@@ -3266,7 +3266,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1927 (Bodenheimer field study); ongoing Sinai botanical research',
     location: 'Sinai Peninsula',
     scriptureReference: 'Exodus 16:14-15',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Gathering_of_the_Manna_%28James_Tissot%29.jpg/400px-Gathering_of_the_Manna_%28James_Tissot%29.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/6/69/Manna_from_heaven.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🍯',
     academicSources: [
@@ -3287,7 +3287,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '4th Century CE (Helena basilica) / ongoing excavations',
     location: 'Mount of Olives, Jerusalem',
     scriptureReference: 'Acts 1:9-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chapel_of_the_Ascension_Jerusalem.jpg/400px-Chapel_of_the_Ascension_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/2013-Aerial-Mount_of_Olives.jpg/330px-2013-Aerial-Mount_of_Olives.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '☁️',
     academicSources: [
@@ -3308,7 +3308,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Veneration attested from the early 4th century CE',
     location: 'Mount Zion, Jerusalem (traditional Cenacle)',
     scriptureReference: 'Acts 2:1-4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Cenacle_on_Mount_Zion%2C_Jerusalem.jpg/400px-Cenacle_on_Mount_Zion%2C_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Cenacle_on_Mount_Zion.jpg/330px-Cenacle_on_Mount_Zion.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🕊️',
     academicSources: [
@@ -3329,7 +3329,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Roman road network continuously attested; Straight Street still in use',
     location: 'Damascus, Syria (Via Recta)',
     scriptureReference: 'Acts 9:3-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bab_Sharqi_Damascus.jpg/400px-Bab_Sharqi_Damascus.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Damascus_from_qasioun_mountain.jpg/330px-Damascus_from_qasioun_mountain.jpg"],
     confidenceLevel: 'Strong',
     icon: '⚡',
     academicSources: [
@@ -3350,7 +3350,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1966 (Brooklyn Papyrus); Tell el-Daba excavations 1966–present',
     location: 'Tell el-Daba (Avaris), Eastern Nile Delta, Egypt',
     scriptureReference: 'Genesis 41:41-43',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Semitic_tribute_bearers_Beni_Hasan_tomb_painting.jpg/400px-Semitic_tribute_bearers_Beni_Hasan_tomb_painting.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Painting_of_foreign_delegation_in_the_tomb_of_Khnumhotep_II_circa_1900_BCE_%28Detail_mentioning_%22Abisha_the_Hyksos%22_in_hieroglyphs%29.jpg/330px-Painting_of_foreign_delegation_in_the_tomb_of_Khnumhotep_II_circa_1900_BCE_%28Detail_mentioning_%22Abisha_the_Hyksos%22_in_hieroglyphs%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '👑',
     academicSources: [
@@ -3372,7 +3372,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1899–1917 (Koldewey excavations); 2011 Etemenanki Stele identified',
     location: 'Babylon, Iraq (Etemenanki ziggurat foundations)',
     scriptureReference: 'Genesis 11:1-9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29.jpg/400px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg/330px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project_-_edited.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏗️',
     academicSources: [
@@ -3393,7 +3393,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1922–1934 (Woolley excavations at Ur)',
     location: 'Tell el-Muqayyar, Dhi Qar Province, Iraq',
     scriptureReference: 'Genesis 11:31',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ancient_ziggurat_at_Ali_Air_Base_Iraq_2005.jpg/400px-Ancient_ziggurat_at_Ali_Air_Base_Iraq_2005.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/20160105-Abraham_house_in_Ur_Iraq.jpg/330px-20160105-Abraham_house_in_Ur_Iraq.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏺',
     academicSources: [
@@ -3414,7 +3414,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '4th Century CE (Helena chapel); St. Catherine\'s Monastery 548–565 CE',
     location: 'St. Catherine\'s Monastery, Jebel Musa, Sinai, Egypt',
     scriptureReference: 'Exodus 3:1-6',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Saint_Catherine%27s_Monastery.jpg/400px-Saint_Catherine%27s_Monastery.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bourdon%2C_S%C3%A9bastien_-_Burning_bush.jpg/330px-Bourdon%2C_S%C3%A9bastien_-_Burning_bush.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🌳',
     academicSources: [
@@ -3435,7 +3435,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1851 (Loftus); 1884–1886 (Dieulafoy excavations)',
     location: 'Susa (Shush), Khuzestan Province, Iran',
     scriptureReference: 'Esther 1:2-5',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Apadana_of_Susa_capital.jpg/400px-Apadana_of_Susa_capital.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/History_of_Egypt%2C_Chaldea%2C_Syria%2C_Babylonia_and_Assyria_%281903%29_%2814584070300%29.jpg/330px-History_of_Egypt%2C_Chaldea%2C_Syria%2C_Babylonia_and_Assyria_%281903%29_%2814584070300%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '👸',
     academicSources: [
@@ -3456,7 +3456,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Marib excavations 1951–present; Ophel excavations 2012 (Mazar)',
     location: 'Marib, Yemen / Ophel, Jerusalem',
     scriptureReference: '1 Kings 10:1-13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marib_ruins_Yemen.jpg/400px-Marib_ruins_Yemen.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Queen_of_Sheba_%281907%29%2C_by_Edward_Slocombe.jpg/330px-Queen_of_Sheba_%281907%29%2C_by_Edward_Slocombe.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '💎',
     academicSources: [
@@ -3477,7 +3477,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1986 (Galilee Boat discovery during drought)',
     location: 'Yigal Allon Museum, Kibbutz Ginosar, Sea of Galilee, Israel',
     scriptureReference: 'Mark 4:37-41',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ancient_Galilee_Boat.jpg/400px-Ancient_Galilee_Boat.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Kinneret_cropped.jpg/330px-Kinneret_cropped.jpg"],
     confidenceLevel: 'Strong',
     icon: '⛵',
     academicSources: [
@@ -3498,7 +3498,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1922–1932 (Schmidt/Kjær); 1981–1984 (Finkelstein); 2017–present (Stripling)',
     location: 'Tel Shiloh, West Bank',
     scriptureReference: 'Joshua 18:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tel_Shiloh.jpg/400px-Tel_Shiloh.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Eli_and_Samuel_%28cropped%29.jpg/330px-Eli_and_Samuel_%28cropped%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '⛺',
     academicSources: [
@@ -3519,7 +3519,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1971–1974 (Mazar at Tel Qasile); 1992+ (Dothan at Tel Miqne-Ekron)',
     location: 'Tel Qasile, Tel Aviv, Israel',
     scriptureReference: 'Judges 16:29-30',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tell_Qasile_Philistine_temple.jpg/400px-Tell_Qasile_Philistine_temple.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%D8%A7%D9%84%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D9%8A_%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1_%D9%81%D9%8A_%D8%BA%D8%B2%D8%A9_%D8%A8%D8%B9%D8%AF_%D8%A7%D9%84%D9%82%D8%B5%D9%81_%D9%88%D8%A7%D9%84%D8%AF%D9%85%D8%A7%D8%B1.jpg/330px-%D8%A7%D9%84%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%B9%D9%85%D8%B1%D9%8A_%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1_%D9%81%D9%8A_%D8%BA%D8%B2%D8%A9_%D8%A8%D8%B9%D8%AF_%D8%A7%D9%84%D9%82%D8%B5%D9%81_%D9%88%D8%A7%D9%84%D8%AF%D9%85%D8%A7%D8%B1.jpg"],
     confidenceLevel: 'Strong',
     icon: '💪',
     academicSources: [
@@ -3540,7 +3540,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1953–1964 (Free excavations at Tel Dothan)',
     location: 'Tel Dothan, West Bank',
     scriptureReference: '2 Kings 6:13-17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Tell_Dothan.jpg/400px-Tell_Dothan.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Jenin-new.jpg/330px-Jenin-new.jpg"],
     confidenceLevel: 'Strong',
     icon: '🔥',
     academicSources: [
@@ -3561,7 +3561,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1968–1981 (Corbo); 2009–present (Vörös)',
     location: 'Mukawir, Jordan',
     scriptureReference: 'Matthew 14:3-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Machaerus_fortress.jpg/400px-Machaerus_fortress.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Machaerus_Panorama.jpg?width=400"],
     confidenceLevel: 'Strong',
     icon: '🗡️',
     academicSources: [
@@ -3582,7 +3582,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1996–present (Mohammad Waheeb excavations); UNESCO 2015',
     location: 'Al-Maghtas, Jordan (east bank) / Qasr al-Yahud, West Bank',
     scriptureReference: 'John 1:28',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Al-Maghtas_baptism_site.jpg/400px-Al-Maghtas_baptism_site.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/El_bautismo_de_Jes%C3%BAs%2C_por_Jos%C3%A9_Ferraz_de_Almeida_J%C3%BAnior.jpg/330px-El_bautismo_de_Jes%C3%BAs%2C_por_Jos%C3%A9_Ferraz_de_Almeida_J%C3%BAnior.jpg"],
     confidenceLevel: 'Strong',
     icon: '💦',
     academicSources: [
@@ -3603,7 +3603,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1961–2005 (Roman lead anchors recovered from St. Paul\'s Bay)',
     location: 'St. Paul\'s Bay, Malta',
     scriptureReference: 'Acts 27:27-28:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/St_Paul%27s_Bay_Malta.jpg/400px-St_Paul%27s_Bay_Malta.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Roman_Empire_Trajan_117AD.png/330px-Roman_Empire_Trajan_117AD.png"],
     confidenceLevel: 'Strong',
     icon: '⚓',
     academicSources: [
@@ -3625,7 +3625,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Continuous archaeological record; bronze plaque installed 1959',
     location: 'Areopagus (Mars Hill), Athens, Greece',
     scriptureReference: 'Acts 17:22-34',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Areopagus_from_the_Acropolis.jpg/400px-Areopagus_from_the_Acropolis.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/V%26A_-_Raphael%2C_St_Paul_Preaching_in_Athens_%281515%29.jpg/330px-V%26A_-_Raphael%2C_St_Paul_Preaching_in_Athens_%281515%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏛️',
     academicSources: [
@@ -3646,7 +3646,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1863 (Wood, British Museum); ongoing Austrian excavations from 1895',
     location: 'Ephesus (Selçuk), Turkey',
     scriptureReference: 'Acts 19:23-41',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Great_theater_of_Ephesus.jpg/400px-Great_theater_of_Ephesus.jpg'],
+    images: [],
     confidenceLevel: 'Definitive',
     icon: '🎭',
     academicSources: [
@@ -3667,7 +3667,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1952 (Qumran Cave 4); published 1956 (Milik)',
     location: 'Shrine of the Book, Israel Museum, Jerusalem',
     scriptureReference: 'Daniel 4:28-34',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Frgmnt_of_a_Bible.jpg/400px-Frgmnt_of_a_Bible.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -3688,7 +3688,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '339 CE (Helena Church of Nativity); attested by Justin Martyr c. 155 CE',
     location: 'Church of the Nativity, Bethlehem, West Bank',
     scriptureReference: 'Luke 2:4-7',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Grotto_of_Nativity_Bethlehem.jpg/400px-Grotto_of_Nativity_Bethlehem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Church_of_the_Nativity_%287703592746%29.jpg/330px-Church_of_the_Nativity_%287703592746%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '⭐',
     academicSources: [
@@ -3710,7 +3710,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1957–1971 (Yadin excavations at Hazor, Megiddo, Gezer)',
     location: 'Hazor, Megiddo, Gezer (Israel)',
     scriptureReference: '1 Kings 9:15',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Megiddo_gate.jpg/400px-Megiddo_gate.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '🏰',
     academicSources: [
@@ -3731,7 +3731,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Veneration attested from c. 348 CE (Cyril of Jerusalem)',
     location: 'Mount Tabor, Lower Galilee, Israel',
     scriptureReference: 'Matthew 17:1-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Mount_Tabor_aerial.jpg/400px-Mount_Tabor_aerial.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mount_of_transfiguration_is.JPG/330px-Mount_of_transfiguration_is.JPG"],
     confidenceLevel: 'Circumstantial',
     icon: '⛰️',
     academicSources: [
@@ -3752,7 +3752,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Historical landslides documented 1160, 1267, 1546, 1906, 1927',
     location: 'Damiya Bridge area, Jordan Valley',
     scriptureReference: 'Joshua 3:16',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Jordan_river.jpg/400px-Jordan_river.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Leningrad-codex-06-joshua.pdf/page1-330px-Leningrad-codex-06-joshua.pdf.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🏞️',
     academicSources: [
@@ -3773,7 +3773,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2007 (Eilat Mazar, Ophel excavations)',
     location: 'Ophel, City of David, Jerusalem',
     scriptureReference: 'Nehemiah 3:1-32',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/City_of_David_Jerusalem.jpg/400px-City_of_David_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/JPF-Ophel_-_City_of_David.JPG/330px-JPF-Ophel_-_City_of_David.JPG"],
     confidenceLevel: 'Strong',
     icon: '🧱',
     academicSources: [
@@ -3794,7 +3794,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '2007–2013 (Garfinkel excavations at Khirbet Qeiyafa)',
     location: 'Elah Valley, Khirbet Qeiyafa, Israel',
     scriptureReference: '1 Samuel 17:1-51',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Khirbet_Qeiyafa.jpg/400px-Khirbet_Qeiyafa.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Qeiyafa-western-gate1_cr.jpg/330px-Qeiyafa-western-gate1_cr.jpg"],
     confidenceLevel: 'Strong',
     icon: '🪨',
     academicSources: [
@@ -3815,7 +3815,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1996–present (Aren Maeir excavations at Tell es-Safi/Gath)',
     location: 'Tell es-Safi/Gath, Israel',
     scriptureReference: '1 Samuel 17:4',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Tell_es-Safi.jpg/400px-Tell_es-Safi.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cafit030.jpg/330px-Cafit030.jpg"],
     confidenceLevel: 'Strong',
     icon: '🗿',
     academicSources: [
@@ -3836,7 +3836,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1838 (Robinson); 1968–1978 (Mazar); 2004–present (Temple Mount Sifting Project)',
     location: 'Temple Mount, Jerusalem',
     scriptureReference: 'Mark 13:1-2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Western_Wall_Jerusalem.jpg/400px-Western_Wall_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/The_remains_of_Robinson%27s_Arch_on_the_western_side_of_the_Temple_Mount.jpg/330px-The_remains_of_Robinson%27s_Arch_on_the_western_side_of_the_Temple_Mount.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🕍',
     academicSources: [
@@ -3858,7 +3858,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1978–1982 (Shiloh, Burnt House); 1982 (House of Bullae)',
     location: 'City of David, Jerusalem',
     scriptureReference: '2 Kings 25:8-10',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Burnt_House_Jerusalem.jpg/400px-Burnt_House_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/The_art_Bible%2C_comprising_the_Old_and_new_Testaments_-_with_numerous_illustrations_%281896%29_%2814783032815%29.jpg/330px-The_art_Bible%2C_comprising_the_Old_and_new_Testaments_-_with_numerous_illustrations_%281896%29_%2814783032815%29.jpg"],
     confidenceLevel: 'Definitive',
     icon: '🔥',
     academicSources: [
@@ -3879,7 +3879,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '326 CE (Helena); 1960–1995 (Corbo, Broshi, Gibson); 2016 (radiocarbon mortar study)',
     location: 'Church of the Holy Sepulchre, Jerusalem',
     scriptureReference: 'John 19:41-42',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Holy_sepulchre_exterior.jpg/400px-Holy_sepulchre_exterior.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Church_of_the_Holy_Sepulchre_by_Gerd_Eichmann_%28cropped%29.jpg/330px-Church_of_the_Holy_Sepulchre_by_Gerd_Eichmann_%28cropped%29.jpg"],
     confidenceLevel: 'Strong',
     icon: '✝️',
     academicSources: [
@@ -3900,7 +3900,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1974 (Beno Rothenberg excavations at Timna)',
     location: 'Timna Valley, southern Negev, Israel',
     scriptureReference: 'Numbers 21:8-9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Timna_Park_Israel.jpg/400px-Timna_Park_Israel.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maurice_Ascalon_Menorah_Pal-Bell.jpg/330px-Maurice_Ascalon_Menorah_Pal-Bell.jpg"],
     confidenceLevel: 'Strong',
     icon: '🐍',
     academicSources: [
@@ -3921,7 +3921,7 @@ export const evidences: Evidence[] = [
     discoveryDate: '1986 (Galilee Boat); ongoing limnological studies',
     location: 'Sea of Galilee, northern Israel',
     scriptureReference: 'Matthew 14:22-33; Mark 6:45-52; John 6:15-21',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Sea_of_Galilee_early_morning.jpg/400px-Sea_of_Galilee_early_morning.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Walking_the_Jesus_Trail.JPG/330px-Walking_the_Jesus_Trail.JPG"],
     confidenceLevel: 'Circumstantial',
     icon: '🌊',
     academicSources: [
@@ -3942,7 +3942,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Tell es-Sultan excavations (Kenyon 1950s; Nigro 1997-present)',
     location: 'Jordan River near Jericho / Tell es-Sultan',
     scriptureReference: '2 Kings 2:1-12',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Jordan_River_near_Jericho.jpg/400px-Jordan_River_near_Jericho.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bethany_%285%29.JPG/330px-Bethany_%285%29.JPG"],
     confidenceLevel: 'Circumstantial',
     icon: '🔥',
     academicSources: [
@@ -3963,7 +3963,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Tel Dan Stele (1993); Aramaic royal correspondence',
     location: 'Damascus and Jordan River, Aram-Israel',
     scriptureReference: '2 Kings 5:1-19',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Jordan_river.jpg/400px-Jordan_river.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Empire_Trajan_117AD.png?width=400"],
     confidenceLevel: 'Circumstantial',
     icon: '💧',
     academicSources: [
@@ -3984,7 +3984,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Assyrian eclipse records (Bur-Sagale, 763 BCE); ongoing sundial archaeology',
     location: 'Jerusalem (palace of Ahaz)',
     scriptureReference: '2 Kings 20:8-11; Isaiah 38:7-8',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ancient_sundial.jpg/400px-Ancient_sundial.jpg'],
+    images: ["https://commons.wikimedia.org/wiki/Special:FilePath/Hubble_ultra_deep_field_high_rez_edit1.jpg?width=400"],
     confidenceLevel: 'Circumstantial',
     icon: '🌞',
     academicSources: [
@@ -4005,7 +4005,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Bethphage ossuary inscriptions (1923); Mount of Olives excavations ongoing',
     location: 'Mount of Olives, Bethphage, Jerusalem',
     scriptureReference: 'Matthew 21:1-11; Zechariah 9:9',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Mount_of_Olives_Jerusalem.jpg/400px-Mount_of_Olives_Jerusalem.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '🌿',
     academicSources: [
@@ -4026,7 +4026,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Emmaus-Nicopolis excavations (1878 Clermont-Ganneau; 2001-present Gibson)',
     location: 'Emmaus-Nicopolis / Motza / Qubeibeh, west of Jerusalem',
     scriptureReference: 'Luke 24:13-35',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Emmaus_Nicopolis_church_ruins.jpg/400px-Emmaus_Nicopolis_church_ruins.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Emmaus_Nicopolis_basilica.JPG/330px-Emmaus_Nicopolis_basilica.JPG"],
     confidenceLevel: 'Circumstantial',
     icon: '🥖',
     academicSources: [
@@ -4047,7 +4047,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Philippi excavations (École française d\'Athènes 1914-present)',
     location: 'Philippi, Macedonia (northern Greece)',
     scriptureReference: 'Acts 16:16-40',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Philippi_forum.jpg/400px-Philippi_forum.jpg'],
+    images: [],
     confidenceLevel: 'Strong',
     icon: '⛓️',
     academicSources: [
@@ -4068,7 +4068,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Cave of the Apocalypse tradition attested from 2nd century; monastery founded 1088',
     location: 'Patmos, Dodecanese, Greece',
     scriptureReference: 'Revelation 1:9-11',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Patmos_Monastery_view.jpg/400px-Patmos_Monastery_view.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Cave_of_the_Apocalypse.jpg/330px-Cave_of_the_Apocalypse.jpg"],
     confidenceLevel: 'Strong',
     icon: '📜',
     academicSources: [
@@ -4089,7 +4089,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Thallus (c. AD 52, in Julius Africanus); Dead Sea sediment earthquake record (Williams et al. 2012)',
     location: 'Jerusalem; Dead Sea region',
     scriptureReference: 'Matthew 27:45-54; Mark 15:33; Luke 23:44-45',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Dead_Sea_from_Masada.jpg/400px-Dead_Sea_from_Masada.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/330px-Cristo_crucificado.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🌑',
     academicSources: [
@@ -4110,7 +4110,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Sinai hydrogeological surveys (Issar 1990s-2000s); traditional sites attested from 4th century',
     location: 'Sinai Peninsula / Wadi Feiran / Horeb',
     scriptureReference: 'Exodus 17:1-7; Numbers 20:1-13',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sinai_mountains_wadi.jpg/400px-Sinai_mountains_wadi.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Occupied_Palestinian_Territories.jpg/330px-Occupied_Palestinian_Territories.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '⛲',
     academicSources: [
@@ -4131,7 +4131,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Bethel (Beitin) excavations: Albright 1934; Kelso 1954-60',
     location: 'Beitin, West Bank (ancient Bethel)',
     scriptureReference: 'Genesis 28:10-22',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Beitin_landscape.jpg/400px-Beitin_landscape.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bethel_MET_DP116361.jpg/330px-Bethel_MET_DP116361.jpg"],
     confidenceLevel: 'Strong',
     icon: '🪜',
     academicSources: [
@@ -4152,7 +4152,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Shunem (Sulam) topographic identification; regional Iron II surveys',
     location: 'Sulam, Jezreel Valley, northern Israel (ancient Shunem)',
     scriptureReference: '2 Kings 4:8-37',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Jezreel_valley_from_Mount_Tabor.jpg/400px-Jezreel_valley_from_Mount_Tabor.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Eva_Cranach.jpg/330px-Eva_Cranach.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '👦',
     academicSources: [
@@ -4173,7 +4173,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Josiah-era bullae, seal impressions, and LMLK jars (late 7th century BCE)',
     location: 'Jerusalem Temple Mount region; City of David',
     scriptureReference: '2 Kings 22:8-23:25',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/City_of_David_excavation.jpg/400px-City_of_David_excavation.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/en/c/cb/Bible_Unearthed.jpg"],
     confidenceLevel: 'Strong',
     icon: '📖',
     academicSources: [
@@ -4194,7 +4194,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Persian-period Yehud seal impressions; Elephantine Papyri (1893-1907)',
     location: 'Jerusalem Temple Mount; Elephantine, Egypt',
     scriptureReference: 'Ezra 3-6; Haggai 1-2',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Second_Temple_model.jpg/400px-Second_Temple_model.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Second_Temple.jpg/330px-Second_Temple.jpg"],
     confidenceLevel: 'Strong',
     icon: '🏛️',
     academicSources: [
@@ -4215,7 +4215,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Basilica of St. Stephen (Eudocia, AD 439); Damascus Gate excavations',
     location: 'North of Damascus Gate, Jerusalem',
     scriptureReference: 'Acts 7:54-8:1',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Saint-Etienne_church_Jerusalem.jpg/400px-Saint-Etienne_church_Jerusalem.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Processed_SAM_loki.jpg/330px-Processed_SAM_loki.jpg"],
     confidenceLevel: 'Strong',
     icon: '🪨',
     academicSources: [
@@ -4236,7 +4236,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Jaffa (Joppa) excavations: Kaplan 1955-74; Tel Aviv University 2007-present',
     location: 'Jaffa (Joppa), Israel',
     scriptureReference: 'Acts 9:36-43; 10:5-6',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Old_Jaffa_port.jpg/400px-Old_Jaffa_port.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg/330px-ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg"],
     confidenceLevel: 'Strong',
     icon: '🕊️',
     academicSources: [
@@ -4257,7 +4257,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Caesarea Maritima theater excavations (Negev 1961-63; Holum 1992-98)',
     location: 'Caesarea Maritima, Israel',
     scriptureReference: 'Acts 12:19-23',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Caesarea_maritima_theater.jpg/400px-Caesarea_maritima_theater.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Piece_Agrippa_I.jpg/330px-Piece_Agrippa_I.jpg"],
     confidenceLevel: 'Definitive',
     icon: '👑',
     academicSources: [
@@ -4278,7 +4278,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Ephesus Artemision (Wood 1869; British Museum 1904-05; Austrian Institute 1965-present)',
     location: 'Ephesus (Selçuk), Turkey',
     scriptureReference: 'Acts 19:11-20, 23-41',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Temple_of_Artemis_reconstruction.jpg/400px-Temple_of_Artemis_reconstruction.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lawrence_Alma-Tadema_10.jpeg/330px-Lawrence_Alma-Tadema_10.jpeg"],
     confidenceLevel: 'Strong',
     icon: '📕',
     academicSources: [
@@ -4299,7 +4299,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Coptic tradition attested from 3rd century; Church of Abu Serga (4th century)',
     location: 'Egypt (Cairo, Asyut, Matariyya, Wadi Natrun)',
     scriptureReference: 'Matthew 2:13-15',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Abu_Serga_church_crypt.jpg/400px-Abu_Serga_church_crypt.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Kairo_Hanging_Church_BW_1.jpg/330px-Kairo_Hanging_Church_BW_1.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '🐫',
     academicSources: [
@@ -4320,7 +4320,7 @@ export const evidences: Evidence[] = [
     discoveryDate: 'Nein village identification; Crusader and Franciscan church traditions',
     location: 'Nein, Lower Galilee, Israel',
     scriptureReference: 'Luke 7:11-17',
-    images: ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Village_of_Nain.jpg/400px-Village_of_Nain.jpg'],
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Eduard_von_Gebhardt_-_The_Raising_of_Lazarus_-_Google_Art_Project_%28cropped%29.jpg/330px-Eduard_von_Gebhardt_-_The_Raising_of_Lazarus_-_Google_Art_Project_%28cropped%29.jpg"],
     confidenceLevel: 'Circumstantial',
     icon: '⚰️',
     academicSources: [

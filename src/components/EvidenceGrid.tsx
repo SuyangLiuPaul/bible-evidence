@@ -1,7 +1,7 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
-import { BookOpen, Clock, X, Search, ArrowUpDown, SlidersHorizontal } from 'lucide-react'
+import { BookOpen, Clock, X, Search, ArrowUpDown, SlidersHorizontal, ChevronDown } from 'lucide-react'
 import { type Evidence, type Category, type ConfidenceLevel } from '../data/evidences'
 import EvidenceCard from './EvidenceCard'
 import MobileFilterSheet, { MobileFilterFAB } from './MobileFilterSheet'
@@ -52,6 +52,29 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
   const [selectedTimeline, setSelectedTimeline] = useState('All')
   const [sortBy, setSortBy] = useState<SortKey>('confidence')
   const [sheetOpen, setSheetOpen] = useState(false)
+
+  // Desktop sticky filter — collapse to a thin compact bar when the
+  // user has scrolled past the natural position. The full panel is
+  // ~300 px tall (search + categories + confidence + 3 selects);
+  // keeping that visible while reading the grid was burying half
+  // the screen. Now: scroll past 280 px → collapse to a single
+  // 56 px bar with the active-filter summary + an expand toggle.
+  const [scrolled, setScrolled] = useState(false)
+  const [filterExpanded, setFilterExpanded] = useState(true)
+  useEffect(() => {
+    const onScroll = () => {
+      const past = window.scrollY > 280
+      setScrolled(past)
+      // Auto-collapse on first scroll past, but keep it open if the
+      // user explicitly expands while scrolled — otherwise the click
+      // would reset on the next scroll tick.
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  // When scrolled, default to collapsed unless user opens it.
+  // When not scrolled, always show full panel.
+  const showFullPanel = !scrolled || filterExpanded
   const isEn = i18n.language === 'en'
   const bookLabel = (b: string) => isEn ? b : (BOOK_ZH[b] || b)
   const translateTimeline = (tl: string) => {
@@ -188,15 +211,61 @@ export default function EvidenceGrid({ evidences, onSelectEvidence }: EvidenceGr
           </div>
         </div>
 
-        {/* ── Desktop filter panel — sticky ─────────────────────── */}
+        {/* ── Desktop filter panel — sticky, collapses on scroll ── */}
         <div className="hidden md:block sticky top-16 z-30">
+          {/* Compact collapsed bar — shown when scrolled + collapsed */}
+          {scrolled && !filterExpanded && (
+            <motion.button
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              onClick={() => setFilterExpanded(true)}
+              aria-label={isEn ? 'Show filters' : '显示筛选'}
+              className="mb-6 w-full glass rounded-2xl px-4 py-2.5 flex items-center gap-3 hover:bg-white/55 transition-colors"
+            >
+              <SlidersHorizontal className="w-4 h-4 text-sapphire flex-shrink-0" />
+              <span className="text-parchment text-sm font-semibold">
+                {isEn ? 'Filters' : '筛选'}
+              </span>
+              {activeFilterCount > 0 && (
+                <span className="px-2 py-0.5 rounded-full bg-sapphire/15 text-sapphire text-xs font-bold tabular-nums">
+                  {activeFilterCount}
+                </span>
+              )}
+              <span className="ml-auto flex items-center gap-2 text-parchment-muted text-xs">
+                <span>
+                  <span className="font-bold text-sapphire">{filtered.length}</span>{' '}
+                  {t('grid.results')}
+                </span>
+                <ChevronDown className="w-4 h-4" />
+              </span>
+            </motion.button>
+          )}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="mb-10 glass rounded-3xl p-5"
+            animate={{
+              opacity: showFullPanel ? 1 : 0,
+              y: showFullPanel ? 0 : -8,
+              height: showFullPanel ? 'auto' : 0,
+              marginBottom: showFullPanel ? 40 : 0,
+            }}
+            transition={{ duration: 0.25 }}
+            style={{ overflow: 'hidden' }}
+            className={`glass rounded-3xl p-5 ${showFullPanel ? '' : 'pointer-events-none'}`}
           >
+            {/* Collapse toggle when expanded while scrolled */}
+            {scrolled && filterExpanded && (
+              <div className="flex justify-end mb-2 -mt-1">
+                <button
+                  onClick={() => setFilterExpanded(false)}
+                  aria-label={isEn ? 'Collapse filters' : '收起筛选'}
+                  className="text-parchment-muted hover:text-parchment text-xs flex items-center gap-1 px-2 py-1 rounded-md hover:bg-white/40 transition-colors"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  {isEn ? 'Collapse' : '收起'}
+                </button>
+              </div>
+            )}
             {/* Search bar */}
             <div className="relative mb-4">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-parchment-muted" />
